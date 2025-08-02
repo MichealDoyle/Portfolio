@@ -37,6 +37,15 @@ h1 a:active {
     color: #3866b6;
 }
 
+
+a[href^='mailto'] {
+    color: #ffffff;
+}
+
+a[href^='mailto']:active {
+    color:#f5a749;
+}
+
 /* END BODY CONTENT */
 
 /* START NAVIGATION BAR */
@@ -140,17 +149,10 @@ footer {
 footer address {
     text-align: right;
     word-spacing: 1.5rem;
+    width: 100%;
     position: fixed;
     bottom: 0.5rem;
     right: 0.5rem;
-}
-
-footer address a[href^='mailto'] {
-    color: #ffffff;
-}
-
-footer address a[href^='mailto']:active {
-    color:#f5a749;
 }
 
 /* END FOOTER SECTION */
