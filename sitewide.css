@@ -1,0 +1,120 @@
+/* START BASIC CONTENT */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: basic-sans ,helvetica-lt-pro, sans-serif;
+    line-height: 1.5;
+    background: #5e6675;
+    color: whitesmoke;
+}
+
+main {
+    margin: auto 10rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+h1 a:active {
+    color: #3866b6;
+}
+
+/* END BODY CONTENT */
+
+/* START NAVIGATION BAR */
+
+#nav-bar {
+    position: absolute;
+    top: 20rem;
+    margin: 0 -0.5rem;
+}
+
+#nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar a {
+    display: block;
+    padding: 1rem;
+}
+
+#nav-bar li:hover{
+    background-color: #f5a749;
+    text-decoration: underline;
+}
+
+
+#nav-bar a:active {
+    color: #3866b6;
+    text-decoration: underline;
+    text-decoration-color: #3866b6;
+}
+
+.portfolio-li > ul {
+    display: none; 
+    position: absolute;
+    left: 5.9rem;
+    top: 0;
+}
+
+.portfolio-li:hover > ul {
+    display: block;
+}
+
+.photoshop-li > ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 7.2rem;
+}
+
+.photoshop-li:hover > ul {
+    display: block;
+}
+
+.animate-li > ul {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 7.2rem;
+}
+
+.animate-li:hover > ul {
+    display: block;
+}
+
+.color-li > ul {
+    display: none;
+    position: absolute;
+    top: 10rem;
+    left: 7.2rem;
+}
+
+.color-li:hover > ul {
+    display: block;
+}
+
+
+.type-li > ul {
+    display: none;
+    position: absolute;
+    top: 15rem;
+    left: 7.2rem;
+}
+
+.type-li:hover > ul {
+    display: block;
+}
+/* END NAVIGATION BAR */
+
+/* START FOOTER SECTION */
