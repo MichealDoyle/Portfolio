@@ -1,5 +1,10 @@
 /* START BASIC CONTENT */
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
 body {
     font-family: basic-sans ,helvetica-lt-pro, sans-serif;
@@ -10,9 +15,10 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 5rem;
-    display: grid;
-    max-width: 1200px;
+    max-width: 60%;
     margin: 0 auto;
 }
 
@@ -46,7 +52,7 @@ a[href^='mailto']:active {
     color:#f5a749;
 }
 
-/* END BODY CONTENT */
+/* END BASIC CONTENT */
 
 /* START NAVIGATION BAR */
 
@@ -140,19 +146,22 @@ a[href^='mailto']:active {
 
 footer {
     background: #3866b6;
-    height: 7%;
     width: 100%;
-    position: fixed;
-    bottom: 0.2rem;
+    position: absolute;
 }
 
 footer address {
     text-align: right;
     word-spacing: 1.5rem;
-    width: 100%;
-    position: fixed;
-    bottom: 0.5rem;
-    right: 0.5rem;
+    position: relative;
+}
+
+footer address a {
+    margin: auto 10px 10px;
+}
+
+footer address a img {
+    padding-top: 10px;
 }
 
 /* END FOOTER SECTION */
