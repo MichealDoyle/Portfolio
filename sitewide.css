@@ -17,7 +17,7 @@ body {
 
 main {
     max-width: 80%;
-    margin-left: 21rem;
+    margin: 0 auto;
     flex: 1;
 }
 
@@ -63,6 +63,7 @@ a[href^='mailto']:active {
 /* START NAVIGATION BAR */
 
 #nav-bar {
+    background: #3866b6;
     position: absolute;
     top: 5rem;
     margin: 0;
@@ -80,70 +81,58 @@ a[href^='mailto']:active {
 }
 
 #nav-bar li:hover{
-    background-color: #3866b6;
+    background-color: #f5a749;
     text-decoration: underline;
 }
 
 
 #nav-bar a:active {
-    color: #f5a749;
+    color: #3866b6;
     text-decoration: underline;
-    text-decoration-color: #f5a749;
+    text-decoration-color: #3866b6;
+}
+
+.portfolio-li > ul,
+.photoshop-li > ul,
+.animate-li > ul, 
+.color-li > ul,
+.type-li > ul
+  {
+    display: none; 
+    position: absolute;
+    background: #3866b6;
 }
 
 .portfolio-li > ul {
-    display: none; 
-    position: absolute;
     left: 5.9rem;
     top: 3.8rem;
 }
 
-.portfolio-li:hover > ul {
-    display: block;
-}
-
 .photoshop-li > ul {
-    display: none;
-    position: absolute;
     top: 0;
     left: 7.2rem;
 }
 
-.photoshop-li:hover > ul {
-    display: block;
-}
-
 .animate-li > ul {
-    display: none;
-    position: absolute;
     top: 5.6rem;
     left: 7.2rem;
 }
 
-.animate-li:hover > ul {
-    display: block;
-}
-
 .color-li > ul {
-    display: none;
-    position: absolute;
     top: 11.2rem;
     left: 7.2rem;
 }
 
-.color-li:hover > ul {
-    display: block;
-}
-
-
 .type-li > ul {
-    display: none;
-    position: absolute;
     top: 16.8rem;
     left: 7.2rem;
 }
 
-.type-li:hover > ul {
+.type-li:hover > ul,
+.color-li:hover > ul,
+.animate-li:hover > ul,
+.photoshop-li:hover > ul,
+.portfolio-li:hover > ul {
     display: block;
 }
 /* END NAVIGATION BAR */
