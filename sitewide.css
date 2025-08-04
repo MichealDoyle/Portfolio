@@ -1,11 +1,5 @@
 /* START BASIC CONTENT */
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
 body {
     font-family: basic-sans ,helvetica-lt-pro, sans-serif;
     font-size: 16px;
@@ -14,16 +8,17 @@ body {
     color: #f5f5f5;
 }
 
-main {
-    max-width: 60%;
-    margin: 0 auto;
-    flex: 1;
-}
-
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+
+main {
+    max-width: 80%;
+    margin-left: 21rem;
+    flex: 1;
 }
 
 h1 {
@@ -33,7 +28,7 @@ h1 {
 
 
 h2, h3, h4, h5, h6 {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 a {
@@ -44,17 +39,23 @@ a:visited {
     color: #ffffff;
 }
 
-h1 a:active {
+a:active {
     color: #f5a749;
+    text-decoration: underline;
+    text-decoration-color: #f5a749;
 }
 
+h1 a:active {
+    text-decoration: none;
+}
 
 a[href^='mailto'] {
     color: #ffffff;
 }
 
 a[href^='mailto']:active {
-    color:#f5a749;
+    color: #f5a749;
+    text-decoration: none;
 }
 
 /* END BASIC CONTENT */
