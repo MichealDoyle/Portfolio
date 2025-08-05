@@ -1,0 +1,55 @@
+/* HOME, CONTACT, AND RESUME PAGES*/
+
+/* START OF HOME PAGE */
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 15% 15% 5% 65%;
+    min-height: 80vh;
+}
+
+.home-header,
+.home-sub-header,
+.content-layout section {
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+.home-header {
+    font-size: 3.5rem;
+    grid-row: 2 / 3;
+}
+
+.home-sub-header {
+    grid-row: 3 / 4;
+}
+
+.content-layout section {
+    grid-row: 4 / 5;
+    padding: 3rem 3rem 0;
+}
+
+.welcome-header {
+    font-size: 2rem;
+    text-decoration: wavy underline;
+    text-decoration-color: #f5d249;
+}
+
+.content-layout img {
+    grid-row: 1 / 5;
+    position: relative;
+    top: 5rem;
+    left: 5rem;
+    width: 80%;
+}
+
+/* END OF HOME PAGE */
+
+/* START OF CONTACT PAGE */
+
+/* END OF CONTACT PAGE */
+
+/* START OF RESUME PAGE */
+
+/* END OF RESUME PAGE */

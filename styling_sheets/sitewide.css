@@ -10,7 +10,7 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     min-height: 100vh;
 }
 
@@ -22,13 +22,7 @@ main {
 }
 
 h1 {
-    padding-top: 1rem;
-    margin: 0 1rem 1rem;
-}
-
-
-h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
+    padding-left: 1rem;
 }
 
 a {
@@ -49,6 +43,10 @@ h1 a:active {
     text-decoration: none;
 }
 
+h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 a[href^='mailto'] {
     color: #ffffff;
 }
@@ -65,7 +63,7 @@ a[href^='mailto']:active {
 #nav-bar {
     background: #3866b6;
     position: absolute;
-    top: 5rem;
+    top: 6.3rem;
     margin: 0;
 }
 
