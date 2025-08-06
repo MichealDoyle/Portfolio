@@ -2,10 +2,6 @@
 
 /* START OF HOME PAGE */
 
-h2 {
-    font-size: 2rem;
-}
-
 .home-header,
 .home-sub-header {
     text-align: center;
@@ -43,6 +39,7 @@ h2 {
     padding-top: 0.5rem;
     text-decoration: wavy #f5d249 underline;
     letter-spacing: 2px;
+    font-size: 2rem;
 }
 
 /* END OF HOME PAGE */
