@@ -2,6 +2,12 @@
 
 /* START OF HOME PAGE */
 
+#home-content img {
+    display: block;
+    position: relative;
+    left: 10rem;
+}
+
 .home-header,
 .home-sub-header {
     text-align: center;
@@ -13,11 +19,6 @@
 
 .home-header {
     font-size: 4rem;
-}
-
-#home-page img {
-    position: relative;
-    left: 10rem;
 }
 
 #about-me {
@@ -46,10 +47,58 @@
 
 /* START OF CONTACT PAGE */
 
+#contact-container {
+    min-height: 81.7vh;
+}
+
+#contact-content {
+    width: 36%;
+    margin-top: 5rem;
+}
+
+#contact-content > p {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #fff;
+    color: #3866b6;
+    padding: 0.7rem 0;
+}
+
+.contact-header {
+    text-decoration: wavy #f5d249 underline;
+    font-size: 2.5em;
+    background: #3866b6;
+    border-radius: 50px 50px 0 0;
+}
+
+.contact-header,
+.contact-address {
+    text-align: center;
+}
+
+.contact-address {
+    background: #3866b6;
+    border-radius: 0 0 50px 50px;
+    padding: 2rem 0;
+    font-size: 1.3rem;
+}
+
+.contact-address div {
+    margin-bottom: 1.3rem;
+}
+
+.contact-address div p {
+    display: inline;
+}
+
+.contact-address p > strong {
+    margin-right: 0.5rem;
+}
 
 
 /* END OF CONTACT PAGE */
 
 /* START OF RESUME PAGE */
 
-/* END OF RESUME PAGE */
+/* END OF RESUME PAGE *?
