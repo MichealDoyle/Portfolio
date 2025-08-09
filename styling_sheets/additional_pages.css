@@ -68,7 +68,7 @@
 
 .contact-header {
     text-decoration: wavy #f5d249 underline;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     background: #3866b6;
     border-radius: 25px 25px 0 0;
 }
@@ -82,7 +82,7 @@
     background: #3866b6;
     border-radius: 0 0 25px 25px;
     padding: 1rem 4rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     height: 240px;
 }
 
