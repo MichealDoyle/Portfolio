@@ -88,6 +88,10 @@
     margin-bottom: 1.3rem;
 }
 
+.contact-address div a:hover {
+    font-size: 1.5rem;
+}
+
 .contact-address div p {
     display: inline;
 }
