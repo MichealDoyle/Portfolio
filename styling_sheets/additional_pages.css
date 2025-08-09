@@ -100,7 +100,11 @@
 }
 
 .contact-address div a:hover {
-    text-decoration: underline;
+    text-decoration: #f5d249 underline;
+}
+
+.contact-address div a:active {
+    text-decoration: #f5a749 underline;
 }
 
 .contact-address div p {
