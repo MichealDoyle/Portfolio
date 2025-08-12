@@ -61,7 +61,7 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
-    background: #fff;
+    background: #ddd;
     color: #3866b6;
     padding: 0.7rem;
 }
@@ -114,5 +114,105 @@
 /* END OF CONTACT PAGE */
 
 /* START OF RESUME PAGE */
+
+#resume {
+    background: #3866b6da;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    border-radius: 15px;
+    padding: 3rem 4rem;
+    width: 80%;
+    margin: 2rem auto;
+    font-weight: 300;
+}
+
+.resume-objective {
+    grid-row: 1 / 3;
+}
+
+.resume-left-container {
+    grid-column: 1 / 2;
+    width: 80%;
+    margin: auto;
+}
+
+.resume-right-container {
+    grid-column: 2 / 3;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.resume-right-container p > strong {
+    font-size: 1.2rem;
+    text-decoration: #fff underline;
+}
+
+.resume-name {
+    grid-row: 1 / 2;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contact-info {
+    grid-row: 2 / 3 ;
+    padding: 0 1rem 1rem;
+}
+
+.contact-info span,
+.resume-education span,
+.resume-skills span
+ {
+    display: block;
+    letter-spacing: 0.5px;
+    margin: 0.5rem 0.5rem;
+    align-items: left;
+}
+
+.resume-headers {
+    background: #fff;
+    color: #3866b6;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    text-decoration: #3866b6 underline;
+    text-align: center;
+    padding-top: 0.3rem;
+}
+
+.resume-education {
+    grid-row: 3 / 4;
+}
+
+.resume-skills {
+    grid-row: 4 / 5;
+}
+
+.resume-experience {
+    grid-row: 5 / 6;
+}
+
+.resume-projects {
+    grid-row: 3 / 6;
+}
+
+.resume-reference {
+    grid-row: 6 / 7;
+    text-align: center;
+}
+
+.projects-header {
+    text-align: center;
+    font-size: 1.8rem;
+    text-decoration: #fff underline;
+}
+
+.animation-header,
+.photoshop-header,
+.reference-header {
+    width: 60%;
+    margin: auto;
+}
 
 /* END OF RESUME PAGE *?

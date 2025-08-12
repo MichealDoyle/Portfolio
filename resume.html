@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
     <link href="styling_sheets/normalize.css" rel="stylesheet">
     <link href="styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="styling_sheets/additional_pages.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,23 +75,35 @@
     </ul>
   </nav>
 </header>
-<main>
+<main id="resume-content" class="main-content">
   <article id="resume">
-    <h2>Micheal doyle</h2>
-      <p>St. Charles, MO | mikeydoyle01@yahoo.com | 123-456-7890 |</p>
-    <h3>Objective</h3>
+    <div class="resume-objective resume-right-container">
+    <h2 class="resume-name">Micheal Doyle</h2> 
       <p>I'm a student programmer working towards a goal of transitioning into the front-end web
         development field and eventually into a full stack developer at some point. I'm currently
-        looking for an internship, entry-level position, or commission work to gain hands-on experience.</p>
-    <h3>Education</h3>
-      <p>Fort Zumwalt West High, O'fallon, MO</p>
-      <p>High School Diploma (2015)
-    <h3>Skills</h3>
-      <p>Adobe Animation Beginner</p>
-      <p>Adobe Photoshop Beginner</p>
-      <p>HTML</p>
-      <p>Customer Service</p>
-    <h3>Experience</h3>
+        looking for an internship, entry-level position, or commission work to gain hands-on experience.
+      </p>
+    </div>
+      <div class="contact-info resume-left-container">
+        <h3 class="resume-contact resume-headers">Contact Information:</h3>
+        <span>&#x2022; St. Charles, MO </span>
+        <span>&#x2022; mikeydoyle01@yahoo.com </span> 
+        <span>&#x2022; 123-456-7890 </span>
+      </div>
+    <div class="resume-education resume-left-container">
+    <h3 class="education-header resume-headers">Education</h3>
+      <span>&#x2022;  Fort Zumwalt West High, O'fallon, MO</span>
+      <span>&#x2022; High School Diploma (2015)</span>
+    </div>
+    <div class="resume-skills resume-left-container">
+    <h3 class="skills-header resume-headers">Skills</h3>
+      <span>&#x2022; Adobe Animation Beginner</span>
+      <span>&#x2022; Adobe Photoshop Beginner</span>
+      <span>&#x2022; HTML</span>
+      <span>&#x2022; Customer Service</span>
+    </div>
+    <div class="resume-experience resume-left-container">
+    <h3 class="experience-header resume-headers">Experience</h3>
       <p>Amazon Delivery Driver - Rapid Connections, St. Peters, MO</p>
       <p>Sept 2021 - Current</p>
       <p>Responsibilities</p>
@@ -105,37 +119,58 @@
         <li>Top Driver Award(from DSP)</li>
         <li>Over 2.5k positive customer feedback badge</li>
       </ul>
-      <h2>Projects</h2>
-        <h3>Adobe Animation</h3>
+    </div>
+    <div class="resume-projects">
+    <h2 class="projects-header">Projects</h2>
+      <div class="resume-animation">
+      <h3 class="animation-header resume-headers">Adobe Animation</h3>
+        <div class="resume-character resume-right-container">
         <p><strong>Character Animation</strong></p>
           <p>This project required us to create an animation of a character doing a simple task.
             The goal of this project was to create an animation that focused on basic movement,
             timing, and character design.</p>
+        </div>
+        <div class="resume-web-banner resume-right-container">
         <p><strong>Interactive Web Banner</strong></p>
           <p>This project required us to create an interactive web banner that responded
             to user actions. The goal was to practice layouts and designs for web banners,
             while also adding interactivity to them with button symbols.</p>
+        </div>
+        <div class="resume-infographic resume-right-container">
         <p><strong>Animated Infographic</strong></p>
           <p>The aim of this project is the create an animated infographic explaining a simple concept
             or process. The goal of this project is to learn how to use the tools Animate offers along
             with design principles to create a smooth flowing and engaging infographic that displays
             the intended information easily.</p>
-        <h3>Adobe Photoshop</h3>
+        </div>
+      </div>
+      <div class="resume-photoshop">
+      <h3 class="photoshop-header resume-headers">Adobe Photoshop</h3>
+        <div class="resume-photo-restore resume-right-container">
         <p><strong>Photo Restoration</strong></p>
           <p>The goal of this project was to repair the damage done to an older photo, as well as to enhance
             the overall quality of the photo and the faces of those in it while retaining its original
             details. The damages needing repaired included tears, scratches, and creases.</p>
+        </div>
+        <div class="resume-magazine resume-right-container">
         <p><strong>Digital Magazine Cover</strong></p>
           <p>This project required us to make a quality digital magazine cover of a fictional or
             non-fictional individual from scratch. The goal was to gain more experience and become 
             more comfortable working with the tools in photoshop while applying elements of design
             such as the layout, visual composition, and typography.</p>
+        </div>
+        <div class="resume-branding resume-right-container">
         <p><strong>Branding Package for Start-up</strong></p>
           <p>This project consisted of designing a branding package for a fictional startup, complete with a logo,
             business card, and social media banner. The overall goal of the project was to create brand identity
             that was consistent, clean, and visually appealing, displayed through multiple ways of marketing.</p>
-    <h2>References</h2>
-      <p>Available upon request</p>         
+        </div>
+      </div>
+    </div>
+    <div class="resume-reference resume-right-container">
+    <h2 class="reference-header resume-headers">References</h2>
+      <p>Available upon request</p> 
+    </div>        
   </article>
 </main>
 <footer>
@@ -152,5 +187,6 @@
    </a> 
  </address>
 </footer>
+</div>
 </body>
 </html>
