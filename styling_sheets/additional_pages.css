@@ -140,8 +140,8 @@
 .resume-right-container {
     grid-column: 2 / 3;
     width: 80%;
-    margin: 0 auto;
-    padding: 1rem 2rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
 }
 
 .resume-right-container p > strong {
@@ -163,12 +163,10 @@
 
 .contact-info span,
 .resume-education span,
-.resume-skills span
- {
+.resume-skills span {
     display: block;
     letter-spacing: 0.5px;
     margin: 0.5rem 0.5rem;
-    align-items: left;
 }
 
 .resume-headers {
