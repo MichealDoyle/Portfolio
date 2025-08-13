@@ -46,16 +46,12 @@ a:active {
 }
 
 h1 a:hover {
-    color: #3866b6;
+    color: #284983;
 }
 
 h1 a:active {
     color: #f5a749;
     text-decoration: none;
-}
-
-h2, h3, h4, h5, h6 {
-    padding-bottom: 0.5rem;
 }
 
 p {
@@ -76,7 +72,7 @@ a[href^='mailto']:active {
 /* START NAVIGATION BAR */
 
 #nav-bar {
-    background: #3866b6;
+    background: #284983;
     position: absolute;
     top: 5rem;
     margin: 0 -0.5rem;
@@ -101,15 +97,15 @@ a[href^='mailto']:active {
 
 
 #nav-bar a:active {
-    color: #3866b6;
+    color: #284983;
     text-decoration: underline;
-    text-decoration-color: #3866b6;
+    text-decoration-color: #284983;
 }
 
 .nav-list-item > ul {
     display: none; 
     position: absolute;
-    background: #3866b6;
+    background: #284983;
     font-size: 0.9rem;
 }
 
@@ -153,7 +149,7 @@ a[href^='mailto']:active {
 /* START FOOTER SECTION */
 
 footer {
-    background: #3866b6;
+    background: #284983;
     width: 100%;
 }
 

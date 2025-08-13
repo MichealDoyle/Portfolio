@@ -1,0 +1,88 @@
+#projects-content {
+    min-width: 100%;
+    margin: 2rem auto;
+}
+
+a {
+    color: white;
+}
+
+.photoshop-photo,
+.animation-photo {
+    height: 300px;
+    width: 300px;
+    margin: 1.5rem 0;
+    border-radius: 20px;
+}
+
+.photoshop-content,
+.animation-content {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-auto-rows: auto;
+    background: #284983;
+    margin-bottom: 1rem;
+}
+
+.photoshop-header {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 1.8rem;
+    text-decoration: wavy #f5d249 underline;
+}
+
+.photoshop-article,
+.animation-article {
+    grid-row: 2 / 3;
+    text-align: center;
+    margin: 1.5rem;
+    border: 2px white solid;
+    border-radius: 10px;
+}
+
+.photoshop-article:hover,
+.animation-article:hover {
+    border: 4px white solid;
+    border-radius: 10px;
+}
+
+.photoshop-article:active,
+.animation-article:active {
+    border: 4px #d68228 solid;
+    border-radius: 10px;
+}
+
+.article-header {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 0 auto 1rem;
+    background: #fff;
+    color: #284983;
+    border-radius: 10px;
+}  
+
+#photo-restore-article,
+#character-animate-article
+ {
+    grid-column: 3 / 4;
+}
+
+#digital-magazine-article,
+#web-banner-article {
+    grid-column: 4 / 5;
+}
+
+#branding-package-article,
+#infographic-article {
+    grid-column: 5 / 6;
+}
+
+.animation-header {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 1.8rem;
+    text-decoration: wavy #f5d249 underline;
+}

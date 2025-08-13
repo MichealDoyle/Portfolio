@@ -26,7 +26,7 @@
     position: relative;
     bottom: 10rem;
     left: 45rem;
-    background: #3866b6;
+    background: #284983;
     width: 40%;
     border-radius: 25px;
 }
@@ -62,14 +62,14 @@
     letter-spacing: 1px;
     text-align: center;
     background: #ddd;
-    color: #3866b6;
+    color: #284983;
     padding: 0.7rem;
 }
 
 .contact-header {
     text-decoration: wavy #f5d249 underline;
     font-size: 2.5rem;
-    background: #3866b6;
+    background: #284983;
     border-radius: 25px 25px 0 0;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .contact-address {
-    background: #3866b6;
+    background: #284983;
     border-radius: 0 0 25px 25px;
     padding: 1rem 4rem;
     font-size: 1.2rem;
@@ -116,10 +116,11 @@
 /* START OF RESUME PAGE */
 
 #resume {
-    background: #3866b6da;
+    background: #284983;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
+    border: 12px solid whitesmoke;
     border-radius: 15px;
     padding: 3rem 4rem;
     width: 80%;
@@ -171,10 +172,10 @@
 
 .resume-headers {
     background: #fff;
-    color: #3866b6;
+    color: #284983;
     border-radius: 15px;
     font-size: 1.3rem;
-    text-decoration: #3866b6 underline;
+    text-decoration: #284983 underline;
     text-align: center;
     padding-top: 0.3rem;
 }
