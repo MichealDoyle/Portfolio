@@ -22,6 +22,8 @@ a {
     grid-auto-rows: auto;
     background: #284983;
     margin-bottom: 1rem;
+    border-top: 2px white solid;
+    border-bottom: 2px white solid;
 }
 
 .photoshop-header {
@@ -51,6 +53,11 @@ a {
 .animation-article:active {
     border: 4px #d68228 solid;
     border-radius: 10px;
+}
+
+.photoshop-article a:active,
+.animation-article a:active {
+    text-decoration: none;
 }
 
 .article-header {
