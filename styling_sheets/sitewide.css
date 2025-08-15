@@ -72,7 +72,6 @@ a[href^='mailto']:active {
 /* START NAVIGATION BAR */
 
 #nav-bar {
-    background: #284983;
     position: absolute;
     top: 5rem;
     margin: 0 -0.5rem;
@@ -83,6 +82,7 @@ a[href^='mailto']:active {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 #nav-bar a {
@@ -97,7 +97,6 @@ a[href^='mailto']:active {
 
 
 #nav-bar a:active {
-    color: #284983;
     text-decoration: underline;
     text-decoration-color: #284983;
 }
@@ -105,15 +104,13 @@ a[href^='mailto']:active {
 .nav-list-item > ul {
     display: none; 
     position: absolute;
-    background: #284983;
-    font-size: 0.9rem;
 }
 
 #photoshop-li > ul,
 #animate-li > ul, 
 #color-li > ul,
 #type-li > ul {
-    left: 6.6rem;
+    left: 8.2rem;
 }
 
 .nav-list-item {
@@ -121,8 +118,8 @@ a[href^='mailto']:active {
 }
 
 #portfolio-li > ul {
-    top: 3.8rem;
-    left: 5.9rem;
+    top: 4.2rem;
+    left: 6.6rem;
 }
 
 #photoshop-li > ul {
@@ -130,15 +127,15 @@ a[href^='mailto']:active {
 }
 
 #animate-li > ul {
-    top: 5.25rem;
+    top: 6.3rem;
 }
 
 #color-li > ul {
-    top: 10.45rem;
+    top: 12.6rem;
 }
 
 #type-li > ul {
-    top: 15.7rem;
+    top: 19rem;
 }
 
 .nav-list-item:hover > ul {
