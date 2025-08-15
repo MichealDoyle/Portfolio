@@ -39,8 +39,6 @@ a {
     grid-row: 2 / 3;
     text-align: center;
     margin: 1.5rem;
-    outline: 2px white solid;
-    border-radius: 10px;
 }
 
 .photoshop-article:hover,
