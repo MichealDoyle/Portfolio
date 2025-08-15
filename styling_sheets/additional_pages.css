@@ -15,10 +15,13 @@
     top: 6rem;
     left: 40rem;
     width: 50%;
+    color: #f5a749;
 }
 
 .home-header {
-    font-size: 4rem;
+    font-size: 5rem;
+    font-variant: small-caps;
+    letter-spacing: 2px;
 }
 
 #about-me {
@@ -26,8 +29,8 @@
     position: relative;
     bottom: 10rem;
     left: 45rem;
-    background: #284983;
     width: 40%;
+    border: 3px #f5a749 solid;
     border-radius: 25px;
 }
 
@@ -38,7 +41,7 @@
 
 .welcome-header {
     padding-top: 0.5rem;
-    text-decoration: wavy #f5d249 underline;
+    text-decoration: wavy #f5a749 underline;
     letter-spacing: 2px;
     font-size: 2rem;
 }
@@ -61,16 +64,15 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
-    background: #ddd;
-    color: #284983;
+    color: #f5a749;
     padding: 0.7rem;
+    margin: 1.5rem auto;
 }
 
 .contact-header {
-    text-decoration: wavy #f5d249 underline;
     font-size: 2.5rem;
-    background: #284983;
-    border-radius: 25px 25px 0 0;
+    border-radius: 10px 10px 0 0;
+    outline: 3px #f5a749 solid;
 }
 
 .contact-header,
@@ -79,8 +81,8 @@
 }
 
 .contact-address {
-    background: #284983;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 10px 10px;
+    outline: 3px #f5a749 solid;
     padding: 1rem 4rem;
     font-size: 1.2rem;
     height: 240px;
@@ -111,16 +113,23 @@
     display: inline;
 }
 
+.contact-address p strong {
+    color: #f5a749;
+}
+
+.email-address a[href^='mailto']:active {
+    color: #f5a749;
+}
+
 /* END OF CONTACT PAGE */
 
 /* START OF RESUME PAGE */
 
 #resume {
-    background: #284983;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
-    border: 12px solid whitesmoke;
+    border: 7px solid #f5a749;
     border-radius: 15px;
     padding: 3rem 4rem;
     width: 80%;
@@ -154,6 +163,7 @@
     grid-row: 1 / 2;
     font-size: 3rem;
     font-weight: 400;
+    color: #f5a749;
     text-align: center;
 }
 
@@ -171,13 +181,14 @@
 }
 
 .resume-headers {
-    background: #fff;
-    color: #284983;
-    border-radius: 15px;
+    color: #fff;
     font-size: 1.3rem;
-    text-decoration: #284983 underline;
+    text-decoration: #fff underline;
     text-align: center;
     padding-top: 0.3rem;
+    outline: 2px #f5a749 solid;
+    color: #fff;
+    border-radius: 10px;
 }
 
 .resume-education {
@@ -203,8 +214,12 @@
 
 .projects-header {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-decoration: #fff underline;
+    color: #f5a749;
+    border-radius: 10px;
+    margin: 0 auto 2rem;
+    width: 60%;
 }
 
 .animation-header,

@@ -15,23 +15,28 @@ a {
     border-radius: 20px;
 }
 
+.photoshop-content {
+    border-bottom: 5px #f5a749 solid;
+}
+
 .photoshop-content,
 .animation-content {
     display: grid;
     grid-template-columns: repeat(7, auto);
     grid-auto-rows: auto;
-    background: #284983;
     margin-bottom: 1rem;
-    border-top: 2px #fff solid;
-    border-bottom: 2px #fff solid;
 }
 
-.photoshop-header {
+.photoshop-header,
+.animation-header {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
     text-align: center;
     font-size: 1.8rem;
-    text-decoration: wavy #f5d249 underline;
+    text-decoration: #f5a749 underline;
+    margin-top: 2rem;
+    font-variant: small-caps;
+    letter-spacing: 1px;
 }
 
 .photoshop-article,
@@ -49,7 +54,7 @@ a {
 
 .photoshop-article:active,
 .animation-article:active {
-    outline: 5px #d68228 solid;
+    outline: 5px #f5a749 solid;
     border-radius: 10px;
 }
 
@@ -63,8 +68,7 @@ a {
     letter-spacing: 1px;
     width: 80%;
     margin: 0 auto 1rem;
-    background: #fff;
-    color: #284983;
+    color: #fff;
     border-radius: 10px;
 }  
 
@@ -82,12 +86,4 @@ a {
 #branding-package-article,
 #infographic-article {
     grid-column: 5 / 6;
-}
-
-.animation-header {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-    text-align: center;
-    font-size: 1.8rem;
-    text-decoration: wavy #f5d249 underline;
 }

@@ -9,7 +9,7 @@ body {
     font-family: basic-sans, helvetica-lt-pro, sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    background: #5e6675;
+    background: #2f333a;
     color: #f5f5f5;
 }
 
@@ -46,11 +46,11 @@ a:active {
 }
 
 h1 a:hover {
-    color: #284983;
+    color: #f5a749;
 }
 
 h1 a:active {
-    color: #f5a749;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -63,7 +63,7 @@ a[href^='mailto'] {
 }
 
 a[href^='mailto']:active {
-    color: #f5a749;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -113,7 +113,7 @@ a[href^='mailto']:active {
     font-size: 0.9rem;
 }
 
-.nav-list-item ul li {
+.nav-list-item ul li { 
     font-size: 0.9rem;
 }
 
@@ -147,7 +147,7 @@ a[href^='mailto']:active {
 /* START FOOTER SECTION */
 
 footer {
-    background: #284983;
+    background: #f5a749;
     width: 100%;
 }
 
