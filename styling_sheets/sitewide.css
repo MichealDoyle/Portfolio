@@ -105,6 +105,7 @@ a[href^='mailto']:active {
     text-align: center;
 }
 
+#portfolio-li > ul,
 .nav-list-item > ul {
     display: none; 
     position: absolute;
@@ -123,7 +124,6 @@ a[href^='mailto']:active {
 
 #portfolio-li > ul {
     top: 4.2rem;
-    left: 6.6rem;
 }
 
 #photoshop-li > ul {
