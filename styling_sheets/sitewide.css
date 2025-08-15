@@ -99,22 +99,26 @@ a[href^='mailto']:active {
 #nav-bar a:active {
     text-decoration: underline;
     text-decoration-color: #284983;
+    color: #284983;
+}
+.nav-list-item {
+    text-align: center;
 }
 
 .nav-list-item > ul {
     display: none; 
     position: absolute;
+    left: 6.6rem;
+    font-size: 0.9rem;
 }
 
-#photoshop-li > ul,
-#animate-li > ul, 
-#color-li > ul,
-#type-li > ul {
-    left: 8.2rem;
+.nav-list-item ul li {
+    font-size: 0.9rem;
 }
 
-.nav-list-item {
-    text-align: center;
+#portfolio-li:hover > ul,
+.nav-list-item:hover > ul {
+    display: block;
 }
 
 #portfolio-li > ul {
@@ -127,20 +131,17 @@ a[href^='mailto']:active {
 }
 
 #animate-li > ul {
-    top: 6.3rem;
+    top: 5.25rem;
 }
 
 #color-li > ul {
-    top: 12.6rem;
+    top: 10.5rem;
 }
 
 #type-li > ul {
-    top: 19rem;
+    top: 15.75rem;
 }
 
-.nav-list-item:hover > ul {
-    display: block;
-}
 /* END NAVIGATION BAR */
 
 /* START FOOTER SECTION */
