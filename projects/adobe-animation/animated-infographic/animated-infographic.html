@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/showcase.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -72,15 +74,20 @@
     </ul>
     </nav>
 </header>
-<main>
-  <article id="infograph">
-    <h2>Animated Infographic</h2>
+<main id="infograph-content" class="main-content">
+  <article id="infograph" class="course-projects">
+    <div class="project-header">
+    <h2 class="infograph-header">Animated Infographic</h2>
       <p>The aim of this project is the create an animated infographic explaining a simple concept
         or process. The goal of this project is to learn how to use the tools Animate offers along
         with design principles to create a smooth flowing and engaging infographic that displays
-        the intended information easily.</p>
+        the intended information easily.
+      </p>
+    </div>
+    <div class="project-photos">
     <img src="images/animated-infographic.png" alt="infographic showing how to make grilled cheese">
-  <section id="infograph-tools">
+    </div>
+  <section id="infograph-tools" class="project-tools">
     <h3>Tools Used</h3>
       <ul>
         <li>Text Tool</li>
@@ -91,7 +98,7 @@
         <li>Symbols</li>
       </ul>
   </section>
-  <section id="infograph-skills">
+  <section id="infograph-skills" class="project-skills">
     <h3>Skills Displayed</h3>
       <ul>
         <li>Editing With Tweens</li>
@@ -101,13 +108,14 @@
         <li>Typography</li>
       </ul>
   </section>
-  <section id="infograph-reflection">
+  <section id="infograph-reflection" class="project-reflection">
     <h3>Reflections</h3>
       <p>The outcome of this project is a fun and interactive infographic about how to make a grilled
         cheese sandwich. This project taught me how to use transitions and tweens to switch "slides",
         how to to use shape tweens to make lines appear as if theyre growing or shrinking, and how to
         use transitions and tweens to hide and reveal information to make the content more engaging to
-        follow along with.</p>
+        follow along with.
+      </p>
   </section>
   </article>
 </main>
@@ -125,5 +133,6 @@
    </a> 
  </address>
 </footer>
+</div>
 </body>
 </html>

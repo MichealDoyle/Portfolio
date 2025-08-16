@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/showcase.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,18 +75,25 @@
     </ul>
   </nav>
 </header>
-<main>
-  <article id="restoration">
-  <h2>Photo Restoration of Damaged Photo</h2>
-    <p>The goal of this project was to repair the damage done to an older photo, as well as to enhance
+<main id="restoration-content" class="main-content">
+  <article id="restoration" class="course-projects">
+  <div class="project-header">
+  <h2 class="restoration-header">Photo Restoration of Damaged Photo</h2>
+    <p class="project-goal">The goal of this project was to repair the damage done to an older photo, as well as to enhance
       the overall quality of the photo and the faces of those in it while retaining its original
-      details. The damages needing repaired included tears, scratches, and creases.</p>
-  <img src="images/teacher-and-children.png" alt="Old damaged photo of children with teachers">
+      details. The damages needing repaired included tears, scratches, and creases.
+    </p>
+  </div>
+  <div id="restore-photos" class="project-photos">
+  <img src="images/teacher-and-children.png" alt="Old damaged photo of children with teachers"
+  class="restore-photo-before">
     <p><strong>Before</strong></p>
-  <img src="images/photo-restoration.png" alt="Restored photo of children with teachers">
+  <img src="images/photo-restoration.png" alt="Restored photo of children with teachers"
+  class="restore-photo-after">
     <p><strong>After</strong></p>
-  <section id="restore-tools">
-    <h3>Tools Used</h3>
+  </div>
+  <section id="restore-tools" class="project-tools">
+    <h3 class="tools-header">Tools Used</h3>
       <ul>
         <li>Spot healing</li>
         <li>Neural filters</li>
@@ -93,8 +102,8 @@
         <li>Smart filters</li>
       </ul>
   </section>
-  <section id="restore-skills">
-    <h3>Skills Displayed</h3>
+  <section id="restore-skills" class="project-skills">
+    <h3 class="skills-header">Skills Displayed</h3>
       <ul>
         <li>Photo enhancement</li>
         <li>photo reconstruction</li>
@@ -103,11 +112,11 @@
         <li>Tear, scratch, and crease removal</li>
       </ul>
   </section>
-  <section id="restore-reflection">
-    <h3>Reflection</h3>
+  <section id="restore-reflection" class="project-reflection">
+    <h3 class="reflection-header">Reflection</h3>
       <p>This project helped me understand how to use non-destructive editing to restore a badly
         damaged photo while keeping most of the original details. It also helped me get a better
-        uderstanding of using neural filters while maintaining the time period aesthetic.</p>
+        understanding of using neural filters while maintaining the time period aesthetic.</p>
   </section>
   </article>    
 </main>
@@ -125,5 +134,6 @@
    </a> 
  </address>
 </footer>
+</div>
 </body>
 </html>

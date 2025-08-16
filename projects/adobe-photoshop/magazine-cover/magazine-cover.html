@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/showcase.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -30,7 +32,7 @@
               </li>
             </ul>
           </li>
-          <li id="antimate-li" class="nav-list-item"><a href="../../projects.html#animation">
+          <li id="animate-li" class="nav-list-item"><a href="../../projects.html#animation">
               Adobe Animation</a>
                 <ul>
                   <li><a href="../../adobe-animation/character-animation/character-animation.html">
@@ -73,15 +75,20 @@
     </ul>
   </nav>
 </header>
-<main>
-  <article id="magazine">
-    <h2>Digital Magazine Cover</h2>
+<main id="magazine-content" class="main-content">
+  <article id="magazine" class="course-projects">
+    <div class="project-header">
+    <h2 class="mag-cover-header">Digital Magazine Cover</h2>
       <p>This project required us to make a quality digital magazine cover of a fictional or
          non-fictional individual from scratch. The goal was to gain more experience and become 
          more comfortable working with the tools in photoshop while applying elements of design
-         such as the layout, visual composition, and typography.</p>
+         such as the layout, visual composition, and typography.
+        </p>
+    </div>
+    <div class="project-photos">
     <img src="images/runescape-fishing-magazine.png" alt="Digital fishing gaming magazine cover">
-    <section id="magazine-tools">
+    </div>
+    <section id="magazine-tools" class="project-tools">
       <h3>Tools Used</h3>
         <ul>
           <li>Healing Brush</li>
@@ -91,7 +98,7 @@
           <li>Layer Effects</li>
         </ul>
     </section>
-    <section id="magazine-skills">
+    <section id="magazine-skills" class="project-skills">
       <h3>Skills Displayed</h3>
         <ul>
           <li>Typography</li>
@@ -101,7 +108,7 @@
           <li>Creativity</li>
         </ul>    
     </section>
-    <section id="magazine-reflection">
+    <section id="magazine-reflection" class="project-reflection">
       <h3>Reflection</h3>
       <p>The outcome of the project is vibrant, organized, and spacious design that very clearly
          displays the theme to the best of its ability. The choice of font along with the color 
@@ -120,9 +127,10 @@
     <img src="/Portfolio/images/facebook-icon.png" alt="Facebook.com">
    </a>
    <a href="https://www.linkedin.com/">
-    <img src="/Portfolio/images/linkedin-icon.png" alt="Linkin.com">
+    <img src="/Portfolio/images/linkedin-icon.png" alt="Linkedin.com">
    </a> 
  </address>
 </footer>
+</div>
 </body>
 </html>

@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/showcase.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,16 +75,21 @@
     </ul>
   </nav>
 </header>
-<main>
-  <article id="brand">
-    <h2>Branding Package for Fictional Start-up</h2>
+<main id="branding=content" class="main-content">
+  <article id="brand" class="course-projects">
+    <div class="project-header">
+    <h2 class="branding-header">Branding Package for Fictional Start-up</h2>
       <p>This project consisted of designing a branding package for a fictional startup, complete with a logo,
         business card, and social media banner. The overall goal of the project was to create brand identity
-        that was consistent, clean, and visually appealing, displayed through multiple ways of marketing.</p>
+        that was consistent, clean, and visually appealing, displayed through multiple ways of marketing.
+      </p>
+    </div>
+    <div class="project-photos">
     <img src="images/logo.png" alt="Planet eight ball billiards lounge logo">
     <img src="images/business-card.png" alt="Planet eight ball billiards lounge business card">
-    <img src="images/social-media-banner-2-alternative.png" alt="Planet eight ball billiards lounge social media banner"> 
-  <section id="brand-tools">
+    <img src="images/social-media-banner-2-alternative.png" alt="Planet eight ball billiards lounge social media banner">
+    </div> 
+  <section id="brand-tools" class="project-tools">
     <h3>Tools Used</h3>
       <ul>
         <li>Shape tools</li>
@@ -93,7 +100,7 @@
         <li>Layer styles</li>
       </ul>
   </section>
-  <section id="brand-skills">
+  <section id="brand-skills" class="project-skills">
     <h3>Skills Displayed</h3>
       <ul>
         <li>Logo design</li>
@@ -103,7 +110,7 @@
         <li>Typography</li>
       </ul>
   </section> 
-  <section id="brand-reflection">
+  <section id="brand-reflection" class="project-reflection">
     <h3>Reflection</h3>
       <p>The final outcome of the project is a very simple, smooth, and visually pleasing branding package that
         displays the theme of the fictional company through multiple forms of marketing techniques. The simple
@@ -128,5 +135,6 @@
    </a> 
  </address>
 </footer>
+</div>
 </body>
 </html>

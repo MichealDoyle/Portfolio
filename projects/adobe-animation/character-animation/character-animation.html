@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/showcase.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -72,15 +74,19 @@
     </ul>
     </nav>
 </header>
-<main>
-  <article id="animate">
-    <h2>Character Animation</h2>
+<main id="animate-content" class="main-content">
+  <article id="animate" class="course-projects">
+    <div class="project-header">
+    <h2 class="animate-header">Character Animation</h2>
       <p>This project required us to create an animation of a character doing a simple task.
         The goal of this project was to create an animation that focused on basic movement,
         timing, and character design.
       </p>
+    </div>
+  <div class="project-photos">
     <img src="images/character-animation.png" alt="Animated character walking down road">
-  <section id="animate-tools">
+  </div>
+  <section id="animate-tools" class="project-tools">
     <h3>Tools Used</h3>
       <ul>
         <li>Fluid Brush Tool</li>
@@ -89,16 +95,16 @@
         <li>Symbols</li>
       </ul>
   </section>
-  <section id="animate-skills">
+  <section id="animate-skills" class="project-skills">
     <h3>Skills Displayed</h3>
       <ul>
-        <li>Chacter Design</li>
+        <li>Character Design</li>
         <li>Timing</li>
         <li>Character Movement</li>
         <li>Editing With Tweens</li>
       </ul>
   </section>
-  <section id="animate-refelction">
+  <section id="animate-refelction" class="project-reflection">
     <h3>Reflection</h3>
       <p>The outcome of this project is a very simple and silly character walking down a path
         to say hello to you at the end of the road. This project helped me learn how to take a
@@ -121,5 +127,6 @@
    </a> 
  </address>
 </footer>
+</div>
 </body>
 </html>

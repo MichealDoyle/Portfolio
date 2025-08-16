@@ -4,8 +4,9 @@
 
 #home-content img {
     display: block;
-    position: relative;
-    left: 10rem;
+    position: absolute;
+    left: 20rem;
+    top: 8rem;
 }
 
 .home-header,
@@ -27,11 +28,11 @@
 #about-me {
     text-align: center;
     position: relative;
-    bottom: 10rem;
     left: 45rem;
+    top: 10rem;
     width: 40%;
-    border: 3px #f5a749 solid;
-    border-radius: 25px;
+    outline: 3px #f5a749 solid;
+    border-radius: 10px;
 }
 
 #about-me p {
