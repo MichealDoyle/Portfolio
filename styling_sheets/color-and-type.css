@@ -1,0 +1,264 @@
+/* START OF TYPOGRAPHY DEFINITIONS PAGE*/
+
+/* START OF TOP PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+
+#type-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 30%) repeat(2, 20%);
+    grid-template-rows: auto;
+    font-family: galix-mono, sans-serif;
+    font-weight: 400;
+}
+
+ .type-header {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #f5a749;
+    margin: 1rem auto 3rem;
+    padding-right: 8rem;
+ }
+
+ .type-subnav {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    list-style: none;
+    width: 50%;
+    padding: 1rem 0;
+ }
+
+  .type-subnav ul {
+    list-style: none;
+    padding: 0;
+ }
+
+ .type-subnav li {
+    margin: 0.5rem auto;
+ }
+
+ .type-subnav li a:hover {
+    color: #f5a749;
+    font-size: 1.2rem;
+ }
+
+ .type-subnav li a:active {
+    color: #4799d4;
+    text-decoration: 2px #4799d4 underline;
+ }
+
+ .type-subnav:hover {
+    box-shadow: 0 0 .5rem .25rem #f5a749;
+ }
+
+.type-subnav:active {
+    outline: 2px #4799d4 solid;
+    border-radius: 10px;
+    box-shadow: 0 0 .75rem .25rem #4799d4;
+}
+
+.type-subnav:active h3 {
+    border-bottom: 3px #4799d4 solid;
+}
+
+ .type-subnav,
+ .overview-desc {
+    text-align: center;
+    outline: 2px #f5a749 solid;
+    border-radius: 10px;
+    margin: 0 auto;
+ }
+
+.overview-desc {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    width: 80%; 
+    padding: 1rem 2rem 2rem;
+ }
+
+ .overview-desc:hover {
+    outline: 2px #f5a749 solid;
+    border-radius: 10px;
+    box-shadow: 0 0 .75rem .25rem #f5a749;
+ }
+
+ .overview-desc:hover .overview-header {
+    border-bottom: 3px #f5a749 solid;
+ }
+
+ .overview-desc p {
+    text-align: left;
+    margin-top: 1rem;
+ }
+
+ .articles-header,
+ .overview-header {
+    border-bottom: 3px #f5a749 solid;
+    margin: auto;
+    font-size: 1.8rem;
+    font-variant: small-caps;
+    letter-spacing: 1.5px;
+}
+
+.articles-header {
+    width: 50%;
+}
+
+.overview-header {
+    width: 25%;
+}
+
+/* END OF TOP PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+
+/* START OF BOTTOM PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+
+#type-terms {
+    margin: 3rem auto;
+}
+
+.terms-list {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-auto-rows: auto;
+    padding: 1rem;
+    row-gap: 1rem;
+    outline: 2px #f5a749 solid;
+}
+
+.terms-list dt {
+    font-family: galix-mono, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    outline: 2px #f5a749 solid;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.terms-list dd {
+    margin: auto 1rem;
+    font-family: galix-mono, sans-serif;
+    font-weight: 400;
+}
+
+/* END OF BOTTOM PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+
+/* END OF TYPOGRAPHY DEFINITIONS PAGE*/
+
+/* START OF FONT TYPES ARTICLE PAGE */
+
+/* START OF TOP PORTION OF TYPES ARTICLE PAGE */
+
+#font-type-article {
+    width: 90%;
+    margin: 3rem auto;
+    outline: 3px #f5a749 solid;
+    border-radius: 5px;
+}
+
+.font-article-head {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem 3rem 2rem;
+    border-bottom: 2px #f5a749 solid;
+}
+
+.font-article-head span {
+    margin: 1rem 0;
+    flex: 1;
+}
+
+.font-article-header {
+    color: #f5a749;
+    font-size: 1.8rem;
+    flex: 2;
+    border-bottom: 3px #fff solid;
+}
+
+.font-article-list {
+    flex: 3;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.font-article-list dt {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color:#f5a749;
+}
+
+.font-article-list dd {
+    font-family: galix-mono, sans-serif;
+    font-weight: 400;
+    margin: .5rem 0 .5rem 1rem;
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+    padding: .75rem;
+}
+
+.font-article-list dd:hover {
+    outline: 2px #4799d4 solid;
+    box-shadow: 0 0 1rem 0 #4799d4;
+}
+
+/* END OF TOP PORTION OF TYPES ARTICLE PAGE */
+
+/* START OF BOTTOM PORTION OF TYPES ARTICLE PAGE */
+
+.font-article-body {
+    padding: 0 3rem 3rem;
+}
+
+.font-body-span {
+    display: block;
+    margin: 2rem auto;
+}
+
+.type-font-list {
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+    margin: auto;
+    padding: 2rem;
+    list-style: none;
+}
+
+.type-font-list strong {
+    font-size: 1.1rem;
+    color: #f5a749;
+}
+
+.type-font-list li {
+    outline: 2px #f5a749 solid;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.type-font-list li:hover {
+    outline: 2px #4799d4 solid;
+    box-shadow: 0 0 1rem 0 #4799d4;
+}
+
+.type-font-list li:hover strong {
+    color: #4799d4;
+}
+
+.type-font-sublist li {
+    outline: none;
+    padding: .5rem;
+    margin: 0;
+}
+
+.type-font-sublist li:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+/* END OF BOTTOM PORTION OF TYPES ARTICLE PAGE */
+
+/* END OF FONT TYPES ARTICLE PAGE */
+
+/**/
+/**/
+
+/**/
+/**/

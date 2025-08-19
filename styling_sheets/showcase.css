@@ -50,14 +50,16 @@ a {
 
 .photoshop-article:hover,
 .animation-article:hover {
-    outline: 5px white solid;
+    outline: 5px #f5a749 solid;
     border-radius: 10px;
+    box-shadow: 0 0 1rem .25rem #f5a749;
 }
 
 .photoshop-article:active,
 .animation-article:active {
-    outline: 5px #f5a749 solid;
+    outline: 5px #4799d4 solid;
     border-radius: 10px;
+    box-shadow: 0 0 1rem .25rem #4799d4;
 }
 
 .photoshop-article a:active,

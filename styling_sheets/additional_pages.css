@@ -35,6 +35,14 @@
     border-radius: 10px;
 }
 
+#about-me:hover {
+    outline: 3px #4799d4 solid;
+}
+
+#about-me:hover .welcome-header {
+    border-bottom: 2px #4799d4 solid;
+}
+
 #about-me p {
     width: 80%;
     padding-bottom: 1rem;
@@ -42,9 +50,11 @@
 
 .welcome-header {
     padding-top: 0.5rem;
-    text-decoration: wavy #f5a749 underline;
+    border-bottom: 2px #f5a749 solid;
     letter-spacing: 2px;
     font-size: 2rem;
+    width: 50%;
+    margin: auto;
 }
 
 /* END OF HOME PAGE */

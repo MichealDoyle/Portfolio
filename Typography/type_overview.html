@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/color-and-type.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="../index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,18 +75,19 @@
     </ul>
   </nav>
 </header>
-<main>
-  <article id="typeography">
-    <article id="type_overview">
-      <h2>Typography</h2>
-      <section id="ct_subnav">
-        <h3>Articles</h3>
+<main id="typography-content" class="main-content">
+  <article id="typography">
+    <article id="type-overview">
+      <h2 class="type-header">Typography</h2>
+      <section class="type-subnav">
+        <h3 class="articles-header">Articles</h3>
           <ul>
             <li><a href="/Portfolio/Typography/Font_Types_Article/font_types.html">Font Types Article</a></li>
             <li><a href="/Portfolio/Typography/Typography_Article/typography.html">Typography Article</a></li>
           </ul>
       </section>
-        <h3>Overview</h3>
+      <div class="overview-desc">
+        <h3 class="overview-header">Overview</h3>
           <p>
             Typography is more than just selecting any font for a project; it includes understanding
             the difference between typefaces and fonts, where and how to place the text, and feelings
@@ -93,60 +96,76 @@
             designs and content. Below is a list of key typography terms to help understand the anatomy
             of typography.
           </p>
+      </div>
     </article>
-    <article id="type_terms">
-      <dl>
-        <dt><dfn>Ascender Line</dfn></dt>
+    <article id="type-terms">
+      <dl class="terms-list">
+        <dt><dfn>Ascender Line:</dfn></dt>
           <dd>
             The guideline that marks the uppermost point of an ascender, which is the part of a lowercase letter
             extending above the x-height.
           </dd>
-        <dt><dfn>Cap Height</dfn></dt>
+        <dt><dfn>Cap Height:</dfn></dt>
           <dd>
             The height of an uppercase letter from the  baseline to the top of the letter.
           </dd>
-        <dt><dfn>X-Height</dfn></dt>
+        <dt><dfn>X-Height:</dfn></dt>
           <dd>
             The height of lowercase letter typically measured by lowercase x. This measurement varies across the typefaces
             and significantly affects readability in body text.
           </dd>
-        <dt><dfn>Baseline</dfn></dt>
+        <dt><dfn>Baseline:</dfn></dt>
           <dd>
             The invisible line on which most characters sit, providing consistency in alignment.
           </dd>
-        <dt><dfn>Descender Line</dfn></dt>
+        <dt><dfn>Descender Line:</dfn></dt>
           <dd>
             The guideline indicating the lowest point of a descender, which is the portion of a lowercase letter that extends
             below the baseline.
         </dd>
-        <dt><dfn>Serif</dfn></dt>
+        <dt><dfn>Serif:</dfn></dt>
           <dd>
             Small projections or "feet" at the end of the strokes in certain typefaces. Serif fonts enhance readability in body text.
           </dd>
-        <dt><dfn>Bracket</dfn></dt>
+        <dt><dfn>Bracket:</dfn></dt>
           <dd>
             The curved or angled connection between a serif and the main stroke of a letter. The shape and contrast of the Bracket
             contribute to a typefaces style.
           </dd>
-        <dt><dfn>Terminal</dfn></dt>
+        <dt><dfn>Terminal:</dfn></dt>
           <dd>
             The end of a stroke that does not have a serif. This can be rounded, flat, or angled, depending on the typeface.
           </dd>
-        <dt><dfn>Loop</dfn></dt>
+        <dt><dfn>Loop:</dfn></dt>
           <dd>
             A fully closed or partially closed counter at the bottom of certain lowercase letters.
           </dd>
-        <dt><dfn>Stem</dfn></dt>
+        <dt><dfn>Stem:</dfn></dt>
           <dd>
             The primary vertical or diagonal stroke of a letterform, providing structural support.
           </dd>
-        <dt><dfn>Arm</dfn></dt>
+        <dt><dfn>Arm:</dfn></dt>
           <dd>
             A horizontal or upward-slanting stroke that does not connect to another stroke at one end.
           </dd>
       </dl>
     </article>
   </article>
-</main> 
+</main>
+<footer>
+  <address>
+    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
+    <a href="https://x.com/">
+    <img src="images/twitter-icon.png" alt="Twitter.com">
+    </a>
+    <a href="https://www.facebook.com/">
+    <img src="images/facebook-icon.png" alt="Facebook.com">
+    </a>
+    <a href="https://www.linkedin.com/">
+    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
+    </a> 
+  </address>
+</footer>      
+</div>
 </body>
 </html> 
