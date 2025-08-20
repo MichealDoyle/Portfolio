@@ -281,6 +281,7 @@
 
 .type-article-head p:hover {
     outline: 2px #4799d4 solid;
+    box-shadow: 0 0 1.5rem .5rem #4799d4;
 }
 
 .top-header {
@@ -388,6 +389,7 @@
 
 .conclusion-text:hover {
     outline: 2px #4799d4 solid;
+    box-shadow: 0 0 1.5rem .5rem #4799d4;
 }
 
 
