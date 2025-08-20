@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/color-and-type.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="../index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,26 +75,28 @@
     </ul>
   </nav>
 </header>
-<main>
-<article id="color_theory">
-  <article id="ct_overview">
-    <h2>Color Theory</h2>
-    <section id="ct_subnav">
-      <h3>Articles</h3>
+<main id="color-theory-content" class="main-content">
+<article id="color-theory">
+  <article id="ct-overview">
+    <h2 class="ct-header">Color Theory</h2>
+    <section class="ct-subnav">
+      <h3 class="articles-header">Articles</h3>
       <ul>
         <li><a href="/Portfolio/Color_Theory/Color_Themes/color_themes.html">Color Themes</a></li>
         <li><a href="/Portfolio/Color_Theory/Color_Theory_Article/color_article.html">Color Theory Article</a></li>
       </ul>
     </section>
-      <h3>Overview</h3>
+    <div class="overview-desc">
+      <h3 class="overview-header">Overview</h3>
         <p>
           Color Theory is the understanding of how different colors interact with each other and how they can be used to
           provide contrast, harmony, and even provoke emotions. Below is a list of key color theory terms that help
           give us a better understanding of what principles make up color theory.
         </p>
+    </div>
   </article>
-  <article id="ct_terms">
-    <dl>
+  <article id="ct-terms">
+    <dl class="terms-list">
       <dt><dfn>Color Wheel</dfn></dt>
         <dd>The color wheel is a fundamental tool in color theory, illustrating the relationship between colors.
       </dd>
@@ -179,6 +183,19 @@
 </article>
 </main>
 <footer>
+  <address>
+    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
+    <a href="https://x.com/">
+    <img src="images/twitter-icon.png" alt="Twitter.com">
+    </a>
+    <a href="https://www.facebook.com/">
+    <img src="images/facebook-icon.png" alt="Facebook.com">
+    </a>
+    <a href="https://www.linkedin.com/">
+    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
+    </a> 
+  </address>
 </footer>
+</div>
 </body>
 </html>

@@ -1,10 +1,7 @@
-/* START OF TYPOGRAPHY SECTION */
+/* START OF TOP PORTION DEFINITIONS PAGEs */
 
-/* START OF TYPOGRAPHY DEFINITIONS PAGE*/
-
-/* START OF TOP PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
-
-#type-overview {
+#type-overview,
+#ct-overview {
     display: grid;
     grid-template-columns: repeat(2, 30%) repeat(2, 20%);
     grid-template-rows: auto;
@@ -12,7 +9,8 @@
     font-weight: 400;
 }
 
- .type-header {
+ .type-header,
+ .ct-header {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     font-size: 3rem;
@@ -23,7 +21,8 @@
     padding-right: 8rem;
  }
 
- .type-subnav {
+ .type-subnav,
+ .ct-subnav {
     grid-column: 3 / 5;
     grid-row: 2 / 3;
     list-style: none;
@@ -31,40 +30,48 @@
     padding: 1rem 0;
  }
 
-  .type-subnav ul {
+  .type-subnav ul,
+  .ct-subnav ul {
     list-style: none;
     padding: 0;
  }
 
- .type-subnav li {
+ .type-subnav li,
+ .ct-subnav li {
     margin: 0.5rem auto;
  }
 
- .type-subnav li a:hover {
+ .type-subnav li a:hover,
+ .ct-subnav li a:hover {
     color: #f5a749;
     font-size: 1.2rem;
  }
 
- .type-subnav li a:active {
+ .type-subnav li a:active,
+ .ct-subnav li a:active {
     color: #4799d4;
     text-decoration: 2px #4799d4 underline;
  }
 
- .type-subnav:hover {
+ .type-subnav:hover,
+ .ct-subnav:hover {
     box-shadow: 0 0 .5rem .25rem #f5a749;
  }
 
-.type-subnav:active {
+.type-subnav:active,
+.ct-subnav:active {
     outline: 2px #4799d4 solid;
     border-radius: 10px;
     box-shadow: 0 0 .75rem .25rem #4799d4;
 }
 
-.type-subnav:active h3 {
+.type-subnav:active h3,
+.ct-subnav:active h3 {
     border-bottom: 3px #4799d4 solid;
 }
 
  .type-subnav,
+ .ct-subnav,
  .overview-desc {
     text-align: center;
     outline: 2px #f5a749 solid;
@@ -83,10 +90,6 @@
     outline: 2px #f5a749 solid;
     border-radius: 10px;
     box-shadow: 0 0 .75rem .25rem #f5a749;
- }
-
- .overview-desc:hover .overview-header {
-    border-bottom: 3px #f5a749 solid;
  }
 
  .overview-desc p {
@@ -111,11 +114,12 @@
     width: 25%;
 }
 
-/* END OF TOP PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+/* END OF TOP PORTION OF DEFINITIONS PAGE */
 
-/* START OF BOTTOM PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+/* START OF BOTTOM PORTION DEFINITIONS PAGE */
 
-#type-terms {
+#type-terms,
+#ct-terms {
     margin: 3rem auto;
 }
 
@@ -132,20 +136,20 @@
     font-family: galix-mono, sans-serif;
     font-weight: 600;
     text-align: center;
-    outline: 2px #f5a749 solid;
+    border: 2px #f5a749 solid;
     font-size: 1.1rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .terms-list dd {
-    margin: auto 1rem;
+    padding: 1rem;
     font-family: galix-mono, sans-serif;
-    font-weight: 400;
+    border: 2px #f5a749 solid;
 }
 
-/* END OF BOTTOM PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
+/* END OF BOTTOM PORTION OF DEFINITIONS PAGE */
 
-/* END OF TYPOGRAPHY DEFINITIONS PAGE*/
+/* END OF DEFINITIONS PAGE*/
 
 /* START OF FONT TYPES ARTICLE PAGE */
 
