@@ -1,3 +1,5 @@
+/* START OF TYPOGRAPHY SECTION */
+
 /* START OF TYPOGRAPHY DEFINITIONS PAGE*/
 
 /* START OF TOP PORTION OF TYPOGRAPHY DEFINITIONS PAGE */
@@ -147,7 +149,7 @@
 
 /* START OF FONT TYPES ARTICLE PAGE */
 
-/* START OF TOP PORTION OF TYPES ARTICLE PAGE */
+/* START OF TOP PORTION OF FONT TYPES ARTICLE PAGE */
 
 #font-type-article {
     width: 90%;
@@ -201,9 +203,9 @@
     box-shadow: 0 0 1rem 0 #4799d4;
 }
 
-/* END OF TOP PORTION OF TYPES ARTICLE PAGE */
+/* END OF TOP PORTION OF FONT TYPES ARTICLE PAGE */
 
-/* START OF BOTTOM PORTION OF TYPES ARTICLE PAGE */
+/* START OF BOTTOM PORTION OF FONT TYPES ARTICLE PAGE */
 
 .font-article-body {
     padding: 0 3rem 3rem;
@@ -253,12 +255,145 @@
     box-shadow: none;
 }
 
-/* END OF BOTTOM PORTION OF TYPES ARTICLE PAGE */
+/* END OF BOTTOM PORTION OF FONT TYPES ARTICLE PAGE */
 
 /* END OF FONT TYPES ARTICLE PAGE */
 
-/**/
-/**/
+/* START OF TYPOGRAPHY COMPARISON ARTICLE */
+
+#type-article {
+    margin: 3rem auto;
+    padding: 2rem;
+    outline: 2px #f5a749 solid;
+    border-radius: 5px;
+}
+
+.type-article-head {
+    padding: 2rem 3rem;
+}
+
+.type-article-head p {
+    padding: 1rem;
+    margin: 3rem 0;
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+}
+
+.type-article-head p:hover {
+    outline: 2px #4799d4 solid;
+}
+
+.top-header {
+    font-size: 2.5rem;
+    color: #f5a749;
+    border-bottom: 2px #fff solid;
+}
+
+.type-article-body {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    align-items: stretch;
+    padding: 0 3rem;
+}
+
+.wiki-example > p,
+.github-example > p {
+    margin: 2rem auto;
+}
+
+.example-photo {
+    width: 100%;
+}
+
+.type-example-one:target,
+.type-example-two:target {
+    flex: 4;
+}
+
+.type-example-one,
+.type-example-two {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    background: #272b30;
+    outline: 3px #f5a749 solid;
+    padding: 3rem;
+    gap: 1rem;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.type-example-one:hover,
+.type-example-two:hover {
+    box-shadow: 0 0 1.5rem .5rem #f5a749;
+}
+
+.wiki-header,
+.github-header {
+    border-bottom: 2px #fff solid;
+}
+
+.wiki-header a,
+.github-header a {
+    text-decoration: #f5a749 underline;
+    font-size: 1.8rem;
+    color: #f5a749;
+}
+
+.wiki-header a:active,
+.github-header a:active {
+    color: #4799d4;
+    text-decoration: #4799d4 underline; 
+}
+
+.wiki-text,
+.github-text {
+    outline: 2px #f5a749 solid;
+    padding: 1rem;
+}
+
+.expand-button {
+    background: #272b30;
+    font-size: 1.3rem;
+    margin: auto;
+}
+
+.expand-button:hover a {
+    color: #f5a749;
+    text-decoration: #f5a749 underline;
+}
+
+.expand-button a:active {
+    color: #4799d4;
+    text-decoration: #4799d4 underline;
+}
+
+.type-article-foot {
+    padding: 3rem 3rem 0;
+}
+
+.conclusion-header {
+    font-size: 1.8rem;
+    color: #f5a749;
+    border-bottom: 2px #fff solid;
+}
+
+.conclusion-text {
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+    padding: 1rem;
+    margin: 3rem 0;
+}
+
+.conclusion-text:hover {
+    outline: 2px #4799d4 solid;
+}
+
+
+/* END OF TYPOGRAPHY COMPARISON ARTICLE */
+
+/* END OF TYPOGRAPHY SECTION */
 
 /**/
 /**/

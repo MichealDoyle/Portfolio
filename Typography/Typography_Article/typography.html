@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,10 +75,10 @@
     </ul>
   </nav>
 </header>
-<main>
-  <article id="type_article">
-    <section id="type_article_head">
-    <h2>The Right Font For The Job</h2>
+<main class="type-content" class="main-content">
+  <article id="type-article">
+    <section class="type-article-head">
+    <h2 class="top-header">The Right Font For The Job</h2>
       <p>
         Choosing the correct typeface and font for your design is incredibly important and can even make or break your design.
         When choosing our typeface and font we want to make sure that it will provide a good reading experience and will match
@@ -85,10 +87,11 @@
         are created by following the key aspects of good typography.
       </p>
     </section>
-    <article id="type_article_body">
-      <section id="type_example_one">
-        <h3><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></h3>
-          <p>
+    <article class="type-article-body">
+      <section id="first-article" class="type-example-one">
+        <div class="wiki-example">
+        <h3 class="wiki-header"><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></h3>
+          <p class="wiki-text">
             Wikipedia is a very text-heavy site that does a good job at using the key aspects of good typography to create a 
             a good reading experience. The contrast between the text and background makes for good readability. The sans-serif
             typeface and clean legible font choice enhances the comprehension of the long blocks of text. It establishes a
@@ -96,12 +99,19 @@
             blocks of text use good line spacing and margins to make them digestible and easy to follow along. The alignment
             on the page helps to structure the content and give it a more professional look.
           </p>
-          <img src="photos/wiki/wiki1.png">
-          <img src="photos/wiki/wiki2.png">
+        </div>
+            <img src="photos/wiki/wiki1.png" alt="wikipedia typography page" id="wiki-photo-one" class="example-photo">
+            <img src="photos/wiki/wiki2.png" alt="wikipedia main page" id="wiki-photo-two" class="example-photo">
+          <div class="expand-button">
+            <a href="#first-article">
+              Expand
+            </a>
+          </div>
       </section>
-      <section id="type_example_two">
-        <h3><a href="https://github.com/">GitHub</a></h3>
-          <p>
+      <section id="second-article" class="type-example-two">
+        <div class="github-example">
+        <h3 class="github-header"><a href="https://github.com/">GitHub</a></h3>
+          <p class="github-text">
             GitHub uses the same key aspects to make a nice and enjoyable website but uses some of them in different ways to
             capture the different kind of content. The contrast of the text and background is very good in this design with
             the dark background with bright text making it easy to read. Using different typefaces like sans-serif and
@@ -111,13 +121,20 @@
             easily distinguishable. All of the content within the page is structured in a way that make it easy to find what 
             you need and provide the professional look its going for.
           </p>
-          <img src="photos/github/github1.png">
-          <img src="photos/github/github2.png">
-          <img src="photos/github/github3.png">
+        </div>
+          <img src="photos/github/github1.png" alt="github main page" id="github-photo-one" class="example-photo">
+          <img src="photos/github/github2.png" alt="github profile page" id="github-photo-two" class="example-photo">
+          <img src="photos/github/github3.png" alt="github topics page" id="github-photo-three" class="example-photo">
+        <div class="expand-button">
+          <a href="#second-article">
+            Expand
+          </a>
+        </div>
       </section>
-      <section id="type_article_foot">
-        <h3>Conclusion</h3>
-          <p>
+    </article>
+    <section class="type-article-foot">
+        <h3 class="conclusion-header">Conclusion</h3>
+          <p class="conclusion-text">
             The content and goals of both of the websites are totally different, but both use typography aspects and principles
             to make their websites attractive to the demographic its trying to appeal to. Wikipedia is an online encyclopedia
             that displays large blocks of informative text and needs to meet needs that differ from something like github; which
@@ -129,9 +146,23 @@
             though these sites are meant to serve different purposes, they both use typography to draw attention to key content,
             enhance readability and comprehension, and maintain consistency across different forms of media.
           </p>
-      </section>
-    </article>
+    </section>
   </article>
 </main>
+<footer>
+  <address>
+    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
+    <a href="https://x.com/">
+    <img src="images/twitter-icon.png" alt="Twitter.com">
+    </a>
+    <a href="https://www.facebook.com/">
+    <img src="images/facebook-icon.png" alt="Facebook.com">
+    </a>
+    <a href="https://www.linkedin.com/">
+    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
+    </a> 
+  </address>
+</footer>
+</div>
 </body>
 </html>
