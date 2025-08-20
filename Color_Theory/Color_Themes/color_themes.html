@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/normalize.css" rel="stylesheet">
+    <link href="/styling_sheets/sitewide.css" rel="stylesheet">
+    <link href="/styling_sheets/color-and-type.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
+<div class="container">
 <header>
   <h1><a href="/Portfolio/index.html">MD</a></h1>
   <nav id="nav-bar">
@@ -73,13 +75,14 @@
     </ul>
   </nav>
 </header>
-<main>
-  <h2>Color Themes</h2>
-  <p>Heres a table of a few different color themes representing various types of color schemes.</p>
-    <table>
+<main id="color-themes" class="main-content">
+<div class="ct-container">
+  <h2 class="color-theme-header">Color Themes</h2>
+  <span class="ct-subhead">Heres a table of a few different color themes representing various types of color schemes.</span>
+    <table class="ct-table">
     <caption>Color themes with hex codes</caption>
       <thead>
-        <tr>
+        <tr class="color-info">
           <th>Theme Style</th>
           <th>Main Color</th>
           <th>Secondary Color</th>
@@ -87,79 +90,103 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="complementary-theme">
           <td>Complementary Theme</td>
           <td>#004A80</td>
           <td>#4799D4</td>
           <td>#D68228</td>
         </tr>
-        <tr>
-          <td>Analogous Theme</td>
-          <td>#665554</td>
-          <td>#E6766E</td>
-          <td>E68B6E</td>
-          <td>#E66E9A</td>
+        <tr class="triadic-theme">
+          <td>Triadic Theme</td>
+          <td>#4CCCD5</td>
+          <td>#D481B6</td>
+          <td>#FFE575</td>
         </tr>
-        <tr>
+        <tr class="monochromatic-theme">
           <td>Monochromatic Theme</td>
           <td>#E6F2DF</td>
           <td>#1A4019</td>
           <td>#B0D897</td>
         </tr>
-        <tr>
+        <tr class="split-theme">
           <td>Split Theme</td>
           <td>#3866B6</td>
           <td>#F5A749</td>
           <td>#F5D249</td>
           <td>#5E6675</td>
         </tr>
-        <tr>
-          <td>Triadic Theme</td>
-          <td>#4CCCD5</td>
-          <td>#D481B6</td>
-          <td>#FFE575</td>
+        <tr class="analogous-theme">
+          <td>Analogous Theme</td>
+          <td>#665554</td>
+          <td>#E6766E</td>
+          <td>E68B6E</td>
+          <td>#E66E9A</td>
         </tr>
       </tbody>
     </table>
-  <h3>Complementary Theme</h3>
-    <img src="photoshop_examples/complementary.png">
+  <div id="complementary" class="color-scheme">
+  <h3 class="theme-header">Complementary Theme</h3>
+    <img src="photoshop_examples/complementary.png" alt="complementary color scheme" class="ct-photo">
       <p class="theme-description">
          Complementary colors are pairs of colors that, when combined, cancel out by producing a grayscale color like black
          or white. When placed next to each other, they create the strongest contrast and reinforce each other. In the 
          traditional color wheel, which is based on the RYB (Red, Yellow, Blue) color model, complementary colors are
          located directly across from each other.
-      <p>
-  <h3>Analogous Theme</h3>
-    <img src="photoshop_examples/Analogous.png">
+      </p>
+  </div>
+  <div id="analogous" class="color-scheme">
+  <h3 class="theme-header">Analogous Theme</h3>
+    <img src="photoshop_examples/Analogous.png" alt="analogous color scheme" class="ct-photo">
       <p class="theme-description">
         Analogous colors refers to groups of colors that are next to each other on the color wheel. These colors usually match
         well together and create serene and comfortable designs. The analogous colors are those directly adjacent to that
         chosen color, typically spanning  a section of three to five hues.
       </p>
-  <h3>Monochromatic Theme</h3>
-    <img src="photoshop_examples/monochromatic.png">
+  </div>
+  <div id="mono" class="color-scheme">
+  <h3 class="theme-header">Monochromatic Theme</h3>
+    <img src="photoshop_examples/monochromatic.png" alt="monochromatic color scheme" class="ct-photo">
       <p class="theme-description">
         Monochromatic colors refers to groups of colors that are composed of various shades, tones, and tints of a single hue.
         Creating a monochromatic color theme involves selecting a base hue and modifying it by adding black, white, or gray to 
         produce different shades, tones, and tints of the selected base hue.
       </p>
-  <h3>Split Complementary Theme</h3>
-    <img src="photoshop_examples/split complementary.png"> 
+  </div>
+  <div id="split-comp" class="color-scheme">
+  <h3 class="theme-header">Split Complementary Theme</h3>
+    <img src="photoshop_examples/split complementary.png" alt="split complementary color scheme" class="ct-photo">  
       <p class="theme-description">
         Split colors, a fundamental concept in color design, involves using  variation of color families to create visual
         interest and visual harmony. This technique focuses on splitting complementary colors by incorporating analogous
         hues, which helps generate a more dynamic and visually appealing composition. Split colors are made by selecting
         a primary color and then two colors adjacent to the complementary color on the color wheel.
       </p>
-  <h3>Triadic Theme</h3>
-    <img src="photoshop_examples/Triadic.png">
+  </div>
+  <div id="triadic" class="color-scheme">
+  <h3 class="theme-header">Triadic Theme</h3>
+    <img src="photoshop_examples/Triadic.png" alt="triadic color scheme" class="ct-photo">
       <p class="theme-description">
         Triadic colors are a group of three colors that are evenly spaced on the color wheel. This scheme is known for its 
         vibrant and harmonious feel, as it balances the use of colors while maintaining contrast and richness. One of the 
         most common ways to use triadic colors is to choose a dominant color, and use the other two as accents.
       </p>
+  </div>
+</div>
 </main>
 <footer>
-</footer>
+  <address>
+    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
+    <a href="https://x.com/">
+    <img src="images/twitter-icon.png" alt="Twitter.com">
+    </a>
+    <a href="https://www.facebook.com/">
+    <img src="images/facebook-icon.png" alt="Facebook.com">
+    </a>
+    <a href="https://www.linkedin.com/">
+    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
+    </a> 
+  </address>
+</footer> 
+</div>
 </body>
 </html>

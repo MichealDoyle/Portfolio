@@ -151,12 +151,167 @@
 
 /* END OF DEFINITIONS PAGE*/
 
+/* START OF WEBSITE COMPARISON ARTICLES */
+
+#type-article,
+#ct-article {
+    margin: 3rem auto;
+    padding: 2rem;
+    outline: 2px #f5a749 solid;
+    border-radius: 5px;
+}
+
+.type-article-head,
+.ct-article-head {
+    padding: 2rem 3rem;
+}
+
+.type-article-head p,
+.ct-article-head p {
+    padding: 1rem;
+    margin: 3rem 0;
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+}
+
+.type-article-head p:hover,
+.ct-article-head p:hover {
+    outline: 2px #4799d4 solid;
+    box-shadow: 0 0 1.5rem .5rem #4799d4;
+}
+
+.top-header {
+    font-size: 2.5rem;
+    color: #f5a749;
+    border-bottom: 2px #fff solid;
+}
+
+.type-article-body,
+.ct-article-body {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    align-items: stretch;
+    padding: 0 3rem;
+}
+
+.article-example > p {
+    margin: 2rem auto;
+}
+
+.example-photo {
+    width: 100%;
+}
+
+.type-example-one:target,
+.type-example-two:target,
+.ct-example-one:target,
+.ct-example-two:target {
+    flex: 4;
+}
+
+.type-example-one,
+.type-example-two,
+.ct-example-one,
+.ct-example-two {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    background: #272b30;
+    outline: 3px #f5a749 solid;
+    padding: 3rem;
+    gap: 1rem;
+    justify-content: space-around;
+    align-content: space-between;
+    width: 50%;
+}
+
+.type-example-one:hover,
+.type-example-two:hover,
+.ct-example-one:hover,
+.ct-example-two:hover {
+    box-shadow: 0 0 1.5rem .5rem #f5a749;
+}
+
+.wiki-header,
+.github-header,
+.software-header,
+.runescape-header {
+    border-bottom: 2px #fff solid;
+}
+
+.wiki-header a,
+.github-header a,
+.software-header a,
+.runescape-header a {
+    text-decoration: #f5a749 underline;
+    font-size: 1.8rem;
+    color: #f5a749;
+}
+
+.wiki-header a:active,
+.github-header a:active,
+.software-header a:active,
+.runescape-header a:active {
+    color: #4799d4;
+    text-decoration: #4799d4 underline; 
+}
+
+.wiki-text,
+.github-text,
+.software-text,
+.runescape-text {
+    outline: 2px #f5a749 solid;
+    padding: 1rem;
+}
+
+.expand-button {
+    background: #272b30;
+    font-size: 1.3rem;
+    margin: auto;
+}
+
+.expand-button:hover a {
+    color: #f5a749;
+    text-decoration: #f5a749 underline;
+}
+
+.expand-button a:active {
+    color: #4799d4;
+    text-decoration: #4799d4 underline;
+}
+
+.type-article-foot,
+.ct-article-foot {
+    padding: 3rem 3rem 0;
+}
+
+.conclusion-header {
+    font-size: 1.8rem;
+    color: #f5a749;
+    border-bottom: 2px #fff solid;
+}
+
+.conclusion-text {
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+    padding: 1rem;
+    margin: 3rem 0;
+}
+
+.conclusion-text:hover {
+    outline: 2px #4799d4 solid;
+    box-shadow: 0 0 1.5rem .5rem #4799d4;
+}
+
+
+/* END OF WEBSITE COMPARISON ARTICLES */
+
 /* START OF FONT TYPES ARTICLE PAGE */
 
 /* START OF TOP PORTION OF FONT TYPES ARTICLE PAGE */
 
 #font-type-article {
-    width: 90%;
     margin: 3rem auto;
     outline: 3px #f5a749 solid;
     border-radius: 5px;
@@ -166,7 +321,7 @@
     display: flex;
     flex-flow: column wrap;
     padding: 2rem 3rem 2rem;
-    border-bottom: 2px #f5a749 solid;
+    border-bottom: 2px #fff solid;
 }
 
 .font-article-head span {
@@ -263,143 +418,222 @@
 
 /* END OF FONT TYPES ARTICLE PAGE */
 
-/* START OF TYPOGRAPHY COMPARISON ARTICLE */
+/* START OF COLOR THEMES PAGE */
 
-#type-article {
-    margin: 3rem auto;
-    padding: 2rem;
-    outline: 2px #f5a749 solid;
+#color-themes {
+    margin: 0 auto;
+}
+
+.ct-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    outline: 3px #f5a749 solid;
     border-radius: 5px;
-}
-
-.type-article-head {
     padding: 2rem 3rem;
+    margin: 3rem auto;
 }
 
-.type-article-head p {
+.color-theme-header {
+    font-size: 2rem;
+    color: #f5a749;
+    border-bottom: 2px #fff solid;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.ct-subhead {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    padding: 1rem 0;
+}
+
+.ct-table {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
     padding: 1rem;
-    margin: 3rem 0;
+}
+
+.ct-table caption {
+    font-size: 1.5rem;
+    padding: 1rem 0 0;
+    background: #272b30;
+    border-bottom: 2px #fff solid;
+    color: #f5a749;
+}
+
+.ct-table tr {
+    text-align: center;
+}
+
+.ct-table,
+.ct-table tr,
+.ct-table th,
+.ct-table td {
     background: #272b30;
     outline: 2px #f5a749 solid;
 }
 
-.type-article-head p:hover {
+.color-scheme {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 10% 90%;
+    background: #272b30;
+    outline: 2px #f5a749 solid;
+    text-align: center;
+    height: 500px;
+    padding: 1rem;
+}
+
+.color-scheme:hover {
     outline: 2px #4799d4 solid;
     box-shadow: 0 0 1.5rem .5rem #4799d4;
 }
 
-.top-header {
-    font-size: 2.5rem;
-    color: #f5a749;
-    border-bottom: 2px #fff solid;
-}
-
-.type-article-body {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-    align-items: stretch;
-    padding: 0 3rem;
-}
-
-.wiki-example > p,
-.github-example > p {
-    margin: 2rem auto;
-}
-
-.example-photo {
-    width: 100%;
-}
-
-.type-example-one:target,
-.type-example-two:target {
-    flex: 4;
-}
-
-.type-example-one,
-.type-example-two {
-    flex: 1;
-    display: flex;
-    flex-flow: row wrap;
-    background: #272b30;
-    outline: 3px #f5a749 solid;
-    padding: 3rem;
-    gap: 1rem;
-    justify-content: space-around;
-    align-content: space-between;
-}
-
-.type-example-one:hover,
-.type-example-two:hover {
-    box-shadow: 0 0 1.5rem .5rem #f5a749;
-}
-
-.wiki-header,
-.github-header {
-    border-bottom: 2px #fff solid;
-}
-
-.wiki-header a,
-.github-header a {
-    text-decoration: #f5a749 underline;
-    font-size: 1.8rem;
-    color: #f5a749;
-}
-
-.wiki-header a:active,
-.github-header a:active {
+.color-scheme:hover .theme-header{
     color: #4799d4;
-    text-decoration: #4799d4 underline; 
 }
 
-.wiki-text,
-.github-text {
-    outline: 2px #f5a749 solid;
-    padding: 1rem;
+.theme-header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    border-bottom: 2px #fff solid;
+    font-size: 1.5rem;
+    color: #f5a749;
 }
 
-.expand-button {
-    background: #272b30;
-    font-size: 1.3rem;
+.ct-photo {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 100%;
     margin: auto;
 }
 
-.expand-button:hover a {
-    color: #f5a749;
-    text-decoration: #f5a749 underline;
+.theme-description {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: auto;
 }
 
-.expand-button a:active {
-    color: #4799d4;
-    text-decoration: #4799d4 underline;
+.color-scheme#complementary {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 }
 
-.type-article-foot {
-    padding: 3rem 3rem 0;
+.color-scheme#analogous {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
 }
 
-.conclusion-header {
-    font-size: 1.8rem;
-    color: #f5a749;
-    border-bottom: 2px #fff solid;
+.color-scheme#mono {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;    
 }
 
-.conclusion-text {
-    background: #272b30;
-    outline: 2px #f5a749 solid;
-    padding: 1rem;
-    margin: 3rem 0;
+.color-scheme#split-comp {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
 }
 
-.conclusion-text:hover {
-    outline: 2px #4799d4 solid;
-    box-shadow: 0 0 1.5rem .5rem #4799d4;
+.color-scheme#triadic {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
 }
 
+/* START COMPLEMENTARY THEME */
 
-/* END OF TYPOGRAPHY COMPARISON ARTICLE */
+.complementary-theme td:nth-child(2) {
+    background: #004a80;
+}
 
-/* END OF TYPOGRAPHY SECTION */
+.complementary-theme td:nth-child(3) {
+    background: #4799d4;
+}
 
-/**/
-/**/
+.complementary-theme td:nth-child(4) {
+    background: #D68228;
+}
+
+/* END COMPLEMENTARY THEME */
+
+/* START TRIADIC THEME */
+
+.triadic-theme td:nth-child(2) {
+    background: #4CCCD5;
+    color: #D481B6;
+}
+
+.triadic-theme td:nth-child(3) {
+    background: #D481B6;
+    color: #FFE575;
+}
+
+.triadic-theme td:nth-child(4) {
+    background: #FFE575;
+    color: #4CCCD5;
+}
+
+/* START MONOCHROMATIC THEME */
+
+.monochromatic-theme td:nth-child(2) {
+    background: #e6f2df;
+    color: #1a4019;
+}
+
+.monochromatic-theme td:nth-child(3) {
+    background: #1a4019;
+}
+
+.monochromatic-theme td:nth-child(4) {
+    background: #b0d897;
+    color: #1a4019;
+}
+
+/* END MONOCHROMATIC THEME */
+
+/* START SPLIT-COMPLEMENTARY THEME */
+
+.split-theme td:nth-child(2) {
+    background: #3866b6;
+}
+
+.split-theme td:nth-child(3) {
+    background: #F5A749;
+}
+
+.split-theme td:nth-child(4) {
+    background: #F5D249;
+    color: #5E6675;
+}
+
+.split-theme td:nth-child(5) {
+    background: #5E6675;
+}
+
+/* END SPLIT-COMPLEMENTARY THEME */
+
+/* START ANALOGOUS THEME */
+
+.analogous-theme td:nth-child(2) {
+    background: #665554;
+    color: #e6766e;
+}
+
+.analogous-theme td:nth-child(3) {
+    background: #e6766e;
+    color: #665554;
+}
+
+.analogous-theme td:nth-child(4) {
+    background: #e68b6e;
+    color: #665554;
+}
+
+.analogous-theme td:nth-child(5) {
+    background: #e66e9a;
+}
+
+/* END ANALOGOUS THEME */
+
+/* END OF COLOR THEMES PAGE */
