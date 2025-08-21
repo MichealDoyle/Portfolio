@@ -147,6 +147,12 @@
     border: 2px #f5a749 solid;
 }
 
+.terms-list dt:hover,
+.terms-list dd:hover {
+    color: #4799d4;
+    box-shadow: 0 0 1.5rem .5rem #4799d4;
+}
+
 /* END OF BOTTOM PORTION OF DEFINITIONS PAGE */
 
 /* END OF DEFINITIONS PAGE*/
