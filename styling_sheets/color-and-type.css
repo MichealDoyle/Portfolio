@@ -136,7 +136,7 @@
     font-family: galix-mono, sans-serif;
     font-weight: 600;
     text-align: center;
-    border: 2px #f5a749 solid;
+    outline: 2px #f5a749 solid;
     font-size: 1.1rem;
     padding: 2rem;
 }
@@ -144,13 +144,14 @@
 .terms-list dd {
     padding: 1rem;
     font-family: galix-mono, sans-serif;
-    border: 2px #f5a749 solid;
+    outline: 2px #f5a749 solid;
 }
 
 .terms-list dt:hover,
 .terms-list dd:hover {
     color: #4799d4;
     box-shadow: 0 0 1.5rem .5rem #4799d4;
+    outline: 2px #4799d4 solid;
 }
 
 /* END OF BOTTOM PORTION OF DEFINITIONS PAGE */
