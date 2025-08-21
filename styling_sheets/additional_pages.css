@@ -77,7 +77,6 @@
     text-align: center;
     color: #f5a749;
     padding: 0.7rem;
-    margin: 1.5rem auto;
 }
 
 .contact-header {
@@ -99,6 +98,23 @@
     height: 240px;
 }
 
+.contact-address:hover {
+    color: #f5a749;
+    box-shadow: 0 0 1.5rem .5rem #f5a749;
+}
+
+.contact-address:active {
+    box-shadow: 0 0 1.5rem .5rem #4799d4;
+    border-radius: 0 0 10px 10px;
+    outline: 3px #4799d4 solid;
+}
+
+.contact-address a:active,
+.email-address a[href^='mailto']:active {
+    color: #4799d4;
+    text-decoration: 2px #fff underline;
+}
+
 .contact-address div {
     margin: 1.5rem auto;
     text-align: left;
@@ -112,23 +128,11 @@
     left: 0;
 }
 
-.contact-address div a:hover {
-    text-decoration: #f5d249 underline;
-}
-
-.contact-address div a:active {
-    text-decoration: #f5a749 underline;
-}
-
 .contact-address div p {
     display: inline;
 }
 
 .contact-address p strong {
-    color: #f5a749;
-}
-
-.email-address a[href^='mailto']:active {
     color: #f5a749;
 }
 
@@ -139,10 +143,10 @@
 #resume {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: auto;
-    border: 7px solid #f5a749;
-    border-radius: 15px;
-    padding: 3rem 4rem;
+    grid-auto-rows: auto;
+    border: 5px solid #f5a749;
+    border-radius:5px;
+    padding: 2rem;
     width: 80%;
     margin: 2rem auto;
     font-weight: 300;
@@ -188,7 +192,7 @@
 .resume-skills span {
     display: block;
     letter-spacing: 0.5px;
-    margin: 0.5rem 0.5rem;
+    margin: 1rem 0;
 }
 
 .resume-headers {
@@ -196,10 +200,8 @@
     font-size: 1.3rem;
     text-decoration: #fff underline;
     text-align: center;
-    padding-top: 0.3rem;
     outline: 2px #f5a749 solid;
     color: #fff;
-    border-radius: 10px;
 }
 
 .resume-education {
@@ -214,6 +216,10 @@
     grid-row: 5 / 6;
 }
 
+.resume-experience p {
+    margin: 1rem 0;
+}
+
 .resume-projects {
     grid-row: 3 / 6;
 }
@@ -221,6 +227,11 @@
 .resume-reference {
     grid-row: 6 / 7;
     text-align: center;
+}
+
+.resume-reference p {
+    margin: 1rem;
+    font-style: oblique;
 }
 
 .projects-header {
@@ -237,7 +248,7 @@
 .photoshop-header,
 .reference-header {
     width: 60%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* END OF RESUME PAGE *?
