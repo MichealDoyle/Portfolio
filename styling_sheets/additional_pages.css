@@ -152,6 +152,22 @@
     font-weight: 300;
 }
 
+i {
+    color: #f5a749;
+    float: right;
+    padding: 1rem 1.5rem 0 0;
+}
+
+.left-side-headers,
+.right-side-headers {
+    border-bottom: 2px #f5a749 solid; 
+}
+
+.right-side-headers {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .resume-objective {
     grid-row: 1 / 3;
 }
@@ -163,10 +179,8 @@
 }
 
 .resume-right-container {
-    grid-column: 2 / 3;
     width: 80%;
     margin: 2rem auto;
-    padding: 0 2rem;
 }
 
 .resume-right-container p > strong {
@@ -184,7 +198,6 @@
 
 .contact-info {
     grid-row: 2 / 3 ;
-    padding: 0 1rem 1rem;
 }
 
 .contact-info span,
@@ -197,11 +210,9 @@
 
 .resume-headers {
     color: #fff;
-    font-size: 1.3rem;
-    text-decoration: #fff underline;
-    text-align: center;
-    outline: 2px #f5a749 solid;
-    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
 }
 
 .resume-education {
@@ -216,21 +227,16 @@
     grid-row: 5 / 6;
 }
 
-.resume-experience p {
-    margin: 1rem 0;
-}
-
 .resume-projects {
     grid-row: 3 / 6;
 }
 
 .resume-reference {
     grid-row: 6 / 7;
-    text-align: center;
+    grid-column: 2 / 3;
 }
 
 .resume-reference p {
-    margin: 1rem;
     font-style: oblique;
 }
 
@@ -242,13 +248,12 @@
     border-radius: 10px;
     margin: 0 auto 2rem;
     width: 60%;
+
 }
 
-.animation-header,
-.photoshop-header,
-.reference-header {
-    width: 60%;
-    margin: 0 auto;
+.reference-content {
+    width: 80%;
+    margin: auto;
 }
 
 /* END OF RESUME PAGE *?
