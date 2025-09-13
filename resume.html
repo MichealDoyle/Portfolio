@@ -7,6 +7,35 @@
     <link href="styling_sheets/normalize.css" rel="stylesheet">
     <link href="styling_sheets/sitewide.css" rel="stylesheet">
     <link href="styling_sheets/additional_pages.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/141188211d.js" crossorigin="anonymous"></script>
+    <script>
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+
+      function toggleContent(e) {
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+      window.addEventListener('load', function (e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -85,45 +114,69 @@
       </p>
     </div>
       <div class="contact-info resume-left-container">
+        <div class="left-side-headers section">
         <h3 class="resume-contact resume-headers">Contact Information</h3>
-        <span>&#x2022; St. Charles, MO </span>
-        <span>&#x2022; mikeydoyle01@yahoo.com </span> 
-        <span>&#x2022; 123-456-7890 </span>
+        <i class="fa-solid fa-circle-chevron-down left-btn"></i>
+        </div>
+        <div class="contact-content">
+          <span>&#x2022; St. Charles, MO </span>
+          <span>&#x2022; mikeydoyle01@yahoo.com </span> 
+          <span>&#x2022; 123-456-7890 </span>
+        </div>
       </div>
     <div class="resume-education resume-left-container">
-    <h3 class="education-header resume-headers">Education</h3>
-      <span>&#x2022;  Fort Zumwalt West High, O'fallon, MO</span>
-      <span>&#x2022; High School Diploma (2015)</span>
+      <div class="left-side-headers section">
+      <h3 class="education-header resume-headers">Education</h3>
+      <i class="fa-solid fa-circle-chevron-down left-btn"></i>
+      </div>
+      <div class="edu-content">
+        <span>&#x2022;  Fort Zumwalt West High, O'fallon, MO</span>
+        <span>&#x2022; High School Diploma (2015)</span>
+      </div>
     </div>
     <div class="resume-skills resume-left-container">
-    <h3 class="skills-header resume-headers">Skills</h3>
-      <span>&#x2022; Adobe Animation Beginner</span>
-      <span>&#x2022; Adobe Photoshop Beginner</span>
-      <span>&#x2022; HTML</span>
-      <span>&#x2022; Customer Service</span>
+      <div class="left-side-headers section">
+      <h3 class="skills-header resume-headers">Skills</h3>
+      <i class="fa-solid fa-circle-chevron-down left-btn"></i>
+      </div>
+      <div class="skills-content">
+        <span>&#x2022; Adobe Animation Beginner</span>
+        <span>&#x2022; Adobe Photoshop Beginner</span>
+        <span>&#x2022; HTML</span>
+        <span>&#x2022; Customer Service</span>
+      </div>
     </div>
     <div class="resume-experience resume-left-container">
-    <h3 class="experience-header resume-headers">Experience</h3>
-      <p>Amazon Delivery Driver - Rapid Connections, St. Peters, MO</p>
-      <p>Sept 2021 - Current</p>
-      <p>Responsibilities</p>
-      <ul>
-        <li>Deliver packages to customers</li>
-        <li>Follow all road guidelines and rules</li>
-        <li>Load van in an organized and timely manner</li>
-        <li>Occasional dispatcher</li>
-      </ul>
-      <p>Awards/Achievements</p>
-      <ul>
-        <li>Top Driver award(from Amazon)</li>
-        <li>Top Driver Award(from DSP)</li>
-        <li>Over 2.5k positive customer feedback badge</li>
-      </ul>
+      <div class="left-side-headers section">
+        <h3 class="experience-header resume-headers">Experience</h3>
+        <i class="fa-solid fa-circle-chevron-down left-btn"></i>
+      </div>
+      <div class="exp-content">
+        <p>Amazon Delivery Driver - Rapid Connections, St. Peters, MO</p>
+        <p>Sept 2021 - Current</p>
+        <p>Responsibilities</p>
+        <ul>
+          <li>Deliver packages to customers</li>
+          <li>Follow all road guidelines and rules</li>
+          <li>Load van in an organized and timely manner</li>
+          <li>Occasional dispatcher</li>
+        </ul>
+        <p>Awards/Achievements</p>
+        <ul>
+          <li>Top Driver award(from Amazon)</li>
+          <li>Top Driver Award(from DSP)</li>
+          <li>Over 2.5k positive customer feedback badge</li>
+        </ul>
+      </div>
     </div>
     <div class="resume-projects">
     <h2 class="projects-header">Projects</h2>
       <div class="resume-animation">
-      <h3 class="animation-header resume-headers">Adobe Animation</h3>
+        <div class="right-side-headers section">
+          <h3 class="animation-header resume-headers">Adobe Animation</h3>
+          <i class="fa-solid fa-circle-chevron-down right-btn"></i>
+        </div>
+        <div class="animation-projects">
         <div class="resume-character resume-right-container">
         <p><strong>Character Animation</strong></p>
           <p>This project required us to create an animation of a character doing a simple task.
@@ -144,8 +197,13 @@
             the intended information easily.</p>
         </div>
       </div>
+      </div>
       <div class="resume-photoshop">
-      <h3 class="photoshop-header resume-headers">Adobe Photoshop</h3>
+        <div class="right-side-headers section">
+          <h3 class="photoshop-header resume-headers">Adobe Photoshop</h3>
+          <i class="fa-solid fa-circle-chevron-down right-btn"></i>
+        </div>
+        <div class="photoshop-projects">
         <div class="resume-photo-restore resume-right-container">
         <p><strong>Photo Restoration</strong></p>
           <p>The goal of this project was to repair the damage done to an older photo, as well as to enhance
@@ -166,10 +224,16 @@
             that was consistent, clean, and visually appealing, displayed through multiple ways of marketing.</p>
         </div>
       </div>
+      </div>
     </div>
-    <div class="resume-reference resume-right-container">
-    <h2 class="reference-header resume-headers">References</h2>
-      <p>Available upon request</p> 
+    <div class="resume-reference">
+      <div class="right-side-headers section">
+        <h2 class="reference-header resume-headers">References</h2>
+        <i class="fa-solid fa-circle-chevron-down right-btn"></i>
+      </div>
+      <div class="reference-content">
+        <p>Available upon request</p> 
+      </div>
     </div>        
   </article>
 </main>
