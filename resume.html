@@ -7,35 +7,8 @@
     <link href="styling_sheets/normalize.css" rel="stylesheet">
     <link href="styling_sheets/sitewide.css" rel="stylesheet">
     <link href="styling_sheets/additional_pages.css" rel="stylesheet">
+    <script src="functionality.js"></script>
     <script src="https://kit.fontawesome.com/141188211d.js" crossorigin="anonymous"></script>
-    <script>
-      function toggleDisplay(e) {
-        if (getComputedStyle(e).display === 'none') {
-          e.style.display = 'block';
-        } else {
-          e.style.display = 'none';
-        }
-      }
-
-
-      function toggleContent(e) {
-        const section = e.currentTarget;
-        const content = section.nextElementSibling;
-        toggleDisplay(content);
-        const chevron = section.querySelector('.fa-solid');
-        chevron.classList.toggle('fa-circle-chevron-down');
-        chevron.classList.toggle('fa-circle-chevron-up');
-      }
-
-
-      window.addEventListener('load', function (e) {
-        const sections = document.querySelectorAll('.section');
-
-        for (section of sections) {
-          section.addEventListener('click', toggleContent)
-        }
-      });
-    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -101,6 +74,19 @@
       </li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="resume.html">Resume</a></li>
+      <li id="settings-li" class="nav-list-item">Settings
+        <ul id="settings-list">
+          <li>Mode:
+            <button>Dark</button>
+            <button>Light</button>
+          </li>
+          <li>Font Size:
+            <button>Small</button>
+            <button>Medium</button>
+            <button>Large</button>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>

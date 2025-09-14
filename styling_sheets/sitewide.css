@@ -146,6 +146,21 @@ a[href^='mailto']:active {
     top: 15.75rem;
 }
 
+#settings-li {
+    padding: 1rem;
+}
+
+#settings-li > ul {
+    top: 16.6rem;
+}
+
+#settings-list li {
+    padding: 1rem;
+}
+
+#settings-list li:active {
+    background: #4799d4;
+}
 /* END NAVIGATION BAR */
 
 /* START FOOTER SECTION */
