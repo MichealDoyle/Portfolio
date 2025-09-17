@@ -7,6 +7,232 @@
     <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
+    <script>
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+// toggle the changes from the pages settings
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const ctHeader = document.querySelector('.ct-header');
+  const ctSubnav = document.querySelector('.ct-subnav');
+  const subnavHeader = ctSubnav.firstElementChild;
+  const subnavList = ctSubnav.querySelectorAll('a')
+  const overview = document.querySelector('.overview-desc');
+  const overviewHeader = overview.firstElementChild;
+  const termsList = document.querySelector('.terms-list');
+  const defTerm = document.querySelectorAll('.terms-list dt');
+  const termDef = document.querySelectorAll('.terms-list dd');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(ctHeader, 'color', '#f5a749');
+  changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
+  changeStyle(ctSubnav, 'color', '#fff');
+  changeStyle(subnavHeader, 'borderBottomColor', '#f5a749');
+  changeStyle(overview, 'outline', '2px #f5a749 solid');
+  changeStyle(overview, 'color', 'fff');
+  changeStyle(overviewHeader, 'borderBottomColor', '#f5a749');
+  changeStyle(overviewHeader, 'color', '#fff');
+  changeStyle(termsList, 'outline', '2px #f5a749 solid');
+
+   for (item of subnavList) {
+    changeStyle(item, 'color', '#fff');
+  }
+
+  for (term of termDef) {
+    changeStyle(term, 'outline', '3px #f5a749 solid');
+    changeStyle(term, 'color', '#fff');
+  }
+
+  for (def of defTerm) {
+    changeStyle(def, 'outline', '3px #f5a749 solid');
+    changeStyle(def, 'color', '#fff');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff');
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+
+  ctSubnav.addEventListener('mouseover', function(e) {
+    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #f5a749');
+    changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
+  });
+  ctSubnav.addEventListener('mouseout', function(e) {
+    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00');
+    changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
+  })
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const ctHeader = document.querySelector('.ct-header');
+  const ctSubnav = document.querySelector('.ct-subnav');
+  const subnavHeader = ctSubnav.firstElementChild;
+  const subnavList = ctSubnav.querySelectorAll('a')
+  const overview = document.querySelector('.overview-desc');
+  const overviewHeader = overview.firstElementChild;
+  const termsList = document.querySelector('.terms-list');
+  const defTerm = document.querySelectorAll('.terms-list dt');
+  const termDef = document.querySelectorAll('.terms-list dd');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(ctHeader, 'color', '#4799d4');
+  changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
+  changeStyle(ctSubnav, 'color', '#616161');
+  changeStyle(subnavHeader, 'borderBottomColor', '#4799d4');
+  changeStyle(overview, 'outline', '2px #4799d4 solid');
+  changeStyle(overview, 'color', '#616161');
+  changeStyle(overviewHeader, 'borderBottomColor', '#4799d4');
+  changeStyle(overviewHeader, 'color', '#616161');
+  changeStyle(termsList, 'outline', '2px #4799d4 solid');
+
+  for (item of subnavList) {
+    changeStyle(item, 'color', '#616161');
+  }
+
+  for (term of termDef) {
+    changeStyle(term, 'outline', '3px #4799d4 solid');
+    changeStyle(term, 'color', '#616161');
+  }
+
+  for (def of defTerm) {
+    changeStyle(def, 'outline', '3px #4799d4 solid');
+    changeStyle(def, 'color', '#616161');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#616161');
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+
+  ctSubnav.addEventListener('mouseover', function(e) {
+    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #4799d4');
+    changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
+  });
+  ctSubnav.addEventListener('mouseout', function(e) {
+    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00');
+    changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
+  })
+};
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>

@@ -41,11 +41,6 @@
     margin: 0.5rem auto;
  }
 
- .type-subnav li a:hover,
- .ct-subnav li a:hover {
-    color: #f5a749;
-    font-size: 1.2rem;
- }
 
  .type-subnav li a:active,
  .ct-subnav li a:active {
@@ -86,11 +81,6 @@
     padding: 1rem 2rem 2rem;
  }
 
- .overview-desc:hover {
-    outline: 2px #f5a749 solid;
-    border-radius: 10px;
-    box-shadow: 0 0 .75rem .25rem #f5a749;
- }
 
  .overview-desc p {
     text-align: left;
@@ -145,13 +135,6 @@
     padding: 1rem;
     font-family: galix-mono, sans-serif;
     outline: 3px #f5a749 solid;
-}
-
-.terms-list dt:hover,
-.terms-list dd:hover {
-    color: #4799d4;
-    box-shadow: 0 0 1.5rem .5rem #4799d4;
-    outline: 3px #4799d4 solid;
 }
 
 /* END OF BOTTOM PORTION OF DEFINITIONS PAGE */
