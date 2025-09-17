@@ -35,14 +35,6 @@
     border-radius: 10px;
 }
 
-#about-me:hover {
-    outline: 3px #4799d4 solid;
-}
-
-#about-me:hover .welcome-header {
-    border-bottom: 2px #4799d4 solid;
-}
-
 #about-me p {
     width: 80%;
     padding-bottom: 1rem;
@@ -96,17 +88,6 @@
     padding: 1rem 4rem;
     font-size: 1.2rem;
     height: 240px;
-}
-
-.contact-address:hover {
-    color: #f5a749;
-    box-shadow: 0 0 1.5rem .5rem #f5a749;
-}
-
-.contact-address:active {
-    box-shadow: 0 0 1.5rem .5rem #4799d4;
-    border-radius: 0 0 10px 10px;
-    outline: 3px #4799d4 solid;
 }
 
 .contact-address a:active,

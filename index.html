@@ -7,7 +7,168 @@
     <link href="styling_sheets/normalize.css" rel="stylesheet">
     <link href="styling_sheets/sitewide.css" rel="stylesheet">
     <link href="styling_sheets/additional_pages.css" rel="stylesheet">
-    <script src="functionality.js"></script>
+    <script>
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+// toggle the changes from the pages settings
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul')
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll('p');
+  const link = document.querySelectorAll('a');
+  const footer = document.querySelector('footer');
+  const subHead = document.querySelector('.home-sub-header');
+  const aboutMe = document.querySelector('section#about-me');
+  const welcome = document.querySelector('.welcome-header');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(h2[0], 'color', '#f5a749'); // CHANGE TEXT COLOR OF FIRST H2 ELEMENT
+  changeStyle(h2[1], 'color', '#f5a749'); // CHANGE TEXT COLOR OF SECOND H2 ELEMENT
+  changeStyle(subHead, 'color', '#f5a759'); //CHANGE TEXT OF SUB HEAD H3 ELEMENT
+  changeStyle(aboutMe, 'outline', '3px #f5a759 solid'); // CHANGE COLOR OF ABOUT ME SECTIONS OUTLINE
+  changeStyle(welcome, 'borderBottom', '2px #f5a759 solid'); // CHANGE THE BOTTOM BORDER FOR THE WELCOME HEADER
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff'); // CHANGE COLOR OF PARAGRAPH TEXT BACK TO WHITE;
+  };
+
+  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll('p');
+  const link = document.querySelectorAll('a');
+  const footer = document.querySelector('footer');
+  const subHead = document.querySelector('.home-sub-header');
+  const aboutMe = document.querySelector('section#about-me');
+  const welcome = document.querySelector('.welcome-header');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(h2[0], 'color', '#4799d4'); // CHANGE TEXT COLOR OF FIRST H2 ELEMENT
+  changeStyle(h2[1], 'color', '#4799d4'); // CHANGE TEXT COLOR OF SECOND H2 ELEMENT
+  changeStyle(subHead, 'color', '#4799d4'); //CHANGE TEXT OF SUB HEAD H3 ELEMENT
+  changeStyle(aboutMe, 'outline', '3px #4799d4 solid'); // CHANGE COLOR OF ABOUT ME SECTIONS OUTLINE
+  changeStyle(welcome, 'borderBottom', '2px #4799d4 solid'); // CHANGE THE BOTTOM BORDER FOR THE WELCOME HEADER
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff'); // CHANGE COLOR OF PARAGRAPH TEXT BACK TO WHITE;
+  };
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -76,7 +237,7 @@
       <li id="settings-li" class="nav-list-item">Settings
         <ul id="settings-list">
           <li>Mode:
-            <button class="ct-btn">Dark</button>  <!-- ct-btn = color theme button-->
+            <button class="ct-btn">Dark</button>
             <button class="ct-btn">Light</button>
           </li>
           <li>Font Size:

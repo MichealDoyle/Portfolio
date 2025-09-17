@@ -76,7 +76,7 @@ a[href^='mailto']:active {
     position: absolute;
     top: 5rem;
     margin: 0 -0.5rem;
-    background: #272b30d2;
+    background: #1d1d1dff;
 }
 
 #nav-bar ul {
@@ -114,7 +114,7 @@ a[href^='mailto']:active {
     position: absolute;
     left: 6.6rem;
     font-size: 0.9rem;
-    background: #272b30;
+    background: #1d1d1dff;
 }
 
 .nav-list-item ul li { 

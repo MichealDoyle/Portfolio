@@ -22,14 +22,11 @@
 
 // toggle the changes from the pages settings
 
-// CHANGE THE BACKGROUND COLOR
+// CHANGE STYLE FUNCTION 
 
-      function changeBg(theme) {
-        if (theme.innerHTML === 'Dark') {
-            document.body.style.backgroundColor = '#2f333a';
-        } else if (theme.innerHTML ==='Light') {
-            document.body.style.backgroundColor = '#cacacaff';
-        }
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
       }
 
 // CHANGE THE FONT SIZE
@@ -44,18 +41,42 @@
         }
       }
 
-// 
+// CHANGING SETTINGS
 
       function changeSetting(e) {
-        if (e.innerHTML === 'Dark' ||
-            e.innerHTML === 'Light') {
-            changeBg(e);
+        const body = document.querySelector('body');
+        const nav = document.querySelector('nav');
+        const h1 = document.querySelector('h1');
+        const h2 = document.querySelectorAll('h2');
+        const h3 = document.querySelectorAll('h3');
+        const h4 = document.querySelectorAll('h4');
+        const uList = document.querySelectorAll('ul');
+        const listItem = document.querySelectorAll('li');
+        const footer = document.querySelector('footer');
+        
+        
+        if (e.innerHTML === 'Dark') {
+            changeStyle(body, 'backgroundColor', '#2f333a');
+            changeStyle(footer, 'backgroundColor', '#f5a749' );
+            changeStyle(h2[0], 'color', '#f5a749');
+            changeStyle(h3[0], 'color', '#f5a749');
+            for (ul of uList) {
+                changeStyle(ul, 'backgroundColor', '#1d1d1dff')
+            }
+        } else if (e.innerHTML === 'Light') {
+            changeStyle(body, 'backgroundColor', '#bbbbbbff');
+            changeStyle(footer, 'backgroundColor', '#4799d4' );
+            changeStyle(h2[0], 'color', '#4799d4');
+            changeStyle(h3[0], 'color', '#4799d4');
+            for (ul of uList) {
+                changeStyle(ul, 'backgroundColor', '#4799d4')
+            }
         } else if (e.innerHTML === 'Small' ||
                    e.innerHTML === 'Medium' ||
                    e.innerHTML === 'Large') {
                    changeFs(e);
         }
-      }
+      };
 
 // BUTTON ASSIGNMENT
 

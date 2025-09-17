@@ -7,6 +7,175 @@
     <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/showcase.css" rel="stylesheet">
+    <script>
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+// toggle the changes from the pages settings
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const h3 = document.querySelectorAll('h3');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll('p');
+  const strong = document.querySelectorAll('p>strong');
+  const link = document.querySelectorAll('a');
+  const footer = document.querySelector('footer');
+  const projHead = document.querySelector('.project-header')
+  const projReflect = document.querySelector('.project-reflection');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(h2[0], 'color', '#f5a749'); // CHANGE H2 HEADERS COLOR
+  changeStyle(projHead, 'borderBottomColor', '#f5a749'); // CHANGE FIRST BORDER DIVIDER COLOR
+  changeStyle(projReflect, 'borderTopColor', '#f5a749'); // CHANGE SECOND BORDER DIVIDER COLOR
+
+  for (s of strong) {
+    changeStyle(s, 'color', '#f5a749') // CHANGE COLOR OF THE BEFORE AND AFTER TAGS ON PHOTOS
+  }
+
+  for (h of h3) {
+    changeStyle(h, 'color', '#f5a749'); // CHANGE COLOR OF H3 HEADERS
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#f5a749'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const h3 = document.querySelectorAll('h3');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll('p');
+  const strong = document.querySelectorAll('p>strong');
+  const link = document.querySelectorAll('a');
+  const footer = document.querySelector('footer');
+  const projHead = document.querySelector('.project-header')
+  const projReflect = document.querySelector('.project-reflection');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(h2[0], 'color', '#4799d4'); // CHANGE H2 HEADERS COLOR
+  changeStyle(projHead, 'borderBottomColor', '#4799d4'); // CHANGE FIRST BORDER DIVIDER COLOR
+  changeStyle(projReflect, 'borderTopColor', '#4799d4'); // CHANGE SECOND BORDER DIVIDER COLOR
+
+  for (s of strong) {
+    changeStyle(s, 'color', '#4799d4') // CHANGE COLOR OF THE BEFORE AND AFTER TAGS ON PHOTOS
+  }
+
+  for (h of h3) {
+    changeStyle(h, 'color', '#4799d4'); // CHANGE COLOR OF H3 HEADERS
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
