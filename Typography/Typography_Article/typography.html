@@ -7,6 +7,208 @@
     <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
+    <script>
+
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const mainContent = document.querySelector('.article-border');
+  const topHeader = document.querySelector('.top-header');
+  const topDesc = document.querySelector('.top-desc');
+  const article1 = document.querySelector('.type-example-one');
+  const article2 = document.querySelector('.type-example-two');
+  const links = document.querySelectorAll('.type-example a');
+  const siteDesc = document.querySelectorAll('.site-desc');
+  const concHeader = document.querySelector('.conclusion-header');
+  const concText = document.querySelector('.conclusion-text');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(mainContent, 'outline', '2px #f5a749 solid');
+  changeStyle(topHeader, 'color', '#f5a749');
+  changeStyle(topDesc, 'backgroundColor', '#272b30');
+  changeStyle(topDesc, 'outline', '2px #f5a749 solid');
+  changeStyle(article1, 'outline', '2px #f5a749 solid');
+  changeStyle(article1, 'backgroundColor', '#272b30');
+  changeStyle(article2, 'outline', '2px #f5a749 solid');
+  changeStyle(article2, 'backgroundColor', '#272b30');
+  changeStyle(concHeader, 'color', '#f5a749');
+  changeStyle(concText, 'outline', '2px #f5a749 solid');
+  changeStyle(concText, 'backgroundColor', '#272b30');
+  
+
+  for (desc of siteDesc) {
+    changeStyle(desc, 'outline', '2px #f5a749 solid');
+  }
+ 
+  for (a of links) {
+    changeStyle(a, 'color', '#f5a749');
+    changeStyle(a, 'textDecoration', '#fff');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff');
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const mainContent = document.querySelector('.article-border');
+  const topHeader = document.querySelector('.top-header');
+  const topDesc = document.querySelector('.top-desc');
+  const article1 = document.querySelector('.type-example-one');
+  const article2 = document.querySelector('.type-example-two');
+  const links = document.querySelectorAll('.type-example a');
+  const siteDesc = document.querySelectorAll('.site-desc');
+  const concHeader = document.querySelector('.conclusion-header');
+  const concText = document.querySelector('.conclusion-text');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(mainContent, 'outline', '2px #4799d4 solid');
+  changeStyle(topHeader, 'color', '#4799d4');
+  changeStyle(topDesc, 'backgroundColor', '#bebebe');
+  changeStyle(topDesc, 'outline', '2px #4799d4 solid');
+  changeStyle(article1, 'outline', '2px #4799d4 solid');
+  changeStyle(article1, 'backgroundColor', '#bebebe');
+  changeStyle(article2, 'outline', '2px #4799d4 solid');
+  changeStyle(article2, 'backgroundColor', '#bebebe');
+  changeStyle(concHeader, 'color', '#4799d4');
+  changeStyle(concText, 'outline', '2px #4799d4 solid');
+  changeStyle(concText, 'backgroundColor', '#bebebe');
+  
+
+  for (desc of siteDesc) {
+    changeStyle(desc, 'outline', '2px #4799d4 solid');
+  }
+ 
+  for (a of links) {
+    changeStyle(a, 'color', '#4799d4');
+    changeStyle(a, 'textDecoration', '#fff');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#555555')
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -89,10 +291,10 @@
   </nav>
 </header>
 <main id="type-content" class="main-content">
-  <div id="type-article">
+  <div id="type-article" class="article-border">
     <div class="type-article-head">
       <h2 class="top-header">The Right Font For The Job</h2>
-        <p>
+        <p class="top-desc">
           Choosing the correct typeface and font for your design is incredibly important and can even make or break your design.
           When choosing our typeface and font we want to make sure that it will provide a good reading experience and will match
           the theme of the content being displayed. The placement, size, medium, and length of the text is also a factor to 
@@ -101,10 +303,10 @@
         </p>
       </div>
     <div class="type-article-body">
-      <section id="first-article" class="type-example-one">
+      <section id="first-article" class="type-example-one type-example">
         <div class="article-example">
         <h3 class="wiki-header"><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></h3>
-          <p class="wiki-text">
+          <p class="wiki-text site-desc">
             Wikipedia is a very text-heavy site that does a good job at using the key aspects of good typography to create a 
             a good reading experience. The contrast between the text and background makes for good readability. The sans-serif
             typeface and clean legible font choice enhances the comprehension of the long blocks of text. It establishes a
@@ -121,10 +323,10 @@
             </a>
           </div>
       </section>
-      <section id="second-article" class="type-example-two">
+      <section id="second-article" class="type-example-two type-example">
         <div class="article-example">
         <h3 class="github-header"><a href="https://github.com/">GitHub</a></h3>
-          <p class="github-text">
+          <p class="github-text site-desc">
             GitHub uses the same key aspects to make a nice and enjoyable website but uses some of them in different ways to
             capture the different kind of content. The contrast of the text and background is very good in this design with
             the dark background with bright text making it easy to read. Using different typefaces like sans-serif and

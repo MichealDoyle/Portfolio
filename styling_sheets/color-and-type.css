@@ -164,12 +164,6 @@
     outline: 2px #f5a749 solid;
 }
 
-.type-article-head p:hover,
-.ct-article-head p:hover {
-    outline: 2px #4799d4 solid;
-    box-shadow: 0 0 1.5rem .5rem #4799d4;
-}
-
 .top-header {
     font-size: 2.5rem;
     color: #f5a749;
@@ -216,13 +210,6 @@
     width: 50%;
 }
 
-.type-example-one:hover,
-.type-example-two:hover,
-.ct-example-one:hover,
-.ct-example-two:hover {
-    box-shadow: 0 0 1.5rem .5rem #f5a749;
-}
-
 .wiki-header,
 .github-header,
 .software-header,
@@ -230,11 +217,11 @@
     border-bottom: 2px #fff solid;
 }
 
+
 .wiki-header a,
 .github-header a,
 .software-header a,
 .runescape-header a {
-    text-decoration: #f5a749 underline;
     font-size: 1.8rem;
     color: #f5a749;
 }
@@ -244,7 +231,6 @@
 .software-header a:active,
 .runescape-header a:active {
     color: #4799d4;
-    text-decoration: #4799d4 underline; 
 }
 
 .wiki-text,
@@ -256,7 +242,6 @@
 }
 
 .expand-button {
-    background: #272b30;
     font-size: 1.3rem;
     margin: auto;
 }
@@ -279,7 +264,7 @@
 .conclusion-header {
     font-size: 1.8rem;
     color: #f5a749;
-    border-bottom: 2px #fff solid;
+    border-bottom: 2px #555555 solid;
 }
 
 .conclusion-text {
@@ -288,12 +273,6 @@
     padding: 1rem;
     margin: 3rem 0;
 }
-
-.conclusion-text:hover {
-    outline: 2px #4799d4 solid;
-    box-shadow: 0 0 1.5rem .5rem #4799d4;
-}
-
 
 /* END OF WEBSITE COMPARISON ARTICLES */
 

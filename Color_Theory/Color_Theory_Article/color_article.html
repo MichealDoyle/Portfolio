@@ -7,6 +7,210 @@
     <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
+    <script>
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+// toggle the changes from the pages settings
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const mainContent = document.querySelector('.article-border');
+  const topHeader = document.querySelector('.top-header');
+  const topDesc = document.querySelector('.top-desc');
+  const article1 = document.querySelector('.ct-example-one');
+  const article2 = document.querySelector('.ct-example-two');
+  const links = document.querySelectorAll('.ct-example a');
+  const siteDesc = document.querySelectorAll('.site-desc');
+  const concHeader = document.querySelector('.conclusion-header');
+  const concText = document.querySelector('.conclusion-text');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(mainContent, 'outline', '2px #f5a749 solid');
+  changeStyle(topHeader, 'color', '#f5a749');
+  changeStyle(topDesc, 'backgroundColor', '#272b30');
+  changeStyle(topDesc, 'outline', '2px #f5a749 solid');
+  changeStyle(article1, 'outline', '2px #f5a749 solid');
+  changeStyle(article1, 'backgroundColor', '#272b30');
+  changeStyle(article2, 'outline', '2px #f5a749 solid');
+  changeStyle(article2, 'backgroundColor', '#272b30');
+  changeStyle(concHeader, 'color', '#f5a749');
+  changeStyle(concText, 'outline', '2px #f5a749 solid');
+  changeStyle(concText, 'backgroundColor', '#272b30');
+  
+
+  for (desc of siteDesc) {
+    changeStyle(desc, 'outline', '2px #f5a749 solid');
+  }
+ 
+  for (a of links) {
+    changeStyle(a, 'color', '#f5a749');
+    changeStyle(a, 'textDecoration', '#fff');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff');
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const mainContent = document.querySelector('.article-border');
+  const topHeader = document.querySelector('.top-header');
+  const topDesc = document.querySelector('.top-desc');
+  const article1 = document.querySelector('.ct-example-one');
+  const article2 = document.querySelector('.ct-example-two');
+  const links = document.querySelectorAll('.ct-example a');
+  const siteDesc = document.querySelectorAll('.site-desc');
+  const concHeader = document.querySelector('.conclusion-header');
+  const concText = document.querySelector('.conclusion-text');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(mainContent, 'outline', '2px #4799d4 solid');
+  changeStyle(topHeader, 'color', '#4799d4');
+  changeStyle(topDesc, 'backgroundColor', '#bebebe');
+  changeStyle(topDesc, 'outline', '2px #4799d4 solid');
+  changeStyle(article1, 'outline', '2px #4799d4 solid');
+  changeStyle(article1, 'backgroundColor', '#bebebe');
+  changeStyle(article2, 'outline', '2px #4799d4 solid');
+  changeStyle(article2, 'backgroundColor', '#bebebe');
+  changeStyle(concHeader, 'color', '#4799d4');
+  changeStyle(concText, 'outline', '2px #4799d4 solid');
+  changeStyle(concText, 'backgroundColor', '#bebebe');
+  
+
+  for (desc of siteDesc) {
+    changeStyle(desc, 'outline', '2px #4799d4 solid');
+  }
+ 
+  for (a of links) {
+    changeStyle(a, 'color', '#4799d4');
+    changeStyle(a, 'textDecoration', '#fff');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#7e7e7e')
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -89,20 +293,20 @@
   </nav>
 </header>
 <main id="ct-content" class="main-content">
-  <div id="ct-article">
+  <div id="ct-article" class="article-border">
     <section class="ct-article-head">
       <h2 class="top-header">Colors Have Feelings</h2>
-        <p>Colors have feeling and purpose and understanding how to use them together cohesively is crucial in creating an
+        <p class="top-desc">Colors have feeling and purpose and understanding how to use them together cohesively is crucial in creating an
           emotionally and aesthetically pleasing design or content. But choosing the right colors for the job isn't as simple
           as just selecting a few random colors and placing them around without following some principles and structure. Below 
           we will compare a few websites I like that apply color theory in different ways to provide a good viewing experience.
         </p>
     </section>
     <div class="ct-article-body">
-      <section id="first-article" class="ct-example-one">
+      <section id="first-article" class="ct-example-one ct-example">
         <div class="article-example">
         <h3 class="software-header"><a href="https://www.makingsoftware.com/?ref=siteinspire">Making Software</a></h3>
-          <p class="software-text">
+          <p class="software-text site-desc">
             I think this webpage does a really good job at using color theory principles to make a webpage thats enjoyable to
             view. The minimal monochromatic light blue color scheme is very good at enhancing the technology aesthetic and keeping 
             a calm feeling. The use of whitespace in the design helps guide the viewer where to look next. The contrast of the 
@@ -118,10 +322,10 @@
             </a>
           </div>
       </section>
-      <section id="second-article" class="ct-example-two">
+      <section id="second-article" class="ct-example-two ct-example">
       <div class="article-example">
         <h3 class="runescape-header"><a href="https://play.runescape.com/oldschool">Oldschool Runescape</a></h3>
-          <p class="runescape-text">
+          <p class="runescape-text site-desc">
             This webpage does a really good job as well at using color theory principles to make an enjoyable webpage but in a different
             way. The colors give the page life and are inviting to the viewer. The contrast is excellent and the accent colors and text
             on the page really pops and stands out, making you interested in the content being shown in those spots. The use of the
