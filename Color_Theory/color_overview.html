@@ -99,10 +99,6 @@ function darkTheme(e) {
     changeStyle(def, 'color', '#fff');
   }
 
-  for (p of text) {
-    changeStyle(p, 'color', '#fff');
-  }
-
   for (ul of navList) {
     changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
   };
@@ -134,7 +130,6 @@ function lightTheme(e) {
   const h1Link = h1.querySelector('a');
   const h2 = document.querySelectorAll('h2');
   const listItem = document.querySelectorAll('li');
-  const text = document.querySelectorAll(('p'));
   const footer = document.querySelector('footer');
   const ctHeader = document.querySelector('.ct-header');
   const ctSubnav = document.querySelector('.ct-subnav');
@@ -150,30 +145,20 @@ function lightTheme(e) {
   changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
   changeStyle(ctHeader, 'color', '#4799d4');
   changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
-  changeStyle(ctSubnav, 'color', '#616161');
   changeStyle(subnavHeader, 'borderBottomColor', '#4799d4');
   changeStyle(overview, 'outline', '2px #4799d4 solid');
-  changeStyle(overview, 'color', '#616161');
   changeStyle(overviewHeader, 'borderBottomColor', '#4799d4');
-  changeStyle(overviewHeader, 'color', '#616161');
   changeStyle(termsList, 'outline', '2px #4799d4 solid');
 
   for (item of subnavList) {
-    changeStyle(item, 'color', '#616161');
   }
 
   for (term of termDef) {
     changeStyle(term, 'outline', '3px #4799d4 solid');
-    changeStyle(term, 'color', '#616161');
   }
 
   for (def of defTerm) {
     changeStyle(def, 'outline', '3px #4799d4 solid');
-    changeStyle(def, 'color', '#616161');
-  }
-
-  for (p of text) {
-    changeStyle(p, 'color', '#616161');
   }
 
   for (ul of navList) {

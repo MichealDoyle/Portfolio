@@ -77,48 +77,43 @@ function darkTheme(e) {
 
   changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
   changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(container, 'outline', '2px #f5a749 solid');
-  changeStyle(ctHeader, 'color', '#f5a749');
-  changeStyle(span, 'color', '#fff');
-  changeStyle(ctTable, 'outline', '2px #f5a749 solid');
-  changeStyle(ctTable, 'backgroundColor', '#272b30');
-  changeStyle(caption, 'color', '#f5a749');
-  changeStyle(caption, 'backgroundColor', '#272b30')
+  changeStyle(container, 'outline', '2px #f5a749 solid'); // CHANGE CONTAINER OUTLINE COLOR
+  changeStyle(ctHeader, 'color', '#f5a749'); // CHANGE HEADER AT TOP OF PAGE COLOR
+  changeStyle(ctTable, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TABLE
+  changeStyle(ctTable, 'backgroundColor', '#272b30'); // CHANGE BACKGROUND COLOR OF TABLE
+  changeStyle(caption, 'color', '#f5a749'); // CHANGE COLOR OF CAPTION TAGS
+  changeStyle(caption, 'backgroundColor', '#272b30') // CHANGE BACKGROUND COLOR OF CAPTION TAGS
 
   for (row of tableRow) {
-    changeStyle(row, 'outline', '2px #f5a749 solid');
+    changeStyle(row, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TABLE ROW
   }
 
   for (cell of emptyCell) {
-  changeStyle(cell, 'backgroundColor', '#272b30');
+  changeStyle(cell, 'backgroundColor', '#272b30'); // CHANGE BACKGROUND COLOR OF EMPTY TABLE CELLS
   }
 
   for (data of tableData) {
-    changeStyle(data, 'outline', '2px #f5a749 solid');
+    changeStyle(data, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TD TABLE CELLS
   }
 
   for (theme of themeName) {
-    changeStyle(theme, 'backgroundColor', '#272b30');
+    changeStyle(theme, 'backgroundColor', '#272b30'); // CHANGE FONT COLOR AND BACKGROUND COLOR OF COLOR THEME NAMES
     changeStyle(theme, 'color', '#fff');
   }
 
   for (head of tableHead) {
-    changeStyle(head, 'backgroundColor', '#272b30');
+    changeStyle(head, 'backgroundColor', '#272b30'); // CHANGE OUTLINE, BACKGROUND, AND FONT COLOR OF HEAD OF TABLE 
     changeStyle(head, 'color', '#fff');
     changeStyle(head, 'outline', '2px #f5a749 solid');
   }
 
   for (scheme of cScheme) {
-    changeStyle(scheme, 'outline', '2px #f5a749 solid');
+    changeStyle(scheme, 'outline', '2px #f5a749 solid'); // CHANGE THE OUTLINE AND BACKGROUND COLOR OF THE COLO SCHEMES
     changeStyle(scheme, 'backgroundColor', '#272b30');
   }
 
   for (h of h3) {
-    changeStyle(h, 'color', '#f5a749');
-  }
-
-  for (p of text) {
-    changeStyle(p, 'color', '#fff');
+    changeStyle(h, 'color', '#f5a749'); // CHANGE COLOR OF H3 TAGS
   }
 
   for (ul of navList) {
@@ -159,48 +154,41 @@ function lightTheme(e) {
 
   changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
   changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(container, 'outline', '2px #4799d4 solid');
-  changeStyle(ctHeader, 'color', '#4799d4');
-  changeStyle(span, 'color', '#555555');
-  changeStyle(ctTable, 'outline', '2px #4799d4 solid');
-  changeStyle(ctTable, 'backgroundColor', '#bebebe');
-  changeStyle(caption, 'color', '#4799d4');
-  changeStyle(caption, 'backgroundColor', '#bebebe')
+  changeStyle(container, 'outline', '2px #4799d4 solid'); // CHANGE CONTAINER OUTLINE COLOR
+  changeStyle(ctHeader, 'color', '#4799d4'); // CHANGE HEADER AT TOP OF PAGE COLOR
+  changeStyle(ctTable, 'outline', '2px #4799d4 solid');  // CHANGE OUTLINE COLOR OF TABLE
+  changeStyle(ctTable, 'backgroundColor', '#bebebe'); // CHANGE BACKGROUND COLOR OF TABLE
+  changeStyle(caption, 'color', '#4799d4'); // CHANGE COLOR OF CAPTION TAGS
+  changeStyle(caption, 'backgroundColor', '#bebebe') // CHANGE BACKGROUND COLOR OF CAPTION TAGS
 
   for (row of tableRow) {
-    changeStyle(row, 'outline', '2px #4799d4 solid');
+    changeStyle(row, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TABLE ROW
   }
 
-  for (cell of emptyCell) {
-  changeStyle(cell, 'backgroundColor', '#bebebe');
+  for (cell of emptyCell) { 
+  changeStyle(cell, 'backgroundColor', '#bebebe'); // CHANGE BACKGROUND COLOR OF EMPTY TABLE CELLS
   }
 
   for (data of tableData) {
-    changeStyle(data, 'outline', '2px #4799d4 solid');
+    changeStyle(data, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TD TABLE CELLS
   }
 
   for (theme of themeName) {
-    changeStyle(theme, 'backgroundColor', '#bebebe');
-    changeStyle(theme, 'color', '#555555');
+    changeStyle(theme, 'backgroundColor', '#bebebe'); // CHANGE FONT COLOR AND BACKGROUND COLOR OF COLOR THEME NAMES
   }
 
   for (head of tableHead) {
     changeStyle(head, 'backgroundColor', '#bebebe');
-    changeStyle(head, 'color', '#555555');
-    changeStyle(head, 'outline', '2px #4799d4 solid');
+    changeStyle(head, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE, BACKGROUND, AND FONT COLOR OF HEAD OF TABLE
   }
 
   for (scheme of cScheme) {
-    changeStyle(scheme, 'outline', '2px #4799d4 solid');
+    changeStyle(scheme, 'outline', '2px #4799d4 solid'); // CHANGE THE OUTLINE AND BACKGROUND COLOR OF THE COLO SCHEMES
     changeStyle(scheme, 'backgroundColor', '#bebebe');
   }
 
   for (h of h3) {
-    changeStyle(h, 'color', '#4799d4');
-  }
-
-  for (p of text) {
-    changeStyle(p, 'color', '#555555')
+    changeStyle(h, 'color', '#4799d4'); // CHANGE COLOR OF H3 TAGS
   }
 
   for (ul of navList) {
