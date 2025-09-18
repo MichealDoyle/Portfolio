@@ -72,35 +72,24 @@ function darkTheme(e) {
   const termsList = document.querySelector('.terms-list');
   const defTerm = document.querySelectorAll('.terms-list dt');
   const termDef = document.querySelectorAll('.terms-list dd');
+  const mainContent = document.querySelector('.main-content');
 
   changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
   changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(typeHeader, 'color', '#f5a749');
-  changeStyle(typeSubnav, 'outline', '2px #f5a749 solid');
-  changeStyle(typeSubnav, 'color', '#fff');
-  changeStyle(subnavHeader, 'borderBottomColor', '#f5a749');
-  changeStyle(overview, 'outline', '2px #f5a749 solid');
-  changeStyle(overview, 'color', 'fff');
-  changeStyle(overviewHeader, 'borderBottomColor', '#f5a749');
-  changeStyle(overviewHeader, 'color', '#fff');
-  changeStyle(termsList, 'outline', '2px #f5a749 solid');
-
-   for (item of subnavList) {
-    changeStyle(item, 'color', '#fff');
-  }
+  changeStyle(typeHeader, 'color', '#f5a749'); // CHANGE HEADER COLOR AT THE TOP
+  changeStyle(typeSubnav, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF SUB-NAV LIST
+  changeStyle(subnavHeader, 'borderBottomColor', '#f5a749'); // CHANGE BOTTOM BORDER COLOR OF SUB-NAV HEADER
+  changeStyle(overview, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF OVERVIEW BORDER
+  changeStyle(overviewHeader, 'borderBottomColor', '#f5a749'); // CHANGE BOTTOM BORDER COLOR OF OVERVIEW HEADER
+  changeStyle(termsList, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
+  changeStyle(mainContent, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
 
   for (term of termDef) {
-    changeStyle(term, 'outline', '3px #f5a749 solid');
-    changeStyle(term, 'color', '#fff');
+    changeStyle(term, 'outline', '3px #f5a749 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
   }
 
-  for (def of defTerm) {
-    changeStyle(def, 'outline', '3px #f5a749 solid');
-    changeStyle(def, 'color', '#fff');
-  }
-
-  for (p of text) {
-    changeStyle(p, 'color', '#fff');
+  for (def of defTerm) { 
+    changeStyle(def, 'outline', '3px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TERM DEFINITION BORDER
   }
 
   for (ul of navList) {
@@ -114,11 +103,11 @@ function darkTheme(e) {
     changeStyle(h1Link, 'color', '#fff');
 
   ctSubnav.addEventListener('mouseover', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #f5a749');
+    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #f5a749'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
     changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
   });
   ctSubnav.addEventListener('mouseout', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00');
+    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOVING MOUSE OFF
     changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
   })
   });
@@ -145,35 +134,24 @@ function lightTheme(e) {
   const termsList = document.querySelector('.terms-list');
   const defTerm = document.querySelectorAll('.terms-list dt');
   const termDef = document.querySelectorAll('.terms-list dd');
+  const mainContent = document.querySelector('.main-content');
 
   changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
   changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(typeHeader, 'color', '#4799d4');
-  changeStyle(typeSubnav, 'outline', '2px #4799d4 solid');
-  changeStyle(typeSubnav, 'color', '#616161');
-  changeStyle(subnavHeader, 'borderBottomColor', '#4799d4');
-  changeStyle(overview, 'outline', '2px #4799d4 solid');
-  changeStyle(overview, 'color', 'fff');
-  changeStyle(overviewHeader, 'borderBottomColor', '#4799d4');
-  changeStyle(overviewHeader, 'color', '#616161');
-  changeStyle(termsList, 'outline', '2px #4799d4 solid');
+  changeStyle(typeHeader, 'color', '#4799d4'); // CHANGE HEADER COLOR AT THE TOP
+  changeStyle(typeSubnav, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF SUB-NAV LIST
+  changeStyle(subnavHeader, 'borderBottomColor', '#4799d4'); // CHANGE BOTTOM BORDER COLOR OF SUB-NAV HEADER
+  changeStyle(overviewHeader, 'borderBottomColor', '#4799d4'); // CHANGE BOTTOM BORDER COLOR OF OVERVIEW HEADER
+  changeStyle(termsList, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
+  changeStyle(mainContent, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
 
-  for (item of subnavList) {
-    changeStyle(item, 'color', '#616161');
-  }
 
   for (term of termDef) {
-    changeStyle(term, 'outline', '3px #4799d4 solid');
-    changeStyle(term, 'color', '#616161');
+    changeStyle(term, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
   }
 
   for (def of defTerm) {
-    changeStyle(def, 'outline', '3px #4799d4 solid');
-    changeStyle(def, 'color', '#616161');
-  }
-
-  for (p of text) {
-    changeStyle(p, 'color', '#616161');
+    changeStyle(def, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERM DEFINITION BORDER
   }
 
   for (ul of navList) {
@@ -188,11 +166,11 @@ function lightTheme(e) {
   });
 
   typeSubnav.addEventListener('mouseover', function(e) {
-    changeStyle(typeSubnav, 'boxShadow', '0 0 .5rem .25rem #4799d4');
+    changeStyle(typeSubnav, 'boxShadow', '0 0 .5rem .25rem #4799d4'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
     changeStyle(typeSubnav, 'outline', '2px #4799d4 solid');
   });
-  typeSubnav.addEventListener('mouseout', function(e) {
-    changeStyle(typeSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00');
+  typeSubnav.addEventListener('mouseout', function(e) { 
+    changeStyle(typeSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOVING MOUSE OFF
     changeStyle(typeSubnav, 'outline', '2px #4799d4 solid');
   })
 };
