@@ -7,6 +7,183 @@
     <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
+    <script>
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+// toggle the changes from the pages settings
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff');
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h2 = document.querySelectorAll('h2');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const mainContent = document.querySelector('.main-content');
+  const articleHeader = document.querySelector('.font-article-header');
+  const subText = document.querySelectorAll('span');
+  const wordDef = document.querySelectorAll('.font-article-list dt');
+  const termDesc = document.querySelectorAll('.font-article-list dd');
+  const descList = document.querySelector('.type-font-list');
+  const fontStrong = descList.querySelectorAll('strong');
+  const fontTerm = document.querySelectorAll('.font-term');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(mainContent, 'outline', '2px #4799d4 solid');
+  changeStyle(articleHeader, 'color', '#4799d4');
+  changeStyle(descList, 'outline', '2px #4799d4 solid');
+  changeStyle(descList, 'backgroundColor', '#bebebe');
+
+  for (term of fontTerm) {
+    changeStyle(term, 'outline', '2px #4799d4 solid');
+  }
+
+  for (strong of fontStrong) {
+    changeStyle(strong, 'color', '#4799d4');
+  }
+  
+  for (span of subText) {
+    changeStyle(span, 'color', '#555555');
+  }
+
+  for (desc of termDesc) {
+    changeStyle(desc, 'outline', '2px #4799d4 solid');
+    changeStyle(desc, 'backgroundColor', '#bebebe');
+    changeStyle(desc, 'color', '#555555');
+  }
+
+  for (word of wordDef) {
+    changeStyle(word, 'color', '#4799d4');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#7e7e7e')
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -95,12 +272,12 @@
       To fully understand typography, we need to understand the difference between a typeface and a font:
     </span>
       <dl class="font-article-list">
-        <dt class="typeface-term"><dfn>Typeface:</dfn></dt>
+        <dt class="diff-term"><dfn>Typeface:</dfn></dt>
         <dd class="typeface-def">A typeface encompasses a family of characters that share a common design theme. Typefaces predate computers
           and have been used with many technologies to provide a consistent way to create text flows that would be easy
           for readers of content to digest.
         </dd>
-        <dt class="font-term"><dfn>Font:</dfn></dt>
+        <dt class="diff-term"><dfn>Font:</dfn></dt>
         <dd class="font-def">Distinct from a typeface, a font refers to a specific weight, size, and style within a typeface family. Fonts
           bring diversity within a typeface family, allowing for a creative and functional text presentation.
         </dd>
@@ -112,7 +289,7 @@
       fonts that work well within those typeface families.
     </span>
     <ul class="type-font-list">
-      <li><strong>Serif:</strong> Serif typefaces are distinguished by their traditional appearance, marked by small decorative
+      <li class="font-term"><strong>Serif:</strong> Serif typefaces are distinguished by their traditional appearance, marked by small decorative
         lines or "feet" at the end of the characters. Effective at guiding the readers eyes along lines of text, enhancing
         readability and comfort.
         <ul class="type-font-sublist">
@@ -122,7 +299,7 @@
             <a href="https://fonts.adobe.com/fonts/adobe-garamond"> Garamond</a></li>
         </ul>
       </li>
-      <li><strong>Sans-serif:</strong> Sans-serif typefaces, characterized by their clean and unadorned style without "feet",
+      <li class="font-term"><strong>Sans-serif:</strong> Sans-serif typefaces, characterized by their clean and unadorned style without "feet",
         offer a modern and minimalist look.
         <ul class="type-font-sublist">
           <li><strong>Uses:</strong> Widely used in both digital and print media. Website body text, advertising, and signage.</li>
@@ -131,7 +308,7 @@
             <a href="https://fonts.adobe.com/fonts/arial"> Arial</a></li>
         </ul>
       </li>
-      <li><strong>Decorative:</strong> Decorative, or display typefaces, are diverse in their design, ranging from whimsical to
+      <li class="font-term"><strong>Decorative:</strong> Decorative, or display typefaces, are diverse in their design, ranging from whimsical to
         eccentric. While they can add a unique flair to a design, their use should be balanced as they may impact readability if
         used extensively.
         <ul class="type-font-sublist">
@@ -142,7 +319,7 @@
             <a href="https://fonts.adobe.com/fonts/papyrus"> Papyrus</a></li>
         </ul>
       </li>
-      <li><strong>Script:</strong> Script typefaces mimic the fluidity of handwriting or calligraphy. They vary from casual,
+      <li class="font-term"><strong>Script:</strong> Script typefaces mimic the fluidity of handwriting or calligraphy. They vary from casual,
         looser styles to formal, more structured designs.
         <ul class="type-font-sublist">
           <li><strong>Uses:</strong> Often used for invitations, branding, and decorative purposes where a personal artistic
@@ -152,7 +329,7 @@
             <a href="https://fonts.adobe.com/fonts/great-vibes"> Great Vibes</a></li>
         </ul>
       </li>
-      <li><strong>Monospaced:</strong> Monospaced typefaces feature characters that each occupy the same horizontal space.
+      <li class="font-term"><strong>Monospaced:</strong> Monospaced typefaces feature characters that each occupy the same horizontal space.
         Historically used in typewriters and coding environments, these typefaces ensure alignment and uniformity.
         <ul class="type-font-sublist">
           <li><strong>Uses:</strong> Ideal for technical documentation, coding, and tabular data where text alignment is needed.</li>

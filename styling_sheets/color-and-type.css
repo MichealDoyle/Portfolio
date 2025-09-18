@@ -280,7 +280,7 @@
 
 /* START OF TOP PORTION OF FONT TYPES ARTICLE PAGE */
 
-#font-type-article {
+.main-content {
     margin: 3rem auto;
     outline: 3px #f5a749 solid;
     border-radius: 5px;
@@ -326,10 +326,6 @@
     padding: .75rem;
 }
 
-.font-article-list dd:hover {
-    outline: 2px #4799d4 solid;
-    box-shadow: 0 0 1rem 0 #4799d4;
-}
 
 /* END OF TOP PORTION OF FONT TYPES ARTICLE PAGE */
 
@@ -363,24 +359,10 @@
     margin: 1rem;
 }
 
-.type-font-list li:hover {
-    outline: 2px #4799d4 solid;
-    box-shadow: 0 0 1rem 0 #4799d4;
-}
-
-.type-font-list li:hover strong {
-    color: #4799d4;
-}
-
 .type-font-sublist li {
     outline: none;
     padding: .5rem;
     margin: 0;
-}
-
-.type-font-sublist li:hover {
-    outline: none;
-    box-shadow: none;
 }
 
 /* END OF BOTTOM PORTION OF FONT TYPES ARTICLE PAGE */
@@ -455,15 +437,6 @@
     padding: 1rem;
 }
 
-.color-scheme:hover {
-    outline: 2px #4799d4 solid;
-    box-shadow: 0 0 1.5rem .5rem #4799d4;
-}
-
-.color-scheme:hover .theme-header{
-    color: #4799d4;
-}
-
 .theme-header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -481,8 +454,8 @@
 
 .theme-description {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    margin: auto;
+    grid-row: 1 / 3;
+    margin: 5rem 1rem;
 }
 
 .color-scheme#complementary {

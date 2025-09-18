@@ -7,6 +7,250 @@
     <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
     <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
+    <script>
+      // toggle display of current section
+
+      function toggleDisplay(e) {
+        if (getComputedStyle(e).display === 'none') {
+          e.style.display = 'block';
+        } else {
+          e.style.display = 'none';
+        }
+      }
+
+// toggle chevron changes and call display function
+
+      function toggleContent(e) { 
+        const section = e.currentTarget;
+        const content = section.nextElementSibling;
+        toggleDisplay(content);
+        const chevron = section.querySelector('.fa-solid');
+        chevron.classList.toggle('fa-circle-chevron-down');
+        chevron.classList.toggle('fa-circle-chevron-up');
+      }
+
+
+// toggle the changes from the pages settings
+
+// CHANGE STYLE FUNCTION 
+
+      function changeStyle(elem, styleProp, styleValue) {
+        elem.style[styleProp] = styleValue;
+        return getComputedStyle(elem)[styleProp];
+      }
+
+// CHANGE THE FONT SIZE
+
+      function changeFs(size) {
+        if (size.innerHTML === 'Small') {
+            document.body.style.fontSize = '12px';
+        } else if (size.innerHTML === 'Medium') {
+            document.body.style.fontSize = '16px';
+        } else if (size.innerHTML === 'Large') {
+            document.body.style.fontSize = '20px';
+        }
+      }
+
+// Dark Theme
+
+function darkTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h3 = document.querySelectorAll('h3');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const container = document.querySelector('.ct-container');
+  const ctHeader = document.querySelector('.color-theme-header');
+  const span = document.querySelector('span');
+  const caption = document.querySelector('caption');
+  const cScheme = document.querySelectorAll('.color-scheme');
+  const ctTable = document.querySelector('.ct-table');
+  const tableHead = document.querySelectorAll('.ct-table th');
+  const tableData = document.querySelectorAll('.ct-table td');
+  const tableRow = document.querySelectorAll('.ct-table tr');
+  const themeName = document.querySelectorAll('.theme-name');
+  const emptyCell = document.querySelectorAll('.empty-cell');
+
+  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(container, 'outline', '2px #f5a749 solid');
+  changeStyle(ctHeader, 'color', '#f5a749');
+  changeStyle(span, 'color', '#fff');
+  changeStyle(ctTable, 'outline', '2px #f5a749 solid');
+  changeStyle(ctTable, 'backgroundColor', '#272b30');
+  changeStyle(caption, 'color', '#f5a749');
+  changeStyle(caption, 'backgroundColor', '#272b30')
+
+  for (row of tableRow) {
+    changeStyle(row, 'outline', '2px #f5a749 solid');
+  }
+
+  for (cell of emptyCell) {
+  changeStyle(cell, 'backgroundColor', '#272b30');
+  }
+
+  for (data of tableData) {
+    changeStyle(data, 'outline', '2px #f5a749 solid');
+  }
+
+  for (theme of themeName) {
+    changeStyle(theme, 'backgroundColor', '#272b30');
+    changeStyle(theme, 'color', '#fff');
+  }
+
+  for (head of tableHead) {
+    changeStyle(head, 'backgroundColor', '#272b30');
+    changeStyle(head, 'color', '#fff');
+    changeStyle(head, 'outline', '2px #f5a749 solid');
+  }
+
+  for (scheme of cScheme) {
+    changeStyle(scheme, 'outline', '2px #f5a749 solid');
+    changeStyle(scheme, 'backgroundColor', '#272b30');
+  }
+
+  for (h of h3) {
+    changeStyle(h, 'color', '#f5a749');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#fff');
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#f5a749');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// Light Theme
+
+function lightTheme(e) {
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const navList = nav.querySelectorAll('ul');
+  const h1 = document.querySelector('h1');
+  const h1Link = h1.querySelector('a');
+  const h3 = document.querySelectorAll('h3');
+  const listItem = document.querySelectorAll('li');
+  const text = document.querySelectorAll(('p'));
+  const footer = document.querySelector('footer');
+  const container = document.querySelector('.ct-container');
+  const ctHeader = document.querySelector('.color-theme-header');
+  const span = document.querySelector('span');
+  const caption = document.querySelector('caption');
+  const cScheme = document.querySelectorAll('.color-scheme');
+  const ctTable = document.querySelector('.ct-table');
+  const tableHead = document.querySelectorAll('.ct-table th');
+  const tableData = document.querySelectorAll('.ct-table td');
+  const tableRow = document.querySelectorAll('.ct-table tr');
+  const themeName = document.querySelectorAll('.theme-name');
+  const emptyCell = document.querySelectorAll('.empty-cell');
+
+  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
+  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
+  changeStyle(container, 'outline', '2px #4799d4 solid');
+  changeStyle(ctHeader, 'color', '#4799d4');
+  changeStyle(span, 'color', '#555555');
+  changeStyle(ctTable, 'outline', '2px #4799d4 solid');
+  changeStyle(ctTable, 'backgroundColor', '#bebebe');
+  changeStyle(caption, 'color', '#4799d4');
+  changeStyle(caption, 'backgroundColor', '#bebebe')
+
+  for (row of tableRow) {
+    changeStyle(row, 'outline', '2px #4799d4 solid');
+  }
+
+  for (cell of emptyCell) {
+  changeStyle(cell, 'backgroundColor', '#bebebe');
+  }
+
+  for (data of tableData) {
+    changeStyle(data, 'outline', '2px #4799d4 solid');
+  }
+
+  for (theme of themeName) {
+    changeStyle(theme, 'backgroundColor', '#bebebe');
+    changeStyle(theme, 'color', '#555555');
+  }
+
+  for (head of tableHead) {
+    changeStyle(head, 'backgroundColor', '#bebebe');
+    changeStyle(head, 'color', '#555555');
+    changeStyle(head, 'outline', '2px #4799d4 solid');
+  }
+
+  for (scheme of cScheme) {
+    changeStyle(scheme, 'outline', '2px #4799d4 solid');
+    changeStyle(scheme, 'backgroundColor', '#bebebe');
+  }
+
+  for (h of h3) {
+    changeStyle(h, 'color', '#4799d4');
+  }
+
+  for (p of text) {
+    changeStyle(p, 'color', '#555555')
+  }
+
+  for (ul of navList) {
+    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
+  };
+
+  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#4799d4');
+  });
+  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
+    changeStyle(h1Link, 'color', '#fff');
+  });
+};
+
+// CHANGING SETTINGS
+
+      function changeSetting(e) {        
+        if (e.innerHTML === 'Dark') {
+          darkTheme(e);
+        } else if (e.innerHTML === 'Light') {
+          lightTheme(e);
+        } else if (e.innerHTML === 'Small' ||
+                   e.innerHTML === 'Medium' ||
+                   e.innerHTML === 'Large') {
+          changeFs(e);
+        }
+      };
+
+// BUTTON ASSIGNMENT
+
+      function assignBtn(e) {
+        const currentBtn = e.currentTarget;
+        changeSetting(currentBtn);
+      }
+
+      window.addEventListener('load', function(e) {
+        const sections = document.querySelectorAll('.section');
+
+        for (section of sections) {
+          section.addEventListener('click', toggleContent)
+        }
+
+        const settingList = document.getElementById('settings-list');
+        const settingBtn = settingList.getElementsByTagName('button');
+
+        for (btn of settingBtn) {
+            btn.addEventListener('click', assignBtn)
+        }
+      });
+    </script>
     <title>Micheal Doyle Portfolio</title>
 </head>
 <body>
@@ -105,35 +349,35 @@
       </thead>
       <tbody>
         <tr class="complementary-theme">
-          <td>Complementary Theme</td>
+          <td class="theme-name">Complementary Theme</td>
           <td>#004A80</td>
           <td>#4799D4</td>
           <td>#D68228</td>
-          <td></td>
+          <td class="empty-cell"></td>
         </tr>
         <tr class="triadic-theme">
-          <td>Triadic Theme</td>
+          <td class="theme-name">Triadic Theme</td>
           <td>#4CCCD5</td>
           <td>#D481B6</td>
           <td>#FFE575</td>
-          <td></td>
+          <td class="empty-cell"></td>
         </tr>
         <tr class="monochromatic-theme">
-          <td>Monochromatic Theme</td>
+          <td class="theme-name">Monochromatic Theme</td>
           <td>#E6F2DF</td>
           <td>#1A4019</td>
           <td>#B0D897</td>
-          <td></td>
+          <td class="empty-cell"></td>
         </tr>
         <tr class="split-theme">
-          <td>Split Theme</td>
+          <td class="theme-name">Split Theme</td>
           <td>#3866B6</td>
           <td>#F5A749</td>
           <td>#F5D249</td>
           <td>#5E6675</td>
         </tr>
         <tr class="analogous-theme">
-          <td>Analogous Theme</td>
+          <td class="theme-name">Analogous Theme</td>
           <td>#665554</td>
           <td>#E6766E</td>
           <td>E68B6E</td>
