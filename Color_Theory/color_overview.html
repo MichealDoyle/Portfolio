@@ -128,8 +128,8 @@ function lightTheme(e) {
   const footer = document.querySelector('footer');
   const ctHeader = document.querySelector('.ct-header');
   const ctSubnav = document.querySelector('.ct-subnav');
-  const subnavHeader = ctSubnav.firstElementChild;
-  const subnavList = ctSubnav.querySelectorAll('a')
+  const subnavHeader = typeSubnav.firstElementChild;
+  const subnavList = typeSubnav.querySelectorAll('a')
   const overview = document.querySelector('.overview-desc');
   const overviewHeader = overview.firstElementChild;
   const termsList = document.querySelector('.terms-list');
@@ -147,9 +147,6 @@ function lightTheme(e) {
   changeStyle(termsList, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
   changeStyle(mainContent, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
 
-
-  for (item of subnavList) {
-  }
 
   for (term of termDef) {
     changeStyle(term, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
@@ -170,11 +167,11 @@ function lightTheme(e) {
     changeStyle(h1Link, 'color', '#fff');
   });
 
-  ctSubnav.addEventListener('mouseover', function(e) {
+  typeSubnav.addEventListener('mouseover', function(e) {
     changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #4799d4'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
     changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
   });
-  ctSubnav.addEventListener('mouseout', function(e) {
+  typeSubnav.addEventListener('mouseout', function(e) { 
     changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOVING MOUSE OFF
     changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
   })
