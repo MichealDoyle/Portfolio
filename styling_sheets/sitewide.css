@@ -146,6 +146,10 @@ a[href^='mailto']:active {
     top: 15.75rem;
 }
 
+#javaScript-li > ul {
+    top: 19.35rem;
+}
+
 #settings-li {
     padding: 1rem;
 }
