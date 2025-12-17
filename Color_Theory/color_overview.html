@@ -1,428 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" data-bs-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
-    <script>
-      // toggle display of current section
-
-      function toggleDisplay(e) {
-        if (getComputedStyle(e).display === 'none') {
-          e.style.display = 'block';
-        } else {
-          e.style.display = 'none';
-        }
-      }
-
-// toggle chevron changes and call display function
-
-      function toggleContent(e) { 
-        const section = e.currentTarget;
-        const content = section.nextElementSibling;
-        toggleDisplay(content);
-        const chevron = section.querySelector('.fa-solid');
-        chevron.classList.toggle('fa-circle-chevron-down');
-        chevron.classList.toggle('fa-circle-chevron-up');
-      }
-
-
-// toggle the changes from the pages settings
-
-// CHANGE STYLE FUNCTION 
-
-      function changeStyle(elem, styleProp, styleValue) {
-        elem.style[styleProp] = styleValue;
-        return getComputedStyle(elem)[styleProp];
-      }
-
-// CHANGE THE FONT SIZE
-
-      function changeFs(size) {
-        if (size.innerHTML === 'Small') {
-            document.body.style.fontSize = '12px';
-        } else if (size.innerHTML === 'Medium') {
-            document.body.style.fontSize = '16px';
-        } else if (size.innerHTML === 'Large') {
-            document.body.style.fontSize = '20px';
-        }
-      }
-
-// Dark Theme
-
-function darkTheme(e) {
-  const body = document.querySelector('body');
-  const nav = document.querySelector('nav');
-  const navList = nav.querySelectorAll('ul');
-  const h1 = document.querySelector('h1');
-  const h1Link = h1.querySelector('a');
-  const h2 = document.querySelectorAll('h2');
-  const listItem = document.querySelectorAll('li');
-  const text = document.querySelectorAll('p');
-  const footer = document.querySelector('footer');
-  const ctHeader = document.querySelector('.ct-header');
-  const ctSubnav = document.querySelector('.ct-subnav');
-  const subnavHeader = ctSubnav.firstElementChild;
-  const subnavList = ctSubnav.querySelectorAll('a')
-  const overview = document.querySelector('.overview-desc');
-  const overviewHeader = overview.firstElementChild;
-  const termsList = document.querySelector('.terms-list');
-  const defTerm = document.querySelectorAll('.terms-list dt');
-  const termDef = document.querySelectorAll('.terms-list dd');
-  const mainContent = document.querySelector('.main-content')
-
-  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
-  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(ctHeader, 'color', '#f5a749'); // CHANGE HEADER COLOR AT THE TOP
-  changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');  // CHANGE OUTLINE COLOR OF SUB-NAV LIST
-  changeStyle(subnavHeader, 'borderBottomColor', '#f5a749'); // CHANGE BOTTOM BORDER COLOR OF SUB-NAV HEADER
-  changeStyle(overview, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF OVERVIEW BORDER
-  changeStyle(overviewHeader, 'borderBottomColor', '#f5a749'); // CHANGE BOTTOM BORDER COLOR OF OVERVIEW HEADER
-  changeStyle(termsList, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
-  changeStyle(mainContent, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
-
-  for (term of termDef) { 
-    changeStyle(term, 'outline', '3px #f5a749 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
-    changeStyle(term, 'color', '#fff');
-  }
-
-  for (def of defTerm) {  
-    changeStyle(def, 'outline', '3px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TERM DEFINITION BORDER
-    changeStyle(def, 'color', '#fff');
-  }
-
-  for (ul of navList) {
-    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
-  };
-
-  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#f5a749');
-  });
-  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#fff');
-
-  ctSubnav.addEventListener('mouseover', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #f5a749'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
-    changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
-  });
-  ctSubnav.addEventListener('mouseout', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
-    changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
-  })
-  });
-};
-
-// Light Theme
-
-function lightTheme(e) {
-  const body = document.querySelector('body');
-  const nav = document.querySelector('nav');
-  const navList = nav.querySelectorAll('ul');
-  const h1 = document.querySelector('h1');
-  const h1Link = h1.querySelector('a');
-  const h2 = document.querySelectorAll('h2');
-  const listItem = document.querySelectorAll('li');
-  const footer = document.querySelector('footer');
-  const ctHeader = document.querySelector('.ct-header');
-  const ctSubnav = document.querySelector('.ct-subnav');
-  const subnavHeader = typeSubnav.firstElementChild;
-  const subnavList = typeSubnav.querySelectorAll('a')
-  const overview = document.querySelector('.overview-desc');
-  const overviewHeader = overview.firstElementChild;
-  const termsList = document.querySelector('.terms-list');
-  const defTerm = document.querySelectorAll('.terms-list dt');
-  const termDef = document.querySelectorAll('.terms-list dd');
-  const mainContent = document.querySelector('.main-content');
-
-  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
-  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(ctHeader, 'color', '#4799d4'); // CHANGE HEADER COLOR AT THE TOP
-  changeStyle(ctSubnav, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF SUB-NAV LIST
-  changeStyle(subnavHeader, 'borderBottomColor', '#4799d4'); // CHANGE BOTTOM BORDER COLOR OF SUB-NAV HEADER
-  changeStyle(overview, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF OVERVIEW BORDER
-  changeStyle(overviewHeader, 'borderBottomColor', '#4799d4'); // CHANGE BOTTOM BORDER COLOR OF OVERVIEW HEADER
-  changeStyle(termsList, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
-  changeStyle(mainContent, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
-
-
-  for (term of termDef) {
-    changeStyle(term, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
-  }
-
-  for (def of defTerm) {
-    changeStyle(def, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERM DEFINITION BORDER
-  }
-
-  for (ul of navList) {
-    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
-  };
-
-  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#4799d4');
-  });
-  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#fff');
-  });
-
-  typeSubnav.addEventListener('mouseover', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #4799d4'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
-    changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
-  });
-  typeSubnav.addEventListener('mouseout', function(e) { 
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOVING MOUSE OFF
-    changeStyle(ctSubnav, 'outline', '2px #4799d4 solid');
-  })
-};
-
-// CHANGING SETTINGS
-
-      function changeSetting(e) {        
-        if (e.innerHTML === 'Dark') {
-          darkTheme(e);
-        } else if (e.innerHTML === 'Light') {
-          lightTheme(e);
-        } else if (e.innerHTML === 'Small' ||
-                   e.innerHTML === 'Medium' ||
-                   e.innerHTML === 'Large') {
-          changeFs(e);
-        }
-      };
-
-// BUTTON ASSIGNMENT
-
-      function assignBtn(e) {
-        const currentBtn = e.currentTarget;
-        changeSetting(currentBtn);
-      }
-
-      window.addEventListener('load', function(e) {
-        const sections = document.querySelectorAll('.section');
-
-        for (section of sections) {
-          section.addEventListener('click', toggleContent)
-        }
-
-        const settingList = document.getElementById('settings-list');
-        const settingBtn = settingList.getElementsByTagName('button');
-
-        for (btn of settingBtn) {
-            btn.addEventListener('click', assignBtn)
-        }
-      });
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
-<body>
-<div class="container">
-<header>
-  <h1><a href="../index.html">MD</a></h1>
-  <nav id="nav-bar">
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li id="portfolio-li" class="nav-list-item"><a href="../projects/projects.html">Portfolio</a>
-        <ul>
-          <li id="photoshop-li" class="nav-list-item"><a href="../projects/projects.html#photoshop">
-            Adobe Photoshop</a>
-              <ul>
-                <li><a href="../projects/adobe-photoshop/photo-restore/photo-restore.html">
+<body class="bg-primary-subtle text-primary-emphasis h-100">
+<div class="d-flex flex-column w-100 h-100 mx-auto">
+
+<!-- START OF NAVIGATION -->
+
+<header class="mb-auto">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="text-decoration-none text-white h1" href="../../index.html">MD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbar-content">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="../../index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown" id="portfolio-li">
+        <a class="nav-link dropdown-toggle" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside">Portfolio</a>
+        <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+          <li class="dropend" id="photoshop-li">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="photoshop-dropdown" data-bs-toggle="dropdown">Adobe Photoshop</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-photoshop/photo-restore/photo-restore.html">
                   Photo Restoration</a>
                 </li>
-                <li><a href="../projects/adobe-photoshop/magazine-cover/magazine-cover.html">
+                <li> 
+                  <a class="dropdown-item" href="../../projects/adobe-photoshop/magazine-cover/magazine-cover.html">
                   Digital Magazine Cover</a>
                 </li>
-                <li><a href="../projects/adobe-photoshop/branding-package/branding-package.html">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-photoshop/branding-package/branding-package.html">
                   Start-up Branding Package</a>
                 </li>
               </ul>
           </li>
-          <li id="animate-li" class="nav-list-item"><a href="../projects/projects.html#animation">
-            Adobe Animation</a>
-              <ul>
-                <li><a href="../projects/adobe-animation/character-animation/character-animation.html">
+          <div class="dropdown-divider"></div>
+          <li id="animate-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="animate-dropdown" data-bs-toggle="dropdown">Adobe Animation</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-animation/character-animation/character-animation.html">
                   Character Animation</a>
                 </li>
-                <li><a href="../projects/adobe-animation/interactive-banner/interactive-banner.html">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-animation/interactive-banner/interactive-banner.html">
                   Interactive Banner</a>
                 </li>
-                <li><a href="../projects/adobe-animation/animated-infographic/animated-infographic.html">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-animation/animated-infographic/animated-infographic.html">
                   Animated Infographic</a>
                 </li>
               </ul>
           </li>
-          <li id="color-li" class="nav-list-item"><a href="color_overview.html">
-            Color Theory</a>
-              <ul>
-                <li><a href="Color_Themes/color_themes.html">
+          <div class="dropdown-divider"></div>
+          <li id="color-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="color-theory-dropdown" data-bs-toggle="dropdown">Color Theory</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../Color_Theory/color_overview.html">
+                  Color Theory Overview</a>
+                <li>
+                  <a class="dropdown-item" href="../Color_Theory/Color_Themes/color_themes.html">
                   Color Themes</a>
                 </li>
-                <li><a href="Color_Theory_Article/color_article.html">
+                <li>
+                  <a class="dropdown-item" href="../Color_Theory/Color_Theory_Article/color_article.html">
                   Color Theory Article</a>
                 </li>
               </ul>
           </li>
-          <li id="type-li" class="nav-list-item"><a href="/Portfolio/Typography/type_overview.html">
-            Typography</a>
-              <ul>
-                <li><a href="/Portfolio/Typography/Font_Types_Article/font_types.html">
+          <div class="dropdown-divider"></div>
+          <li id="type-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="type-dropdown" data-bs-toggle="dropdown">Typography</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../Typography/type_overview.html">
+                  Typography Overview</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../Typography/Font_Types_Article/font_types.html">
                   Font Types Article</a>
                 </li>
-                <li><a href="/Portfolio/Typography/Typography_Article/typography.html">
+                <li>
+                  <a class="dropdown-item" href="../Typography/Typography_Article/typography.html">
                   Typography Article</a>
                 </li>
               </ul>  
           </li>
-          <li id="javaScript-li" class="nav-list-item">
-            JavaScript Projects
-              <ul>
-                <li><a href="/projects/javaScript-projects/quiz-mine.html">
+          <div class="dropdown-divider"></div>
+          <li id="javaScript-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="js-dropdown" data-bs-toggle="dropdown">JavaScript Projects</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../projects/javaScript-projects/quiz-mine.html">
                   Interactive Quiz</a>
                 </li>
               </ul>
           </li>
         </ul>
       </li>
-      <li><a href="../contact.html">Contact</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li id="settings-li" class="nav-list-item">Settings
-        <ul id="settings-list">
-          <li>Mode:
-            <button>Dark</button>
-            <button>Light</button>
-          </li>
-          <li>Font Size:
-            <button>Small</button>
-            <button>Medium</button>
-            <button>Large</button>
-          </li>
-        </ul>
+      <div class="dropdown-divider"></div>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../contact.html">Contact</a>
+      </li>
+      <div class="dropdown-divider"></div>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../resume.html">Resume</a>
+      </li>
+      <div class="dropdown-divider"></div>
+      <li id="settings-li" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle disabled" href="#" role="button" id="settings-dropdown" data-bs-toggle="dropdown">Settings</a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle" id="settings-list">
+            <li class="text-center">Mode:
+              <div class="dropdown-divider"></div>
+              <button class="ct-btn dropdown-item">Dark</button>
+              <button class="ct-btn dropdown-item">Light</button>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="text-center">Font Size:
+              <div class="dropdown-divider"></div>
+              <button class="font-btn dropdown-item">Small</button>
+              <button class="font-btn dropdown-item">Medium</button>
+              <button class="font-btn dropdown-item">Large</button>
+            </li>
+          </ul>
       </li>
     </ul>
+    </div>
+  </div>
   </nav>
 </header>
+
+<!-- END OF NAVIGATION -->
+
+<!-- START OF MAIN -->
+
 <main id="color-theory-content" class="main-content">
-<div id="color-theory">
-  <article id="ct-overview">
-    <h2 class="ct-header">Color Theory</h2>
-    <section class="ct-subnav">
-      <h3 class="articles-header">Articles</h3>
-      <ul>
-        <li><a href="/Portfolio/Color_Theory/Color_Themes/color_themes.html">Color Themes</a></li>
-        <li><a href="/Portfolio/Color_Theory/Color_Theory_Article/color_article.html">Color Theory Article</a></li>
-      </ul>
-    </section>
-    <div class="overview-desc">
-      <h3 class="overview-header">Overview</h3>
-        <p>
+<div id="color-theory" class="container-lg my-4">
+  <div id="ct-overview" class="row">
+    <div class="col-12">
+      <h1 class="ct-header border-bottom border-primary border-2 p-3">Color Theory</h1>
+    </div>
+    <div class="col-8 d-flex flex-column p-3 align-items-center">
+      <h2 class="p-2 border-bottom border-primary">Overview</h2>
+        <p class="p-2 lead">
           Color Theory is the understanding of how different colors interact with each other and how they can be used to
           provide contrast, harmony, and even provoke emotions. Below is a list of key color theory terms that help
           give us a better understanding of what principles make up color theory.
         </p>
     </div>
-  </article>
-  <div id="ct-terms">
-    <dl class="terms-list">
-      <dt><dfn>Color Wheel</dfn></dt>
-        <dd>The color wheel is a fundamental tool in color theory, illustrating the relationship between colors.
-      </dd>
-      <dt><dfn>Primary Colors</dfn></dt>
-        <dd>Primary colors, which are pure and cannot be created by mixing other colors, include, Red, Blue, and Yellow.
+    <div class="col-4 d-flex flex-column align-items-center justify-content-lg-evenly p-3">
+      <h2 class="p-2 border-bottom border-primary">Articles</h2>
+      <ul>
+        <li class="p-1"><a href="/Portfolio/Color_Theory/Color_Themes/color_themes.html">Color Themes</a></li>
+        <li class="p-1"><a href="/Portfolio/Color_Theory/Color_Theory_Article/color_article.html">Color Theory Article</a></li>
+      </ul>
+    </div>
+    <div id="ct-terms" class="col-12 p-3">
+      <h3 class="p-2 mb-4 text-center">Color Theory Terms</h3>
+    <dl class="border border-primary border-2 rounded-3 p-4">
+      <dt class="p-2 mb-2"><dfn>Color Wheel</dfn></dt>
+        <dd class="px-2">The color wheel is a fundamental tool in color theory, illustrating the relationship between colors.
         </dd>
-      <dt><dfn>Secondary Colors</dfn></dt>
-        <dd>Secondary colors are formed by mixing two primary colors. Green, Violet, and Orange are the secondary colors.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Primary Colors</dfn></dt>
+        <dd class="px-2">Primary colors, which are pure and cannot be created by mixing other colors, include, Red, Blue, and Yellow.
         </dd>
-      <dt><dfn>Tertiary Colors</dfn></dt>
-        <dd>Tertiary colors result from mixing a primary color with a secondary color. There are six possible tertiary colors.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Secondary Colors</dfn></dt>
+        <dd class="px-2">Secondary colors are formed by mixing two primary colors. Green, Violet, and Orange are the secondary colors.
         </dd>
-      <dt><dfn>Saturation</dfn></dt>
-        <dd>Saturation refers to the intensity and purity of a color.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Tertiary Colors</dfn></dt>
+        <dd class="px-2">Tertiary colors result from mixing a primary color with a secondary color. There are six possible tertiary colors.
         </dd>
-      <dt><dfn>Hues</dfn></dt>
-        <dd>Hues are often defined as the purest form of a color. There are twelve hues that are considered to be the purest
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Saturation</dfn></dt>
+        <dd class="px-2">Saturation refers to the intensity and purity of a color.
+        </dd>
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Hues</dfn></dt>
+        <dd class="px-2">Hues are often defined as the purest form of a color. There are twelve hues that are considered to be the purest
           and most vivid. The three primary colors, the three secondary colors, and the six tertiary colors.
         </dd>
-      <dt><dfn>Shades</dfn></dt>
-        <dd>Shades of a hue are made by mixing the hue with black.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Shades</dfn></dt>
+        <dd class="px-2">Shades of a hue are made by mixing the hue with black.
         </dd>
-      <dt><dfn>Tints</dfn></dt>
-        <dd>Tints of a hue are made by mixing the hue with white.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Tints</dfn></dt>
+        <dd class="px-2">Tints of a hue are made by mixing the hue with white.
         </dd>
-      <dt><dfn>Tones</dfn></dt>
-        <dd>Tones of a hue are made by mixing the hue with gray.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Tones</dfn></dt>
+        <dd class="px-2">Tones of a hue are made by mixing the hue with gray.
         </dd>
-      <dt><dfn>Value of the Hue</dfn></dt>
-        <dd>The value of the hue refers to its relative lightness or darkness. When values are close, elements will appear to
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Value of the Hue</dfn></dt>
+        <dd class="px-2">The value of the hue refers to its relative lightness or darkness. When values are close, elements will appear to
           blend together. When values differ significantly, creating a greater contrast, the most distinct areas of the image will
           stand out or &#34;pop&#34;.
         </dd>
-      <dt><dfn>Neutral Colors</dfn></dt>
-        <dd>Neutral colors are often perceived as the absence of color, but they usually contain subtle undertones.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Neutral Colors</dfn></dt>
+        <dd class="px-2">Neutral colors are often perceived as the absence of color, but they usually contain subtle undertones.
         </dd>
-      <dt><dfn>Warm Colors</dfn></dt>
-        <dd>Warm bring energy and intensity to a design. They often evoke strong emotions and can create a sense of excitement or warmth.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Warm Colors</dfn></dt>
+        <dd class="px-2">Warm bring energy and intensity to a design. They often evoke strong emotions and can create a sense of excitement or warmth.
         </dd>
-      <dt><dfn>Cool Colors</dfn></dt>
-        <dd>Cool colors contribute to a calm and soothing atmosphere. These colors are associated with relaxation and can evoke
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Cool Colors</dfn></dt>
+        <dd class="px-2">Cool colors contribute to a calm and soothing atmosphere. These colors are associated with relaxation and can evoke
           a peaceful, tranquil feeling.
         </dd>
-      <dt><dfn>Monochromatic Colors</dfn></dt>
-        <dd>A monochromatic color scheme consist of a single hue with variations in shades, tints and tones. this approach creates a minimal yet
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Monochromatic Colors</dfn></dt>
+        <dd class="px-2">A monochromatic color scheme consist of a single hue with variations in shades, tints and tones. this approach creates a minimal yet
           impactful design, directing attention to key elements.
         </dd>
-      <dt><dfn>Color Scheme</dfn></dt>
-        <dd>A color scheme is a defined set of colors that ensures a cohesive look and feel across a project.
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Color Scheme</dfn></dt>
+        <dd class="px-2">A color scheme is a defined set of colors that ensures a cohesive look and feel across a project.
         </dd>
-      <dt><dfn>Triadic Colors</dfn></dt>
-        <dd>Triadic colors are a group of three colors that are evenly spaced on the color wheel. A common color scheme 
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Triadic Colors</dfn></dt>
+        <dd class="px-2">Triadic colors are a group of three colors that are evenly spaced on the color wheel. A common color scheme 
           known for its vibrant and harmonious feel, as it balances the use of colors while maintaining contrast and richness.
         </dd>
-      <dt><dfn>Complementary colors</dfn></dt>
-        <dd>Complementary colors are pairs of colors that when combined, cancel out by producing a grayscale color like white
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Complementary colors</dfn></dt>
+        <dd class="px-2">Complementary colors are pairs of colors that when combined, cancel out by producing a grayscale color like white
           or black. When placed next to each other, they create the strongest contrast and reinforce each other. On the traditional
           color wheel, complementary colors are placed directly across from each other.
         </dd>
-      <dt><dfn>Split Colors</dfn></dt>
-        <dd>Split colors involves using a variation of color families to create visual interest and harmony. This technique focuses on
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Split Colors</dfn></dt>
+        <dd class="px-2">Split colors involves using a variation of color families to create visual interest and harmony. This technique focuses on
           splitting complementary colors by incorporating analogous hues, which helps generate a more dynamic and visually appealing
           composition.
         </dd>
-      <dt><dfn>Analogous Colors</dfn></dt>
-        <dd>Analogous colors refers to groups of colors that are next to each other on the color wheel. These colors usually match well
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Analogous Colors</dfn></dt>
+        <dd class="px-2">Analogous colors refers to groups of colors that are next to each other on the color wheel. These colors usually match well
           together and create serene and comfortable designs. they are often found in nature and are harmonious and pleasing to the eye.
         </dd>
-      <dt><dfn>Contrasting</dfn></dt>
-        <dd>In color theory, contrasting refers to the impact of combining hues in a way that highlights their differences, thus
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Contrasting</dfn></dt>
+        <dd class="px-2">In color theory, contrasting refers to the impact of combining hues in a way that highlights their differences, thus
           enhancing their visual impact. Contrasting colors are often used to make each other stand out, creating a dynamic and
           visually appealing effect.
         </dd>
-      <dt><dfn>Vibrancy</dfn></dt>
-        <dd>In color theory, vibrancy refers to the brightness, intensity, and energy of a hue. Vibrant colors naturally draw attention
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Vibrancy</dfn></dt>
+        <dd class="px-2">In color theory, vibrancy refers to the brightness, intensity, and energy of a hue. Vibrant colors naturally draw attention
           and create a sense of excitement, movement, or warmth, depending on their placement and context. 
         </dd>
-      <dt><dfn>Whitespace</dfn></dt>
-        <dd>Empty space is often referred to as whitespace. Whitespace is a powerful tool that can be used to direct attention,
+        <hr>
+      <dt class="p-2 mb-2"><dfn>Whitespace</dfn></dt>
+        <dd class="px-2">Empty space is often referred to as whitespace. Whitespace is a powerful tool that can be used to direct attention,
           create balance, and establish a visual hierarchy.
         </dd>
     </dl>
   </div>
 </div>
-</main>
-<footer>
-  <address>
-    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
-    <a href="https://x.com/">
-    <img src="images/twitter-icon.png" alt="Twitter.com">
-    </a>
-    <a href="https://www.facebook.com/">
-    <img src="images/facebook-icon.png" alt="Facebook.com">
-    </a>
-    <a href="https://www.linkedin.com/">
-    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
-    </a> 
-  </address>
-</footer>
 </div>
+</main>
+
+<!-- END OF MAIN -->
+
+<!-- START OF FOOTER -->
+
+<footer class="mt-auto">
+ <address class="d-flex justify-content-center gap-3">
+   <a href="mailto:mikeydoyle01@yahoo.com" class="text-decoration-none link-info my-auto">Mikeydoyle01@yahoo.com</a>
+   <a href="https://x.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/twitter-icon.png" alt="Twitter.com">
+   </a>
+   <a href="https://www.facebook.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/facebook-icon.png" alt="Facebook.com">
+   </a>
+   <a href="https://www.linkedin.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/linkedin-icon.png" alt="Linkedin.com">
+   </a> 
+ </address>
+</footer> 
+
+<!-- END OF FOOTER -->
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

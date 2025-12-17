@@ -1,306 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" data-bs-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
-    <script>
-      // toggle display of current section
-
-      function toggleDisplay(e) {
-        if (getComputedStyle(e).display === 'none') {
-          e.style.display = 'block';
-        } else {
-          e.style.display = 'none';
-        }
-      }
-
-// toggle chevron changes and call display function
-
-      function toggleContent(e) { 
-        const section = e.currentTarget;
-        const content = section.nextElementSibling;
-        toggleDisplay(content);
-        const chevron = section.querySelector('.fa-solid');
-        chevron.classList.toggle('fa-circle-chevron-down');
-        chevron.classList.toggle('fa-circle-chevron-up');
-      }
-
-
-// toggle the changes from the pages settings
-
-// CHANGE STYLE FUNCTION 
-
-      function changeStyle(elem, styleProp, styleValue) {
-        elem.style[styleProp] = styleValue;
-        return getComputedStyle(elem)[styleProp];
-      }
-
-// CHANGE THE FONT SIZE
-
-      function changeFs(size) {
-        if (size.innerHTML === 'Small') {
-            document.body.style.fontSize = '12px';
-        } else if (size.innerHTML === 'Medium') {
-            document.body.style.fontSize = '16px';
-        } else if (size.innerHTML === 'Large') {
-            document.body.style.fontSize = '20px';
-        }
-      }
-
-// Dark Theme
-
-function darkTheme(e) {
-  const body = document.querySelector('body');
-  const nav = document.querySelector('nav');
-  const navList = nav.querySelectorAll('ul');
-  const h1 = document.querySelector('h1');
-  const h1Link = h1.querySelector('a');
-  const h2 = document.querySelectorAll('h2');
-  const listItem = document.querySelectorAll('li');
-  const text = document.querySelectorAll(('p'));
-  const footer = document.querySelector('footer');
-  const typeHeader = document.querySelector('.type-header');
-  const typeSubnav = document.querySelector('.type-subnav');
-  const subnavHeader = typeSubnav.firstElementChild;
-  const subnavList = typeSubnav.querySelectorAll('a')
-  const overview = document.querySelector('.overview-desc');
-  const overviewHeader = overview.firstElementChild;
-  const termsList = document.querySelector('.terms-list');
-  const defTerm = document.querySelectorAll('.terms-list dt');
-  const termDef = document.querySelectorAll('.terms-list dd');
-  const mainContent = document.querySelector('.main-content');
-
-  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
-  changeStyle(footer, 'backgroundColor', '#f5a749' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(typeHeader, 'color', '#f5a749'); // CHANGE HEADER COLOR AT THE TOP
-  changeStyle(typeSubnav, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF SUB-NAV LIST
-  changeStyle(subnavHeader, 'borderBottomColor', '#f5a749'); // CHANGE BOTTOM BORDER COLOR OF SUB-NAV HEADER
-  changeStyle(overview, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF OVERVIEW BORDER
-  changeStyle(overviewHeader, 'borderBottomColor', '#f5a749'); // CHANGE BOTTOM BORDER COLOR OF OVERVIEW HEADER
-  changeStyle(termsList, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
-  changeStyle(mainContent, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
-
-  for (term of termDef) {
-    changeStyle(term, 'outline', '3px #f5a749 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
-  }
-
-  for (def of defTerm) { 
-    changeStyle(def, 'outline', '3px #f5a749 solid'); // CHANGE OUTLINE COLOR OF TERM DEFINITION BORDER
-  }
-
-  for (ul of navList) {
-    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
-  };
-
-  h1Link.addEventListener('mouseover', function(e) {  // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#f5a749');
-  });
-  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#fff');
-
-  ctSubnav.addEventListener('mouseover', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #f5a749'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
-    changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
-  });
-  ctSubnav.addEventListener('mouseout', function(e) {
-    changeStyle(ctSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOVING MOUSE OFF
-    changeStyle(ctSubnav, 'outline', '2px #f5a749 solid');
-  })
-  });
-};
-
-// Light Theme
-
-function lightTheme(e) {
-  const body = document.querySelector('body');
-  const nav = document.querySelector('nav');
-  const navList = nav.querySelectorAll('ul');
-  const h1 = document.querySelector('h1');
-  const h1Link = h1.querySelector('a');
-  const h2 = document.querySelectorAll('h2');
-  const listItem = document.querySelectorAll('li');
-  const text = document.querySelectorAll(('p'));
-  const footer = document.querySelector('footer');
-  const typeHeader = document.querySelector('.type-header');
-  const typeSubnav = document.querySelector('.type-subnav');
-  const subnavHeader = typeSubnav.firstElementChild;
-  const subnavList = typeSubnav.querySelectorAll('a')
-  const overview = document.querySelector('.overview-desc');
-  const overviewHeader = overview.firstElementChild;
-  const termsList = document.querySelector('.terms-list');
-  const defTerm = document.querySelectorAll('.terms-list dt');
-  const termDef = document.querySelectorAll('.terms-list dd');
-  const mainContent = document.querySelector('.main-content');
-
-  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
-  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(typeHeader, 'color', '#4799d4'); // CHANGE HEADER COLOR AT THE TOP
-  changeStyle(typeSubnav, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF SUB-NAV LIST
-  changeStyle(subnavHeader, 'borderBottomColor', '#4799d4'); // CHANGE BOTTOM BORDER COLOR OF SUB-NAV HEADER
-  changeStyle(overview, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF OVERVIEW BORDER
-  changeStyle(overviewHeader, 'borderBottomColor', '#4799d4'); // CHANGE BOTTOM BORDER COLOR OF OVERVIEW HEADER
-  changeStyle(termsList, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERMS LIST BORDER
-  changeStyle(mainContent, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE COLOR OF ARTICLE BORDER
-
-
-  for (term of termDef) {
-    changeStyle(term, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF WORD TERM BORDER
-  }
-
-  for (def of defTerm) {
-    changeStyle(def, 'outline', '3px #4799d4 solid'); // CHANGE OUTLINE COLOR OF TERM DEFINITION BORDER
-  }
-
-  for (ul of navList) {
-    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
-  };
-
-  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#4799d4');
-  });
-  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#fff');
-  });
-
-  typeSubnav.addEventListener('mouseover', function(e) {
-    changeStyle(typeSubnav, 'boxShadow', '0 0 .5rem .25rem #4799d4'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOUSED OVER
-    changeStyle(typeSubnav, 'outline', '2px #4799d4 solid');
-  });
-  typeSubnav.addEventListener('mouseout', function(e) { 
-    changeStyle(typeSubnav, 'boxShadow', '0 0 .5rem .25rem #ffffff00'); // CHANGE BOX SHADOW AND OUTLINE COLOR WHEN MOVING MOUSE OFF
-    changeStyle(typeSubnav, 'outline', '2px #4799d4 solid');
-  })
-};
-
-// CHANGING SETTINGS
-
-      function changeSetting(e) {        
-        if (e.innerHTML === 'Dark') {
-          darkTheme(e);
-        } else if (e.innerHTML === 'Light') {
-          lightTheme(e);
-        } else if (e.innerHTML === 'Small' ||
-                   e.innerHTML === 'Medium' ||
-                   e.innerHTML === 'Large') {
-          changeFs(e);
-        }
-      };
-
-// BUTTON ASSIGNMENT
-
-      function assignBtn(e) {
-        const currentBtn = e.currentTarget;
-        changeSetting(currentBtn);
-      }
-
-      window.addEventListener('load', function(e) {
-        const sections = document.querySelectorAll('.section');
-
-        for (section of sections) {
-          section.addEventListener('click', toggleContent)
-        }
-
-        const settingList = document.getElementById('settings-list');
-        const settingBtn = settingList.getElementsByTagName('button');
-
-        for (btn of settingBtn) {
-            btn.addEventListener('click', assignBtn)
-        }
-      });
-    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
-<body>
-<div class="container">
-<header>
-  <h1><a href="../index.html">MD</a></h1>
-  <nav id="nav-bar">
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li id="portfolio-li" class="nav-list-item"><a href="../projects/projects.html">Portfolio</a>
-        <ul>
-          <li id="photoshop-li" class="nav-list-item"><a href="../projects/projects.html#photoshop">
-            Adobe Photoshop</a>
-              <ul>
-                <li><a href="../projects/adobe-photoshop/photo-restore/photo-restore.html">
+<body class="bg-primary-subtle text-primary-emphasis h-100">
+<div class="d-flex flex-column w-100 h-100 mx-auto">
+
+<!-- START OF NAVIGATION -->
+
+<header class="mb-auto">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="text-decoration-none text-white h1" href="../../index.html">MD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbar-content">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="../../index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown" id="portfolio-li">
+        <a class="nav-link dropdown-toggle" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside">Portfolio</a>
+        <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+          <li class="dropend" id="photoshop-li">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="photoshop-dropdown" data-bs-toggle="dropdown">Adobe Photoshop</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-photoshop/photo-restore/photo-restore.html">
                   Photo Restoration</a>
                 </li>
-                <li><a href="../projects/adobe-photoshop/magazine-cover/magazine-cover.html">
+                <li> 
+                  <a class="dropdown-item" href="../../projects/adobe-photoshop/magazine-cover/magazine-cover.html">
                   Digital Magazine Cover</a>
                 </li>
-                <li><a href="../projects/adobe-photoshop/branding-package/branding-package.html">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-photoshop/branding-package/branding-package.html">
                   Start-up Branding Package</a>
                 </li>
               </ul>
           </li>
-          <li id="animate-li" class="nav-list-item"><a href="../projects/projects.html#animation">
-            Adobe Animation</a>
-              <ul>
-                <li><a href="../projects/adobe-animation/character-animation/character-animation.html">
+          <div class="dropdown-divider"></div>
+          <li id="animate-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="animate-dropdown" data-bs-toggle="dropdown">Adobe Animation</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-animation/character-animation/character-animation.html">
                   Character Animation</a>
                 </li>
-                <li><a href="../projects/adobe-animation/interactive-banner/interactive-banner.html">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-animation/interactive-banner/interactive-banner.html">
                   Interactive Banner</a>
                 </li>
-                <li><a href="../projects/adobe-animation/animated-infographic/animated-infographic.html">
+                <li>
+                  <a class="dropdown-item" href="../../projects/adobe-animation/animated-infographic/animated-infographic.html">
                   Animated Infographic</a>
                 </li>
               </ul>
           </li>
-          <li id="color-li" class="nav-list-item"><a href="../Color_Theory/color_overview.html">
-            Color Theory</a>
-              <ul>
-                <li><a href="../Color_Theory/Color_Themes/color_themes.html">
+          <div class="dropdown-divider"></div>
+          <li id="color-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="color-theory-dropdown" data-bs-toggle="dropdown">Color Theory</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../Color_Theory/color_overview.html">
+                  Color Theory Overview</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../Color_Theory/Color_Themes/color_themes.html">
                   Color Themes</a>
                 </li>
-                <li><a href="../Color_Theory/Color_Theory_Article/color_article.html">
+                <li>
+                  <a class="dropdown-item" href="../../Color_Theory/Color_Theory_Article/color_article.html">
                   Color Theory Article</a>
                 </li>
               </ul>
           </li>
-          <li id="type-li" class="nav-list-item"><a href="type_overview.html">
-            Typography</a>
-              <ul>
-                <li><a href="Font_Types_Article/font_types.html">
+          <div class="dropdown-divider"></div>
+          <li id="type-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="type-dropdown" data-bs-toggle="dropdown">Typography</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../Typography/type_overview.html">
+                  Typography Overview</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../Typography/Font_Types_Article/font_types.html">
                   Font Types Article</a>
                 </li>
-                <li><a href="Typography_Article/typography.html">
+                <li>
+                  <a class="dropdown-item" href="../../Typography/Typography_Article/typography.html">
                   Typography Article</a>
                 </li>
               </ul>  
           </li>
-          <li id="javaScript-li" class="nav-list-item">
-            JavaScript Projects
-              <ul>
-                <li><a href="../projects/javaScript-projects/quiz-mine.html">
+          <div class="dropdown-divider"></div>
+          <li id="javaScript-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="js-dropdown" data-bs-toggle="dropdown">JavaScript Projects</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="../../projects/javaScript-projects/quiz-mine.html">
                   Interactive Quiz</a>
                 </li>
               </ul>
           </li>
         </ul>
       </li>
-      <li><a href="../contact.html">Contact</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li id="settings-li" class="nav-list-item">Settings
-        <ul id="settings-list">
-          <li>Mode:
-            <button>Dark</button>
-            <button>Light</button>
-          </li>
-          <li>Font Size:
-            <button>Small</button>
-            <button>Medium</button>
-            <button>Large</button>
-          </li>
-        </ul>
+      <div class="dropdown-divider"></div>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../contact.html">Contact</a>
+      </li>
+      <div class="dropdown-divider"></div>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../resume.html">Resume</a>
+      </li>
+      <div class="dropdown-divider"></div>
+      <li id="settings-li" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle disabled" href="#" role="button" id="settings-dropdown" data-bs-toggle="dropdown">Settings</a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle" id="settings-list">
+            <li class="text-center">Mode:
+              <div class="dropdown-divider"></div>
+              <button class="ct-btn dropdown-item">Dark</button>
+              <button class="ct-btn dropdown-item">Light</button>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="text-center">Font Size:
+              <div class="dropdown-divider"></div>
+              <button class="font-btn dropdown-item">Small</button>
+              <button class="font-btn dropdown-item">Medium</button>
+              <button class="font-btn dropdown-item">Large</button>
+            </li>
+          </ul>
       </li>
     </ul>
+    </div>
+  </div>
   </nav>
 </header>
+
+<!-- END OF NAVIGATION -->
+
+<!-- START OF MAIN -->
+
 <main id="typography-content" class="main-content">
   <div id="typography">
     <article id="type-overview">
@@ -378,20 +223,28 @@ function lightTheme(e) {
     </div>
   </div>
 </main>
-<footer>
-  <address>
-    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
-    <a href="https://x.com/">
-    <img src="images/twitter-icon.png" alt="Twitter.com">
-    </a>
-    <a href="https://www.facebook.com/">
-    <img src="images/facebook-icon.png" alt="Facebook.com">
-    </a>
-    <a href="https://www.linkedin.com/">
-    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
-    </a> 
-  </address>
-</footer>      
+
+<!-- END OF MAIN -->
+
+<!-- START OF FOOTER -->
+
+<footer class="mt-auto">
+ <address class="d-flex justify-content-center gap-3">
+   <a href="mailto:mikeydoyle01@yahoo.com" class="text-decoration-none link-info my-auto">Mikeydoyle01@yahoo.com</a>
+   <a href="https://x.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/twitter-icon.png" alt="Twitter.com">
+   </a>
+   <a href="https://www.facebook.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/facebook-icon.png" alt="Facebook.com">
+   </a>
+   <a href="https://www.linkedin.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/linkedin-icon.png" alt="Linkedin.com">
+   </a> 
+ </address>
+</footer> 
+
+<!-- END OF FOOTER -->
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
