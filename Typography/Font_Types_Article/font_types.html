@@ -1,360 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100" data-bs-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
-    <link href="/Portfolio/styling_sheets/normalize.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/sitewide.css" rel="stylesheet">
-    <link href="/Portfolio/styling_sheets/color-and-type.css" rel="stylesheet">
-    <script>
-      // toggle display of current section
-
-      function toggleDisplay(e) {
-        if (getComputedStyle(e).display === 'none') {
-          e.style.display = 'block';
-        } else {
-          e.style.display = 'none';
-        }
-      }
-
-// toggle chevron changes and call display function
-
-      function toggleContent(e) { 
-        const section = e.currentTarget;
-        const content = section.nextElementSibling;
-        toggleDisplay(content);
-        const chevron = section.querySelector('.fa-solid');
-        chevron.classList.toggle('fa-circle-chevron-down');
-        chevron.classList.toggle('fa-circle-chevron-up');
-      }
-
-
-// toggle the changes from the pages settings
-
-// CHANGE STYLE FUNCTION 
-
-      function changeStyle(elem, styleProp, styleValue) {
-        elem.style[styleProp] = styleValue;
-        return getComputedStyle(elem)[styleProp];
-      }
-
-// CHANGE THE FONT SIZE
-
-      function changeFs(size) {
-        if (size.innerHTML === 'Small') {
-            document.body.style.fontSize = '12px';
-        } else if (size.innerHTML === 'Medium') {
-            document.body.style.fontSize = '16px';
-        } else if (size.innerHTML === 'Large') {
-            document.body.style.fontSize = '20px';
-        }
-      }
-
-// Dark Theme
-
-function darkTheme(e) {
-  const body = document.querySelector('body');
-  const nav = document.querySelector('nav');
-  const navList = nav.querySelectorAll('ul');
-  const h1 = document.querySelector('h1');
-  const h1Link = h1.querySelector('a');
-  const h2 = document.querySelectorAll('h2');
-  const footer = document.querySelector('footer');
-  const mainContent = document.querySelector('.main-content');
-  const articleHeader = document.querySelector('.font-article-header');
-  const subText = document.querySelectorAll('span');
-  const wordDef = document.querySelectorAll('.font-article-list dt');
-  const termDesc = document.querySelectorAll('.font-article-list dd');
-  const descList = document.querySelector('.type-font-list');
-  const fontStrong = descList.querySelectorAll('strong');
-  const fontTerm = document.querySelectorAll('.font-term');
-
-  changeStyle(body, 'backgroundColor', '#2f333a'); // CHANGE BACKGROUND COLOR OF BODY
-  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(mainContent, 'outline', '2px #f5a749 solid'); // CHANGE BORDER AROUND ALL CONTENT
-  changeStyle(articleHeader, 'color', '#f5a749'); // CHANGE HEADER AT TOP COLOR
-  changeStyle(descList, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE OF WORD DESCRIPTIONS
-  changeStyle(descList, 'backgroundColor', '#272b30'); // CHANGE WORD DESCRIPTIONS BACKGROUND COLOR
-
-  for (term of fontTerm) {
-    changeStyle(term, 'outline', '2px #f5a749 solid'); // CHANGE OUTLINE AROUND TERMS AT BOTTOM
-  }
-
-  for (strong of fontStrong) {
-    changeStyle(strong, 'color', '#f5a749'); // CHANGE COLOR OF STRONG TAGS
-  }
-
-  for (desc of termDesc) {
-    changeStyle(desc, 'outline', '2px #f5a749 solid'); // CHANGE COLOR TERM DESCRIPTION
-    changeStyle(desc, 'backgroundColor', '#272b30');
-  }
-
-  for (word of wordDef) {
-    changeStyle(word, 'color', '#f5a749'); // CHANGE COLOR OF WORD BEING DEFINED 
-  }
-
-  for (ul of navList) {
-    changeStyle(ul, 'backgroundColor', '#1d1d1dff'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
-  };
-
-  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#4799d4');
-  });
-  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#fff');
-  });
-};
-
-// Light Theme
-
-function lightTheme(e) {
-  const body = document.querySelector('body');
-  const nav = document.querySelector('nav');
-  const navList = nav.querySelectorAll('ul');
-  const h1 = document.querySelector('h1');
-  const h1Link = h1.querySelector('a');
-  const h2 = document.querySelectorAll('h2');
-  const footer = document.querySelector('footer');
-  const mainContent = document.querySelector('.main-content');
-  const articleHeader = document.querySelector('.font-article-header');
-  const subText = document.querySelectorAll('span');
-  const wordDef = document.querySelectorAll('.font-article-list dt');
-  const termDesc = document.querySelectorAll('.font-article-list dd');
-  const descList = document.querySelector('.type-font-list');
-  const fontStrong = descList.querySelectorAll('strong');
-  const fontTerm = document.querySelectorAll('.font-term');
-
-  changeStyle(body, 'backgroundColor', '#c9c9c9ff'); // CHANGE BACKGROUND COLOR OF BODY
-  changeStyle(footer, 'backgroundColor', '#4799d4' ); // CHANGE BACKGROUND COLOR OF FOOTER
-  changeStyle(mainContent, 'outline', '2px #4799d4 solid'); // CHANGE BORDER AROUND ALL CONTENT
-  changeStyle(articleHeader, 'color', '#4799d4'); // CHANGE HEADER AT TOP COLOR
-  changeStyle(descList, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE OF WORD DESCRIPTIONS
-  changeStyle(descList, 'backgroundColor', '#bebebe'); // CHANGE WORD DESCRIPTIONS BACKGROUND COLOR
-
-  for (term of fontTerm) {
-    changeStyle(term, 'outline', '2px #4799d4 solid'); // CHANGE OUTLINE AROUND TERMS AT BOTTOM
-  }
-
-  for (strong of fontStrong) {
-    changeStyle(strong, 'color', '#4799d4'); // CHANGE COLOR OF STRONG TAGS
-  }
-
-  for (desc of termDesc) {
-    changeStyle(desc, 'outline', '2px #4799d4 solid'); // CHANGE COLOR TERM DESCRIPTION
-    changeStyle(desc, 'backgroundColor', '#bebebe');
-  }
-
-  for (word of wordDef) {
-    changeStyle(word, 'color', '#4799d4'); // CHANGE COLOR OF WORD BEING DEFINED
-  }
-
-  for (ul of navList) {
-    changeStyle(ul, 'backgroundColor', '#4799d4'); // CHANGE THE BACKGROUND COLOR OF NAVIGATION LIST ITEMS
-  };
-
-  h1Link.addEventListener('mouseover', function(e) { // CHANGE COLOR WHEN HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#4799d4');
-  });
-  h1Link.addEventListener('mouseout', function(e) { // CHANGE COLOR WHEN NO LONGER HOVERING OVER H1 ELEMENT
-    changeStyle(h1Link, 'color', '#fff');
-  });
-};
-
-// CHANGING SETTINGS
-
-      function changeSetting(e) {        
-        if (e.innerHTML === 'Dark') {
-          darkTheme(e);
-        } else if (e.innerHTML === 'Light') {
-          lightTheme(e);
-        } else if (e.innerHTML === 'Small' ||
-                   e.innerHTML === 'Medium' ||
-                   e.innerHTML === 'Large') {
-          changeFs(e);
-        }
-      };
-
-// BUTTON ASSIGNMENT
-
-      function assignBtn(e) {
-        const currentBtn = e.currentTarget;
-        changeSetting(currentBtn);
-      }
-
-      window.addEventListener('load', function(e) {
-        const sections = document.querySelectorAll('.section');
-
-        for (section of sections) {
-          section.addEventListener('click', toggleContent)
-        }
-
-        const settingList = document.getElementById('settings-list');
-        const settingBtn = settingList.getElementsByTagName('button');
-
-        for (btn of settingBtn) {
-            btn.addEventListener('click', assignBtn)
-        }
-      });
-    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/hsv3lyk.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Micheal Doyle Portfolio</title>
 </head>
-<body>
-<header>
-  <h1><a href="/Portfolio/index.html">MD</a></h1>
-  <nav id="nav-bar">
-    <ul>
-      <li><a href="/Portfolio/index.html">Home</a></li>
-      <li id="portfolio-li" class="nav-list-item"><a href="/Portfolio/projects/projects.html">Portfolio</a>
-        <ul>
-          <li id="photoshop-li" class="nav-list-item"><a href="/Portfolio/projects/projects.html#photoshop">
-            Adobe Photoshop</a>
-              <ul>
-                <li><a href="/Portfolio/projects/adobe-photoshop/photo-restore/photo-restore.html">
+<body class="bg-primary-subtle text-primary-emphasis h-100">
+<div class="d-flex flex-column w-100 h-100 mx-auto">
+
+<!-- START OF NAVIGATION -->
+
+<header class="mb-auto">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="text-decoration-none text-white h1" href="index.html">MD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbar-content">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown" id="portfolio-li">
+        <a class="nav-link dropdown-toggle" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside">Portfolio</a>
+        <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+          <li class="dropend" id="photoshop-li">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="photoshop-dropdown" data-bs-toggle="dropdown">Adobe Photoshop</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="/projects/adobe-photoshop/photo-restore/photo-restore.html">
                   Photo Restoration</a>
                 </li>
-                <li><a href="/Portfolio/projects/adobe-photoshop/magazine-cover/magazine-cover.html">
+                <li> 
+                  <a class="dropdown-item" href="/projects/adobe-photoshop/magazine-cover/magazine-cover.html">
                   Digital Magazine Cover</a>
                 </li>
-                <li><a href="/Portfolio/projects/adobe-photoshop/branding-package/branding-package.html">
+                <li>
+                  <a class="dropdown-item" href="/projects/adobe-photoshop/branding-package/branding-package.html">
                   Start-up Branding Package</a>
                 </li>
               </ul>
           </li>
-          <li id="animate-li" class="nav-list-item"><a href="/Portfolio/projects/projects.html#animation">
-            Adobe Animation</a>
-              <ul>
-                <li><a href="/Portfolio/projects/adobe-animation/character-animation/character-animation.html">
+          <div class="dropdown-divider"></div>
+          <li id="animate-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="animate-dropdown" data-bs-toggle="dropdown">Adobe Animation</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="/projects/adobe-animation/character-animation/character-animation.html">
                   Character Animation</a>
                 </li>
-                <li><a href="/Portfolio/projects/adobe-animation/interactive-banner/interactive-banner.html">
+                <li>
+                  <a class="dropdown-item" href="/projects/adobe-animation/interactive-banner/interactive-banner.html">
                   Interactive Banner</a>
                 </li>
-                <li><a href="/Portfolio/projects/adobe-animation/animated-infographic/animated-infographic.html">
+                <li>
+                  <a class="dropdown-item" href="/projects/adobe-animation/animated-infographic/animated-infographic.html">
                   Animated Infographic</a>
                 </li>
               </ul>
           </li>
-          <li id="color-li" class="nav-list-item"><a href="/Portfolio/Color_Theory/color_overview.html">
-            Color Theory</a>
-              <ul>
-                <li><a href="/Portfolio/Color_Theory/Color_Themes/color_themes.html">
+          <div class="dropdown-divider"></div>
+          <li id="color-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="color-theory-dropdown" data-bs-toggle="dropdown">Color Theory</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="/Color_Theory/Color_Themes/color_themes.html">
                   Color Themes</a>
                 </li>
-                <li><a href="/Portfolio/Color_Theory/Color_Theory_Article/color_article.html">
+                <li>
+                  <a class="dropdown-item" href="/Color_Theory/Color_Theory_Article/color_article.html">
                   Color Theory Article</a>
                 </li>
               </ul>
           </li>
-          <li id="type-li" class="nav-list-item"><a href="../type_overview.html">
-            Typography</a>
-              <ul>
-                <li><a href="font_types.html">
+          <div class="dropdown-divider"></div>
+          <li id="type-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="type-dropdown" data-bs-toggle="dropdown">Typography</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="/Typography/Font_Types_Article/font_types.html">
                   Font Types Article</a>
                 </li>
-                <li><a href="../Typography_Article/typography.html">
+                <li>
+                  <a class="dropdown-item" href="/Typography/Typography_Article/typography.html">
                   Typography Article</a>
                 </li>
               </ul>  
           </li>
-          <li id="javaScript-li" class="nav-list-item">
-            JavaScript Projects
-              <ul>
-                <li><a href="../../projects/javaScript-projects/quiz-mine.html">
+          <div class="dropdown-divider"></div>
+          <li id="javaScript-li" class="dropend">
+            <a class="dropdown-item dropdown-toggle" href="#" role="button" id="js-dropdown" data-bs-toggle="dropdown">JavaScript Projects</a>
+              <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle">
+                <li>
+                  <a class="dropdown-item" href="/projects/javaScript-projects/quiz-mine.html">
                   Interactive Quiz</a>
                 </li>
               </ul>
           </li>
         </ul>
       </li>
-      <li><a href="/Portfolio/contact.html">Contact</a></li>
-      <li><a href="/Portfolio/resume.html">Resume</a></li>
-      <li id="settings-li" class="nav-list-item">Settings
-        <ul id="settings-list">
-          <li>Mode:
-            <button>Dark</button>
-            <button>Light</button>
-          </li>
-          <li>Font Size:
-            <button>Small</button>
-            <button>Medium</button>
-            <button>Large</button>
-          </li>
-        </ul>
+      <div class="dropdown-divider"></div>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../contact.html">Contact</a>
+      </li>
+      <div class="dropdown-divider"></div>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../resume.html">Resume</a>
+      </li>
+      <div class="dropdown-divider"></div>
+      <li id="settings-li" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle disabled" href="#" role="button" id="settings-dropdown" data-bs-toggle="dropdown">Settings</a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-primary-subtle" id="settings-list">
+            <li class="text-center">Mode:
+              <div class="dropdown-divider"></div>
+              <button class="ct-btn dropdown-item">Dark</button>
+              <button class="ct-btn dropdown-item">Light</button>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="text-center">Font Size:
+              <div class="dropdown-divider"></div>
+              <button class="font-btn dropdown-item">Small</button>
+              <button class="font-btn dropdown-item">Medium</button>
+              <button class="font-btn dropdown-item">Large</button>
+            </li>
+          </ul>
       </li>
     </ul>
+    </div>
+  </div>
   </nav>
 </header>
+
+<!-- END OF NAVIGATION -->
+
+<!-- START OF MAIN -->
+
 <main id="font-article-content" class="main-content">
-<div id="font-type-article">
+<div id="font-type-article" class="container-lg border border-primary border-2 rounded p-4 my-4">
+  <div class="row">
   <div class="font-article-head">
-  <h2 class="font-article-header">Understanding The Difference Between Typefaces and Fonts</h2>
-    <span>
+  <h1 class="font-article-header border-bottom border-primary border-2 pb-2">Understanding The Difference Between Typefaces and Fonts</h1>
+    <p class="lead py-2">
       To fully understand typography, we need to understand the difference between a typeface and a font:
-    </span>
-      <dl class="font-article-list">
-        <dt class="diff-term"><dfn>Typeface:</dfn></dt>
-        <dd class="typeface-def">A typeface encompasses a family of characters that share a common design theme. Typefaces predate computers
+    </p>
+      <dl class="font-article-list border border-primary border-2 rounded p-3">
+        <dt class="diff-term mb-2 p-2"><dfn>Typeface:</dfn></dt>
+        <dd class="typeface-def px-2">A typeface encompasses a family of characters that share a common design theme. Typefaces predate computers
           and have been used with many technologies to provide a consistent way to create text flows that would be easy
           for readers of content to digest.
         </dd>
-        <dt class="diff-term"><dfn>Font:</dfn></dt>
-        <dd class="font-def">Distinct from a typeface, a font refers to a specific weight, size, and style within a typeface family. Fonts
+        <hr class="text-primary">
+        <dt class="diff-term mb-2 p-2"><dfn>Font:</dfn></dt>
+        <dd class="font-def px-2">Distinct from a typeface, a font refers to a specific weight, size, and style within a typeface family. Fonts
           bring diversity within a typeface family, allowing for a creative and functional text presentation.
         </dd>
       </dl>
     </div>
+  </div>
   <div class="font-article-body">
-    <span class="font-body-span">
+    <p class="font-body-span lead">
       Now that we understand the difference between the two, lets go over some of the uses of each typeface and some of the 
       fonts that work well within those typeface families.
-    </span>
-    <ul class="type-font-list">
-      <li class="font-term"><strong>Serif:</strong> Serif typefaces are distinguished by their traditional appearance, marked by small decorative
+    </p>
+    <ul class="type-font-list border border-primary border-2 rounded p-3 list-unstyled">
+      <li class="font-term m-2 p-3 border border-primary"><strong>Serif:</strong> Serif typefaces are distinguished by their traditional appearance, marked by small decorative
         lines or "feet" at the end of the characters. Effective at guiding the readers eyes along lines of text, enhancing
         readability and comfort.
-        <ul class="type-font-sublist">
-          <li><strong>Uses:</strong> Extensive text in print, like books, newspapers, magazines, and long reading segments.</li>
-          <li><strong>Fonts:</strong> 
+        <ul class="type-font-sublist m-2">
+          <li class="p-1"><strong>Uses:</strong> Extensive text in print, like books, newspapers, magazines, and long reading segments.</li>
+          <li class="p-1"><strong>Fonts:</strong> 
             <a href="https://fonts.adobe.com/fonts/times-new-roman"> Times New Roman</a>, 
             <a href="https://fonts.adobe.com/fonts/adobe-garamond"> Garamond</a></li>
         </ul>
       </li>
-      <li class="font-term"><strong>Sans-serif:</strong> Sans-serif typefaces, characterized by their clean and unadorned style without "feet",
+      <li class="font-term m-2 p-3 border border-primary"><strong>Sans-serif:</strong> Sans-serif typefaces, characterized by their clean and unadorned style without "feet",
         offer a modern and minimalist look.
-        <ul class="type-font-sublist">
-          <li><strong>Uses:</strong> Widely used in both digital and print media. Website body text, advertising, and signage.</li>
-          <li><strong>Fonts:</strong>
+        <ul class="type-font-sublist m-2">
+          <li class="p-1"><strong>Uses:</strong> Widely used in both digital and print media. Website body text, advertising, and signage.</li>
+          <li class="p-1"><strong>Fonts:</strong>
             <a href="https://fonts.adobe.com/fonts/helvetica"> Helvetica</a>,
             <a href="https://fonts.adobe.com/fonts/arial"> Arial</a></li>
         </ul>
       </li>
-      <li class="font-term"><strong>Decorative:</strong> Decorative, or display typefaces, are diverse in their design, ranging from whimsical to
+      <li class="font-term m-2 p-3 border border-primary"><strong>Decorative:</strong> Decorative, or display typefaces, are diverse in their design, ranging from whimsical to
         eccentric. While they can add a unique flair to a design, their use should be balanced as they may impact readability if
         used extensively.
-        <ul class="type-font-sublist">
-          <li><strong>Uses:</strong> Primarily used for attention-grabbing elements like logos, headers, and special text in 
+        <ul class="type-font-sublist m-2">
+          <li class="p-1"><strong>Uses:</strong> Primarily used for attention-grabbing elements like logos, headers, and special text in 
           advertising.</li>
           <li><strong>Fonts:</strong>
             <a href="https://fonts.adobe.com/fonts/lobster"> Lobster</a>,
             <a href="https://fonts.adobe.com/fonts/papyrus"> Papyrus</a></li>
         </ul>
       </li>
-      <li class="font-term"><strong>Script:</strong> Script typefaces mimic the fluidity of handwriting or calligraphy. They vary from casual,
+      <li class="font-term m-2 p-3 border border-primary"><strong>Script:</strong> Script typefaces mimic the fluidity of handwriting or calligraphy. They vary from casual,
         looser styles to formal, more structured designs.
-        <ul class="type-font-sublist">
-          <li><strong>Uses:</strong> Often used for invitations, branding, and decorative purposes where a personal artistic
+        <ul class="type-font-sublist m-2">
+          <li class="p-1"><strong>Uses:</strong> Often used for invitations, branding, and decorative purposes where a personal artistic
           touch is desired.
-          <li><strong>Fonts:</strong>
+          <li class="p-1"><strong>Fonts:</strong>
             <a href="https://fonts.adobe.com/fonts/allura"> Allura</a>,
             <a href="https://fonts.adobe.com/fonts/great-vibes"> Great Vibes</a></li>
         </ul>
       </li>
-      <li class="font-term"><strong>Monospaced:</strong> Monospaced typefaces feature characters that each occupy the same horizontal space.
+      <li class="font-term m-2 p-3 border border-primary"><strong>Monospaced:</strong> Monospaced typefaces feature characters that each occupy the same horizontal space.
         Historically used in typewriters and coding environments, these typefaces ensure alignment and uniformity.
-        <ul class="type-font-sublist">
-          <li><strong>Uses:</strong> Ideal for technical documentation, coding, and tabular data where text alignment is needed.</li>
-          <li><strong>Fonts:</strong>
+        <ul class="type-font-sublist m-2">
+          <li class="p-1"><strong>Uses:</strong> Ideal for technical documentation, coding, and tabular data where text alignment is needed.</li>
+          <li class="p-1"><strong>Fonts:</strong>
             <a href="https://fonts.adobe.com/fonts/courier"> Courier</a>,
             <a href="https://fonts.adobe.com/fonts/consolas"> Consolas</a></li>
         </ul>
@@ -363,19 +219,28 @@ function lightTheme(e) {
   </div>
 </div>
 </main>
-<footer>
-  <address>
-    <a href="mailto:mikeydoyle01@yahoo.com">Mikeydoyle01@yahoo.com</a>
-    <a href="https://x.com/">
-    <img src="images/twitter-icon.png" alt="Twitter.com">
-    </a>
-    <a href="https://www.facebook.com/">
-    <img src="images/facebook-icon.png" alt="Facebook.com">
-    </a>
-    <a href="https://www.linkedin.com/">
-    <img src="images/linkedin-icon.png" alt="LinkedIn.com">
-    </a> 
-  </address>
-</footer>
+
+<!-- END OF MAIN -->
+
+<!-- START OF FOOTER -->
+
+<footer class="mt-auto">
+ <address class="d-flex justify-content-center gap-3">
+   <a href="mailto:mikeydoyle01@yahoo.com" class="text-decoration-none link-info my-auto">Mikeydoyle01@yahoo.com</a>
+   <a href="https://x.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/twitter-icon.png" alt="Twitter.com">
+   </a>
+   <a href="https://www.facebook.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/facebook-icon.png" alt="Facebook.com">
+   </a>
+   <a href="https://www.linkedin.com/" class="text-decoration-none link-info my-auto">
+    <img src="/Portfolio/images/linkedin-icon.png" alt="Linkedin.com">
+   </a> 
+ </address>
+</footer> 
+
+<!-- END OF FOOTER -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
